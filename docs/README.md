@@ -87,7 +87,7 @@ In the example below, the user should be able to make venue bookings since the `
 
 **Example Document:** <br>
 In the following example, the user should be able to make bookings since the `is_tutor` field is set to `true`. If it was set to `false`, they would not have the priviledge to book venues.
-**Example Document:**
+
 
 > ```json
 > {
