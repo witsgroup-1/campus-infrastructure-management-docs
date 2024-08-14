@@ -42,7 +42,7 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ## Schedule API :watch:
 
-## Maintenance API :tools:
+## Maintenance API :hammer_and_wrench:
 
 ## Notification API :bell:
 
