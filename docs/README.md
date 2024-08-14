@@ -158,6 +158,122 @@ In the following example, the user should be able to make bookings since the `is
 ## Schedule Database :calendar:
 
 ## Maintenance Database :hammer_and_wrench:
+**Maintenance Collection**
+
+**1. Collection** : `maintenanceRequests`
+**Document**: `{requestId}`
+
+**Document fields**:
+
+- `roomId` (String): Identifier for the room or venue where the issue was reported.
+- `userId` (String): Unique identifier for the user who reported the issue (e.g., firebase_uid).
+- `issueType` (String): The type of issue reported – e.g., "Electrical," "Plumbing."
+- `description` (Text): Detailed description of the issue.
+- `status` (String): Current status of the request – e.g., "Open," "In Progress," "Resolved."
+- `createdAt` (Timestamp): Date and time when the request was created.
+- `assignedTo` (String): Identifier for the staff member assigned to the request.
+
+**Example Document:** <br>
+
+>```json
+>{
+>  "roomId": "Room101",
+>  "userId": "User123",
+>  "issueType": "Electrical",
+>  "description": "Light not working",
+>  "status": "Open",
+>  "createdAt": "2024-08-12T09:00:00Z",
+>  "assignedTo": "Staff456"
+>}
+>```
+
+**2. Subcollection: `maintenanceLogs`**
+
+This subcollection is found inside each `maintenanceRequests` document. It tracks the history of actions taken on the request.
+**Document**: `{logId}`
+
+**Document Fields:**
+- `logId` (String): Unique identifier for the log entry.
+- `actionTaken` (String): Description of the action – e.g., "Request created," "Status changed to In Progress."
+- `actionBy` (String): Identifier for the user who performed the action.
+- `timestamp` (Timestamp): Date and time when the action was taken.
+
+**Example Document:** <br>
+
+>```json
+>{
+>  "logId": "Log001",
+>  "actionTaken": "Request created",
+>  "actionBy": "User123",
+>  "timestamp": "2024-08-12T09:01:00Z"
+>}
+>```
+
+**3. Subcollection: `rooms`**
+
+This subcollection is found inside each `maintenanceRequests` document. It contains information about the room or venue related to the maintenance request. This is useful if the room details need to be recorded separately or if multiple rooms are associated with a single maintenance request.
+
+**Document**:`roomId`
+
+ **Document Fields:**
+- `roomId` (String): Unique identifier for the room or venue – e.g., "Room101."
+- `building` (String): The building where the room is located – e.g., "Science Building."
+- `floor` (String): The floor on which the room is located.
+- `roomType` (String): The type of room – e.g., "Classroom," "Lecture Hall," "Lab."
+- `capacity` (Number): The capacity of the room – e.g., 30 students.
+
+ **Example Document:**
+
+>```json
+>{
+>  "roomId": "Room101",
+>  "building": "Science Building",
+>  "floor": "1st",
+>  "roomType": "Classroom",
+>  "capacity": 30,
+>}
+>```
+
+**Overall Structure:**
+
+- **`maintenanceRequests` (Main Collection)**
+  - **`requestId1` (Document)**
+    - `roomId`: "Room101"
+    - `userId`: "User123"
+    - `issueType`: "Electrical"
+    - `description`: "Light not working"
+    - `status`: "Open"
+    - `createdAt`: "2024-08-12T09:00:00Z"
+    - `assignedTo`: "Staff456"
+    - **`rooms` (Subcollection)**
+      - `roomId1` (Document)
+        - `roomId`: "Room101"
+        - `building`: "Science Building"
+        - `floor`: "1st"
+        - `roomType`: "Classroom"
+        - `capacity`: 30
+    - **`maintenanceLogs` (Subcollection)**
+      - `logId1` (Document)
+        - `actionTaken`: "Request created"
+        - `actionBy`: "User123"
+        - `timestamp`: "2024-08-12T09:01:00Z"
+
+**Summary:**
+
+- **Main Collection: `maintenanceRequests`**
+  - Stores general information about each maintenance request.
+
+- **Subcollection: `rooms`**
+  - Contains details about the specific room(s) involved in the maintenance request.
+
+- **Subcollection: `maintenanceLogs`**
+  - Tracks the history of actions taken related to the maintenance request.
+
+This structure simplifies the maintenance tracking process by focusing on essential details, making it easier to manage and query.
+
+
+**Summary of schema structure:**
+
 
 # Testing and Quality Assurance :test_tube:
 
