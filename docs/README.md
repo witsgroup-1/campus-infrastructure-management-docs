@@ -40,7 +40,6 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ## Booking API :calendar:
 
-# Room Booking and Venue Management API
 
 ## Overview
 
