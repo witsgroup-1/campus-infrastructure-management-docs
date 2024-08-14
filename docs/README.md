@@ -40,6 +40,9 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ## Booking API :calendar:
 
+<iframe src="./swagger/swagger-ui.html" width="100%" height="800px"></iframe>
+
+
 ## Schedule API :watch:
 
 ## Maintenance API :hammer_and_wrench:
