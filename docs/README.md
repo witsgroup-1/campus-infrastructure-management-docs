@@ -1,4 +1,4 @@
-# Welcome to Campus Infrastructure Management Docs!
+# Welcome to Campus Infrastructure Management Docs! :paperclips:
 
 ---
 
@@ -9,12 +9,12 @@
 ---
 
 > **Made By Group -1:**<br>
-> Claire Newman (2549861)  
-> Dineo Chiloane (2563191)
-> Chloe Dube(2602515)
-> Mayuri Balakistan (2543986)
-> Busisiwe Vemba (2561620)
-> Menzi Shazi (2453308)
+> Claire Newman (2549861) :woman_technologist:<br>
+> Dineo Chiloane (2563191) :woman_technologist:<br>
+> Chloe Dube(2602515) :woman_technologist:<br>
+> Mayuri Balakistan (2543986) :woman_technologist: <br>
+> Busisiwe Vemba (2561620) :woman_technologist:<br>
+> Menzi Shazi (2453308) :man_technologist:<br>
 
 # Introduction
 
