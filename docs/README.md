@@ -16,7 +16,7 @@
 > Busisiwe Vemba (2561620) :woman_technologist:<br>
 > Menzi Shazi (2453308) :man_technologist:<br>
 
-# Introduction
+# Introduction :book:
 
 The Classroom/Venue Management App is designed to enhance the efficiency of managing classroom and venue assignments, bookings, and maintenance on campus. This application integrates seamlessly with academic schedules, providing a centralized platform for room bookings, maintenance issue reporting, and schedule management.
 
@@ -26,33 +26,33 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ---
 
-# Development Process
+# Development Process :gear:
 
 ---
 
-# Component Details
+# Component Details :wrench:
 
 ---
 
-# API Specifications
+# API Specifications :memo:
 
-## User Management API
+## User Management API :bust_in_silhouette:
 
-## Booking API
+## Booking API :calendar:
 
-## Schedule API
+## Schedule API :watch:
 
-## Maintenance API
+## Maintenance API :tools:
 
-## Notification API
+## Notification API :bell:
 
 ---
 
-# Database Schema
+# Database Schema :floppy_disk:
 
 For our project, we use a **Hierarchical Model**, which organizes data in a “tree-like” structure with parent-child relationships. Our chosen database, Firebase Firestore, uses this hierarchical model to effectively manage and scale our data.
 
-## User Database
+## User Database :file_folder:
 
 **Users Collection**
 
@@ -153,29 +153,29 @@ In the following example, the user should be able to make bookings since the `is
 
 ---
 
-## Booking Database
+## Booking Database :clipboard:
 
-## Schedule Database
+## Schedule Database :calendar:
 
-## Maintenance Database
+## Maintenance Database :hammer_and_wrench:
 
-# Testing and Quality Assurance
-
----
-
-# Deployment and Integration
+# Testing and Quality Assurance :test_tube:
 
 ---
 
-# Challenges and Solutions
+# Deployment and Integration :rocket:
 
 ---
 
-# Conclusion and Future Work
+# Challenges and Solutions :thinking:
 
 ---
 
-# Appendices
+# Conclusion and Future Work :trophy:
+
+---
+
+# Appendices :file_cabinet:
 
 ```
 
