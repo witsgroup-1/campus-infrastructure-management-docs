@@ -11,6 +11,10 @@
 > **Made By Group -1:**<br>
 > Claire Newman (2549861)  
 > Dineo Chiloane (2563191)
+> Chloe Dube(2602515)
+> Mayuri Balakistan (2543986)
+> Busisiwe Vemba (2561620)
+> Menzi Shazi (2453308)
 
 # Introduction
 
