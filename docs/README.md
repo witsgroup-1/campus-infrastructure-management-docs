@@ -28,6 +28,18 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 # Development Process :gear:
 
+At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
+
+![Users Table](media/USeCaseSVG.drawio.svg)
+
+The initial project architecture is: 
+
+We chose this architecture as we have a front-end, api and backend database.
+
+
+## Timelines
+
+
 ---
 
 # Component Details :wrench:
