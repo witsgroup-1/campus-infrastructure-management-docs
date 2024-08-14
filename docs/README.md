@@ -1,6 +1,14 @@
-# Welcome to Campus Infrastructure (Classroom/Venue) Management
+# Welcome to Campus Infrastructure Management Docs!
 
-> **By Group -1:**<br>
+---
+
+<p style="text-align: center;">
+    <img src="media/docscover.svg" alt="Users Table" width="500" height="auto"/>
+</p>
+
+---
+
+> **Made By Group -1:**<br>
 > Claire Newman (2549861)  
 > Dineo Chiloane (2563191)
 
@@ -36,11 +44,116 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ---
 
-# Database Design
+# Database Schema
 
-## User Table Schema
+For our project, we use a **Hierarchical Model**, which organizes data in a “tree-like” structure with parent-child relationships. Our chosen database, Firebase Firestore, uses this hierarchical model to effectively manage and scale our data.
+
+## User Database
+
+**Users Collection**
+
+**1. Collection**: `users`
+
+**Document**: `{userId}` (Document ID is a unique identifier for each user, such as `firebase_uid`)
+
+**Document Fields:**
+
+- `name`: User’s first name (string)
+- `surname`: User’s last name (string)
+- `email`: User’s email address (string)
+- `role`: User’s role (string) – e.g., student, or staff
+- `faculty`: User’s faculty or department (string)
+- `is_tutor`: Indicates if the user is a tutor (boolean)
+- `is_lecturer`: Indicates if the user is a lecturer (boolean)
+
+**Example Document:** <br>
+In the example below, the user should be able to make venue bookings since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to book venues.
+
+> ```json
+> {
+>   "name": "John",
+>   "surname": "Doe",
+>   "email": "john.doe@wits.ac.za",
+>   "role": "staff",
+>   "faculty": "science",
+>   "is_tutor": false,
+>   "is_lecturer": true
+> }
+> ```
+
+**Example Document:** <br>
+In the following example, the user should be able to make bookings since the `is_tutor` field is set to `true`. If it was set to `false`, they would not have the priviledge to book venues.
+**Example Document:**
+
+> ```json
+> {
+>   "name": "Mitsy",
+>   "surname": "Nkuna",
+>   "email": "2538929632@students.wits.ac.za",
+>   "role": "student",
+>   "faculty": "science",
+>   "is_tutor": true,
+>   "is_lecturer": true
+> }
+> ```
+
+**2. Bookings Subcollection**
+
+**Subcollection**: `bookings` (inside each user document)
+
+**Document**: `{bookingId}` (Document ID for each booking)
+
+**Document Fields:**
+
+- `venue`: The unique identifier for the venue (string) – e.g., `wss1`
+- `start_time`: The start time of the booking (timestamp)
+- `end_time`: The end time of the booking (timestamp)
+- `booker_id`: The email of the user who made the booking (string)
+
+**Example Document**
+
+> ```json
+> {
+>   "venue": "wss1",
+>   "start_time": "2024-10-19T10:15:00Z",
+>   "end_time": "2024-10-19T11:00:00Z",
+>   "booker_id": "john.doe@wits.ac.za"
+> }
+> ```
+
+**3. Courses Subcollection**
+
+**Subcollection**: `courses` (inside each user document)
+
+**Document**: `{courseId}` (Document ID for each course)
+
+**Document Fields:**
+
+- `course_code`: The code of the course (string) – e.g., `COMS1018A`
+- `lecturer_email`: The email of the course instructor, since they are responsible for making the booking. (string) – e.g., `john.doe@wits.ac.za`
+
+**Example Document:**
+
+> ```json
+> {
+>   "course_code": "COMS1018A",
+>   "lecturer_email": "john.doe@wits.ac.za"
+> }
+> ```
+
+**Summary of Schema Structure**
+
+![Users Table](media/userstable.svg)
 
 ---
+
+---
+
+## Booking Database
+
+## Schedule Database
+
+## Maintenance Database
 
 # Testing and Quality Assurance
 
@@ -59,3 +172,7 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 ---
 
 # Appendices
+
+```
+
+```
