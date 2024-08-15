@@ -1,50 +1,46 @@
 openapi: 3.0.0
 info:
   title: Room Booking API
-  description: API for managing room bookings.The Room Booking API allows users to manage bookings for classrooms and venues for various purposes such as classes, meetings, and events. The API provides endpoints for creating, updating, retrieving, and canceling bookings. The infrastructure is designed to be scalable, secure, and reliable, ensuring high availability and data protection
+  description: API for managing room bookings. The Room Booking API allows users to manage bookings for classrooms and venues for various purposes such as classes, meetings, and events. The API provides endpoints for creating, updating, retrieving, and canceling bookings. The infrastructure is designed to be scalable, secure, and reliable, ensuring high availability and data protection.
   version: 1.0.0
-
-servers:
-  - url: http://localhost:3000
-    description: Local development server
 
 tags:
   - name: endpoints
     description: "All available API endpoints"
 
 paths:
-  /rooms:
+  /venues:
     get:
       tags:
         - endpoints
-      summary: Retrieve a list of available rooms and venues
+      summary: Retrieve a list of available venues
       responses:
         '200':
-          description: A list of rooms
+          description: A list of venues
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Room'
+                  $ref: '#/components/schemas/Venue'
 
     post:
       tags:
         - endpoints
-      summary: Create a new room or venue
+      summary: Create a new venue
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NewRoom'
+              $ref: '#/components/schemas/NewVenue'
       responses:
         '201':
-          description: Room created successfully
+          description: Venue created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Room'
+                $ref: '#/components/schemas/Venue'
                 
 
   /bookings:
@@ -54,11 +50,11 @@ paths:
       summary: Retrieve a list of bookings
       parameters:
         - in: query
-          name: room_id
+          name: venue_id
           schema:
             type: string
             format: uuid
-          description: ID of the room to filter bookings
+          description: ID of the venue to filter bookings
         - in: query
           name: user_id
           schema:
@@ -83,7 +79,7 @@ paths:
 
     post:
       tags:
-          - endpoints
+        - endpoints
       summary: Create a new booking
       requestBody:
         required: true
@@ -100,48 +96,48 @@ paths:
                 $ref: '#/components/schemas/Booking'
 
   
-  /rooms/{room_id}:
+  /venues/{venue_id}:
     put:
       tags:
         - endpoints
-      summary: Update details of an existing room
+      summary: Update details of an existing venue
       parameters:
         - in: path
-          name: room_id
+          name: venue_id
           required: true
           schema:
             type: string
             format: uuid
-          description: ID of the room to update
+          description: ID of the venue to update
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NewRoom'
+              $ref: '#/components/schemas/NewVenue'
       responses:
         '200':
-          description: Room updated successfully
+          description: Venue updated successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Room'
+                $ref: '#/components/schemas/Venue'
 
     delete:
       tags:
         - endpoints
-      summary: Delete a room
+      summary: Delete a venue
       parameters:
         - in: path
-          name: room_id
+          name: venue_id
           required: true
           schema:
             type: string
             format: uuid
-          description: ID of the room to delete
+          description: ID of the venue to delete
       responses:
         '200':
-          description: Room deleted successfully
+          description: Venue deleted successfully
 
   /bookings/{booking_id}:
     put:
@@ -188,7 +184,7 @@ paths:
                
 components:
   schemas:
-    Room:
+    Venue:
       type: object
       properties:
         id:
@@ -205,7 +201,7 @@ components:
           items:
             type: string
 
-    NewRoom:
+    NewVenue:
       type: object
       properties:
         name:
@@ -223,15 +219,13 @@ components:
         - location
         - capacity
 
-  
-
     Booking:
       type: object
       properties:
         id:
           type: string
           format: uuid
-        room_id:
+        venue_id:
           type: string
           format: uuid
         user_id:
@@ -251,7 +245,7 @@ components:
     NewBooking:
       type: object
       properties:
-        room_id:
+        venue_id:
           type: string
           format: uuid
         user_id:
@@ -266,8 +260,7 @@ components:
         purpose:
           type: string
       required:
-        - room_id
+        - venue_id
         - user_id
         - start_time
         - end_time
-
