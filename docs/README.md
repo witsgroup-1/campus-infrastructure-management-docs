@@ -41,6 +41,8 @@ We chose this architecture as we have a front-end, a web hosting server, api and
 
 ### Wireframes
 
+![Users Table](media/MayWireframe1.jpg)
+
 ### Mockups
 
 ### Prototypes
