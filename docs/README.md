@@ -450,10 +450,10 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 - **Subcollection: `maintenanceLogs`**
   - Tracks the history of actions taken related to the maintenance request.
 
-This structure simplifies the maintenance tracking process by focusing on essential details, making it easier to manage and query.
-
 
 **Summary of schema structure:**
+![Maintenance Table](media/maintenancetable.png)
+
 
 
 # Testing and Quality Assurance :test_tube:
