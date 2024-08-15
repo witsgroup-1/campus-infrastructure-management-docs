@@ -28,13 +28,18 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 # Development Process :gear:
 
+## Planning of Architecture
 At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
 
 ![Users Table](media/USeCaseSVG.drawio.svg)
 
-The initial project architecture is: 
+The initial project architecture is: Multi-tier architecture
 
-We chose this architecture as we have a front-end, api and backend database.
+We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
+
+## Key Features
+
+## Integration with Other Systems
 
 
 ## Timelines
