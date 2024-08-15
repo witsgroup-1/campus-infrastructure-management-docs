@@ -37,7 +37,18 @@ The initial project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
+## UI/UX Design Process
+
+### Wireframes
+
+### Mockups
+
+### Prototypes
+
+
 ## Key Features
+
+
 
 ## Integration with Other Systems
 - Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
