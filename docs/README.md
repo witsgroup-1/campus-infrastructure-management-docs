@@ -40,220 +40,7 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ## Booking API :calendar:
 
-
-## Overview
-
-The Room Booking and Venue Management API allows users to manage venues and bookings for various purposes such as classes, meetings, and events. The API provides endpoints to create, update, retrieve, and delete venue records, as well as manage bookings associated with these venues.
-
-## API Version
-
-- **Version:** 1.0.0
-
-
-## Endpoints
-
-### 1. Venue Endpoints
-
-#### 1.1. Retrieve a List of Venues
-
-- **Endpoint:** `GET /venues`
-- **Description:** Retrieves a list of available venues.
-- **Responses:**
-  - **200 OK**: Returns a list of venue objects.
-    - **Response Body Example:**
-    ```json
-    [
-      {
-        "id": "0001",
-        "name": "FNB 37",
-        "location": "FNB Building, Floor 1",
-        "capacity": 50,
-        "features": ["Projector", "Wi-Fi", "Whiteboard"]
-      }
-    ]
-    ```
-
-#### 1.2. Create a New Venue
-
-- **Endpoint:** `POST /venues`
-- **Description:** Creates a new venue.
-- **Request Body:**
-  - **Body Parameters:**
-    - `name` (String, Required) - The name of the venue.
-    - `location` (String, Required) - The physical location of the venue.
-    - `capacity` (Integer, Required) - The maximum number of people the venue can accommodate.
-    - `features` (Array of Strings, Optional) - A list of features available at the venue.
-  - **Request Body Example:**
-    ```json
-    {
-      "name": "FNB 37",
-      "location": "FNB Building, Floor 1",
-      "capacity": 50,
-      "features": ["Projector", "Wi-Fi", "Whiteboard"]
-    }
-    ```
-- **Responses:**
-  - **201 Created**: The venue is successfully created.
-    - **Response Body Example:**
-    ```json
-    {
-      "id": "0001",
-      "name": "FNB 37",
-      "location": "FNB Building, Floor 1",
-      "capacity": 50,
-      "features": ["Projector", "Wi-Fi", "Whiteboard"]
-    }
-    ```
-
-#### 1.3. Update an Existing Venue
-
-- **Endpoint:** `PUT /venues/{venue_id}`
-- **Description:** Updates the details of an existing venue.
-- **Path Parameters:**
-  - `venue_id` (String, Required) - The unique identifier of the venue to update.
- - **Request Body Example:**
-    ```json
-    {
-      "name": "FNB 102",
-      "location": "FNB Building, Floor 1",
-      "capacity": 50,
-      "features": ["Projector", "Wi-Fi", "Whiteboard"]
-    }
-    ```
-- **Responses:**
-  - **200 OK**: The venue is successfully updated.
-    - **Response Body Example:** 
-        ```json
-    {
-      "id": "0001",
-      "name": "FNB 102",
-      "location": "FNB Building, Floor 1",
-      "capacity": 50,
-      "features": ["Projector", "Wi-Fi", "Whiteboard"]
-    }
-    ```
-
-#### 1.4. Delete a Venue
-
-- **Endpoint:** `DELETE /venues/{venue_id}`
-- **Description:** Deletes a venue.
-- **Path Parameters:**
-  - `venue_id` (String, Required) - The unique identifier of the venue to delete.
-- **Responses:**
-  - **200 OK**: The venue is successfully deleted.
-
-### 2. Booking Endpoints
-
-#### 2.1. Retrieve a List of Bookings
-
-- **Endpoint:** `GET /bookings`
-- **Description:** Retrieves a list of bookings.
-- **Query Parameters:**
-  - `venue_id` (String, Optional) - Filter bookings by the venue ID.
-  - `user_id` (String, Optional) - Filter bookings by the user ID.
-  - `date` (String, Optional) - Filter bookings by date (format: YYYY-MM-DD).
-- **Responses:**
-  - **200 OK**: Returns a list of booking objects.
-    - **Response Body Example:**
-    ```json
-    [
-      {
-        "id": "1234",
-        "venue_id": "0001",
-        "user_id": "1000",
-        "start_time": "2024-08-14T09:00:00Z",
-        "end_time": "2024-08-14T10:00:00Z",
-        "purpose": "SDP Lecture",
-        "status": "Confirmed"
-      }
-    ]
-    ```
-
-#### 2.2. Create a New Booking
-
-- **Endpoint:** `POST /bookings`
-- **Description:** Creates a new booking.
-- **Request Body:**
-  - **Body Parameters:**
-    - `venue_id` (String, Required) - The ID of the venue being booked.
-    - `user_id` (String, Required) - The ID of the user making the booking.
-    - `start_time` (String, Required) - The start time of the booking (format: ISO 8601).
-    - `end_time` (String, Required) - The end time of the booking (format: ISO 8601).
-    - `purpose` (String, Optional) - The purpose of the booking.
-  - **Request Body Example:**
-    ```json
-    {
-      "venue_id": "0001",
-      "user_id": "1000",
-      "start_time": "2024-08-14T09:00:00Z",
-      "end_time": "2024-08-14T10:00:00Z",
-      "purpose": "SDP Lecture"
-    }
-    ```
-- **Responses:**
-  - **201 Created**: The booking is successfully created.
-    - **Response Body Example:**
-    ```json
-    {
-      "id": "7894",
-      "venue_id": "0001",
-      "user_id": "1000",
-      "start_time": "2024-08-14T09:00:00Z",
-      "end_time": "2024-08-14T10:00:00Z",
-      "purpose": "SDP Lecture",
-      "status": "Confirmed"
-    }
-    ```
-
-#### 2.3. Update an Existing Booking
-
-- **Endpoint:** `PUT /bookings/{booking_id}`
-- **Description:** Updates the details of an existing booking.
-- **Path Parameters:**
-  - `booking_id` (String, Required) - The unique identifier of the booking to update.
-
-- **Request Body:**
-  - **Body Parameters:**
-    - `venue_id` (String, Required) - The ID of the venue being booked.
-    - `user_id` (String, Required) - The ID of the user making the booking.
-    - `start_time` (String, Required) - The start time of the booking in ISO 8601 format.
-    - `end_time` (String, Required) - The end time of the booking in ISO 8601 format.
-    - `purpose` (String, Optional) - The purpose of the booking.
-  - **Request Body Example:**
-    ```json
-    {
-      "venue_id": "0001",
-      "user_id": "1000",
-      "start_time": "2024-08-14T09:00:00Z",
-      "end_time": "2024-08-14T10:00:00Z",
-      "purpose": "SDP Lecture"
-    }
-    ```
-
-- **Responses:**
-  - **200 OK**: The booking has been successfully updated.
-    - **Response Body Example:**
-      ```json
-      {
-        "booking_id": "12345",
-        "venue_id": "0001",
-        "user_id": "1000",
-        "start_time": "2024-08-14T09:00:00Z",
-        "end_time": "2024-08-14T10:00:00Z",
-        "purpose": "SDP Lecture",
-        "status": "updated"
-      }
-      ```
-
-#### 2.4. Cancel a Booking
-
-- **Endpoint:** `DELETE /bookings/{booking_id}`
-- **Description:** Cancels a booking.
-- **Path Parameters:**
-  - `booking_id` (String, Required) - The unique identifier of the booking to cancel.
-- **Responses:**
-  - **200 OK**: The booking is successfully canceled.
-
+<iframe src="./swagger/swagger-ui.html" width="100%" height="800px"></iframe>
 
 
 ## Schedule API :watch:
@@ -370,6 +157,66 @@ In the following example, the user should be able to make bookings since the `is
 ---
 
 ## Booking Database :clipboard:
+
+**1. Bookings Collection**
+
+**Collection Name:** `bookings`
+
+**Documents:** Each document represents a booking and is identified by a unique `bookingId`.
+
+**Document Fields:**
+
+- **`bookingId`** (String, **Unique Identifier**): A unique identifier for each booking.
+- **`venueId`** (String, **Foreign Key**): The unique identifier of the venue being booked.
+- **`userId`** (String, **Foreign Key**): The unique identifier of the user who made the booking.
+- **`start_time`** (Timestamp): The start time of the booking (ISO 8601 format).
+- **`end_time`** (Timestamp): The end time of the booking (ISO 8601 format).
+- **`purpose`** (String, Optional): The purpose of the booking.
+- **`status`** (String): The status of the booking (e.g., "Confirmed", "Pending", "Cancelled").
+
+**Example Document:**
+
+```json
+{
+  "bookingId": "1234",
+  "venueId": "0001",
+  "userId": "1000",
+  "start_time": "2024-08-14T09:00:00Z",
+  "end_time": "2024-08-14T10:00:00Z",
+  "purpose": "SDP Lecture",
+  "status": "Confirmed"
+}
+```
+
+---
+
+**2. Venues Collection**
+
+**Collection Name:** `venues`
+
+**Documents:** Each document represents a venue and is identified by a unique `venueId`.
+
+**Document Fields:**
+
+- **`venueId`** (String, **Unique Identifier**): A unique identifier for each venue.
+- **`name`** (String): The name of the venue.
+- **`location`** (String): The physical location of the venue.
+- **`capacity`** (Integer): The maximum number of people the venue can accommodate.
+- **`features`** (Array of Strings, Optional): A list of features available at the venue (e.g., ["Projector", "Wi-Fi", "Whiteboard"]).
+
+**Example Document:**
+
+```json
+{
+  "venueId": "0001",
+  "name": "FNB 37",
+  "location": "FNB Building, Floor 1",
+  "capacity": 50,
+  "features": ["Projector", "Wi-Fi", "Whiteboard"]
+}
+```
+
+---
 
 ## Schedule Database :calendar:
 
