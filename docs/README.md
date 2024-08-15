@@ -28,6 +28,38 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 # Development Process :gear:
 
+## Planning of Architecture
+At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
+
+![Users Table](media/USeCaseSVG.drawio.svg)
+
+The initial project architecture is: Multi-tier architecture
+
+We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
+
+## UI/UX Design Process
+
+### Wireframes
+
+We did a couple of wireframes in order to perfect our design.
+![Users Table](media/MayWireframe1.jpg)
+
+### Mockups
+
+### Prototypes
+
+
+## Key Features
+
+
+
+## Integration with Other Systems
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
+- Campus Safety App: Call their API to provide emergency contact information
+
+## Timelines
+
+
 ---
 
 # Component Details :wrench:
