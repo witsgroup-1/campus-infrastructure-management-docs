@@ -40,7 +40,8 @@ We chose this architecture as we have a front-end, a web hosting server, api and
 ## Key Features
 
 ## Integration with Other Systems
-
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
+- Campus Safety App: Call their API to provide emergency contact information
 
 ## Timelines
 
