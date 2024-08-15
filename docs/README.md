@@ -42,7 +42,13 @@ We chose this architecture as we have a front-end, a web hosting server, api and
 ### Wireframes
 
 We did a couple of wireframes in order to perfect our design.
+
+Login
+![Users Table](media/ClaWireframe2.jpg)
+
+Home
 ![Users Table](media/MayWireframe1.jpg)
+![Users Table](media/ClaWireframe1.jpg)
 
 ### Mockups
 
