@@ -28,6 +28,44 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 # Development Process :gear:
 
+## Planning of Architecture
+At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
+
+![Users Table](media/USeCaseSVG.drawio.svg)
+
+The initial project architecture is: Multi-tier architecture
+
+We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
+
+## UI/UX Design Process
+
+### Wireframes
+
+We did a couple of wireframes in order to perfect our design.
+
+Login
+![Users Table](media/ClaWireframe2.jpg)
+
+Home
+![Users Table](media/MayWireframe1.jpg)
+![Users Table](media/ClaWireframe1.jpg)
+
+### Mockups
+
+### Prototypes
+
+
+## Key Features
+
+
+
+## Integration with Other Systems
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
+- Campus Safety App: Call their API to provide emergency contact information
+
+## Timelines
+
+
 ---
 
 # Component Details :wrench:
@@ -219,6 +257,86 @@ In the following example, the user should be able to make bookings since the `is
 ---
 
 ## Schedule Database :calendar:
+**Schedule Collection**
+
+**1. Collection** : `schedules`
+
+**Document** : `{scheduleId}`
+
+**Document Fields** :
+ 
+ - `roomId` (string): the room/venue where the lesson will take place.
+ - `courseId` (string): the course that will be taught.
+ - `startTime` (timestamp): the time at which the lesson begins.
+ - `endTime` (timestamp): the time at which the lesson ends.
+ - `daysOfWeek` (string): the days on which the lesson takes place.
+ - `startDate` (timestamp): the date on which the lessons begin.
+ - `endDate` (timestamp): the date on which the lessons end.
+ - `recurring` (boolean): indicates whether the lesson recurs on a timely basis.
+ - `userId` (string): the identifier for the lecturer that created the schedule. (Only lecturers can create schedules.)
+
+ **Example Document:** <br>
+
+>```json
+>{
+>  "roomId": "Room101",
+>  "courseId": "COMS3011A",
+>  "startTime": "10:00",
+>  "endTime": "12:00",
+>  "daysOfWeek": "Monday",
+>  "startDate": "24 January 2024",
+>  "endDate": "8 June 2024",
+>  "recurring": "True",
+>  "userId": "Lecturer1923"
+>}
+>```
+
+**2. Subcollection** : `rooms`
+
+The `rooms` subcollection is found inside every `schedule` collection. It contains the details of the room that is being booked for a particular course.
+
+**Document** : `{roomsId}`
+
+ **Document Fields:**
+
+- `roomId` (String): The identifier for the room or venue.
+- `building` (String): The building where the room is located.
+- `floor` (String): The floor on which the room is located.
+- `roomType` (String): The type of room.
+- `capacity` (Number): The capacity of the room.
+
+ **Example Document:**
+
+>```json
+>{
+>  "roomId": "Room101",
+>  "building": "Science Building",
+>  "floor": "2nd",
+>  "roomType": "Tutorial Room",
+>  "capacity": 20,
+>}
+>```
+
+**Reference** : `courses`
+
+The `schedules` collection makes reference to the `courses` subcollection. This subcollection specifies which course the lecturer will teach in that time slot.
+
+**Document**: `{courseId}`
+
+**Document Fields:**
+
+- `course_code`: (string) The code of the course.
+- `lecturer_email`: (string) The email of the course instructor that created the schedule.
+
+**Example Document:**
+
+> ```json
+> {
+>   "course_code": "COMS3011A",
+>   "lecturer_email": "adamwhite@wits.ac.za"
+> }
+> ```
+
 
 ## Maintenance Database :hammer_and_wrench:
 **Maintenance Collection**
