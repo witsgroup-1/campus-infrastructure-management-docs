@@ -155,7 +155,7 @@ In the following example, the user should be able to make bookings since the `is
 
 **Document Fields:**
 
-- `venue`: The unique identifier for the venue (string) – e.g., `wss1`
+- `room`: The unique identifier for the room (string) – e.g., `wss1`
 - `start_time`: The start time of the booking (timestamp)
 - `end_time`: The end time of the booking (timestamp)
 - `booker_id`: The email of the user who made the booking (string)
@@ -164,7 +164,7 @@ In the following example, the user should be able to make bookings since the `is
 
 > ```json
 > {
->   "venue": "wss1",
+>   "room": "wss1",
 >   "start_time": "2024-10-19T10:15:00Z",
 >   "end_time": "2024-10-19T11:00:00Z",
 >   "booker_id": "john.doe@wits.ac.za"
@@ -257,8 +257,6 @@ In the following example, the user should be able to make bookings since the `is
 
 
 ```
-
-** 2.1 Buildings Subcollection **
 
 **Subcollection:** `rooms` (inside each venue document)
 
