@@ -268,6 +268,8 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 > }
 > ```
 
+![Users Table](media/Schedule_database.drawio.png)
+
 
 ## Maintenance Database :hammer_and_wrench:
 **Maintenance Collection**
