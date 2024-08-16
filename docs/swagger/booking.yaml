@@ -1,0 +1,266 @@
+openapi: 3.0.0
+info:
+  title: Room Booking API
+  description: API for managing room bookings. The Room Booking API allows users to manage bookings for classrooms and venues for various purposes such as classes, meetings, and events. The API provides endpoints for creating, updating, retrieving, and canceling bookings. The infrastructure is designed to be scalable, secure, and reliable, ensuring high availability and data protection.
+  version: 1.0.0
+
+tags:
+  - name: endpoints
+    description: "All available API endpoints"
+
+paths:
+  /venues:
+    get:
+      tags:
+        - endpoints
+      summary: Retrieve a list of available venues
+      responses:
+        '200':
+          description: A list of venues
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Venue'
+
+    post:
+      tags:
+        - endpoints
+      summary: Create a new venue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewVenue'
+      responses:
+        '201':
+          description: Venue created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Venue'
+                
+
+  /bookings:
+    get:
+      tags:
+        - endpoints
+      summary: Retrieve a list of bookings
+      parameters:
+        - in: query
+          name: venue_id
+          schema:
+            type: string
+            format: uuid
+          description: ID of the venue to filter bookings
+        - in: query
+          name: user_id
+          schema:
+            type: string
+            format: uuid
+          description: ID of the user to filter bookings
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date
+          description: Date to filter bookings (YYYY-MM-DD)
+      responses:
+        '200':
+          description: A list of bookings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+
+    post:
+      tags:
+        - endpoints
+      summary: Create a new booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewBooking'
+      responses:
+        '201':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+  
+  /venues/{venue_id}:
+    put:
+      tags:
+        - endpoints
+      summary: Update details of an existing venue
+      parameters:
+        - in: path
+          name: venue_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: ID of the venue to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewVenue'
+      responses:
+        '200':
+          description: Venue updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Venue'
+
+    delete:
+      tags:
+        - endpoints
+      summary: Delete a venue
+      parameters:
+        - in: path
+          name: venue_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: ID of the venue to delete
+      responses:
+        '200':
+          description: Venue deleted successfully
+
+  /bookings/{booking_id}:
+    put:
+      tags:
+        - endpoints
+      summary: Update an existing booking
+      parameters:
+        - in: path
+          name: booking_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: ID of the booking to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewBooking'
+      responses:
+        '200':
+          description: Booking updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+    delete:
+      tags:
+        - endpoints
+      summary: Cancel a booking
+      parameters:
+        - in: path
+          name: booking_id
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: ID of the booking to cancel
+      responses:
+        '200':
+          description: Booking cancelled successfully
+               
+components:
+  schemas:
+    Venue:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        location:
+          type: string
+        capacity:
+          type: integer
+        features:
+          type: array
+          items:
+            type: string
+
+    NewVenue:
+      type: object
+      properties:
+        name:
+          type: string
+        location:
+          type: string
+        capacity:
+          type: integer
+        features:
+          type: array
+          items:
+            type: string
+      required:
+        - name
+        - location
+        - capacity
+
+    Booking:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        venue_id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        purpose:
+          type: string
+        status:
+          type: string
+
+    NewBooking:
+      type: object
+      properties:
+        venue_id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        purpose:
+          type: string
+      required:
+        - venue_id
+        - user_id
+        - start_time
+        - end_time
