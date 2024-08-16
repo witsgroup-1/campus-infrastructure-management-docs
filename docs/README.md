@@ -1,5 +1,5 @@
 # Welcome to Campus Infrastructure Management Docs! :paperclips:
-
+https://witsgroup-1.github.io/campus-infrastructure-management-docs/
 ---
 
 <p style="text-align: center;">
@@ -36,6 +36,11 @@ At the begining of the process we focused on the technology choices, the high-le
 The initial project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
+
+Here is the deployment diagram to illustrate how our website deploys.
+
+![Users Table](media/DeploymentDiagram.drawio.png)
+
 
 ## UI/UX Design Process
 
