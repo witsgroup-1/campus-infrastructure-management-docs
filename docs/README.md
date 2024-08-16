@@ -49,12 +49,14 @@ Here is the deployment diagram to illustrate how our website deploys.
 We did a couple of wireframes in order to perfect our design.
 
 Login
+
 ![Users Table](media/ClaWireframe2.jpg)
 
 Home
+
 ![Users Table](media/MayWireframe1.jpg)
 ![Users Table](media/ClaWireframe1.jpg)
-![Users Table](media/ClhWireframe1.jpg)
+![Users Table](media/ChlWireframe1.jpg)
 
 ### Mockups
 
