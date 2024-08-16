@@ -1,5 +1,5 @@
 # Welcome to Campus Infrastructure Management Docs! :paperclips:
-
+https://witsgroup-1.github.io/campus-infrastructure-management-docs/
 ---
 
 <p style="text-align: center;">
@@ -15,7 +15,7 @@
 > Mayuri Balakistan (2543986) :woman_technologist: <br>
 > Busisiwe Vemba (2561620) :woman_technologist:<br>
 > Menzi Shazi (2453308) :man_technologist:<br>
-https://witsgroup-1.github.io/campus-infrastructure-management-docs/
+
 # Introduction :book:
 
 The Classroom/Venue Management App is designed to enhance the efficiency of managing classroom and venue assignments, bookings, and maintenance on campus. This application integrates seamlessly with academic schedules, providing a centralized platform for room bookings, maintenance issue reporting, and schedule management.
