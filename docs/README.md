@@ -54,6 +54,7 @@ Login
 Home
 ![Users Table](media/MayWireframe1.jpg)
 ![Users Table](media/ClaWireframe1.jpg)
+![Users Table](media/ClhWireframe1.jpg)
 
 ### Mockups
 
