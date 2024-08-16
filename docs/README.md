@@ -37,6 +37,11 @@ The initial project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
+Here is the deployment diagram to illustrate how our website deploys.
+
+![Users Table](media/DeploymentDiagram.drawio.png)
+
+
 ## UI/UX Design Process
 
 ### Wireframes
