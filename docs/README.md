@@ -369,7 +369,7 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 
 **Summary of Schema Structure**
 
-![Users Table](media/Schedule_database.drawio.svg)
+![Users Table](media//Schedule_database.drawio.svg)
 
 
 ## Maintenance Database :hammer_and_wrench:
