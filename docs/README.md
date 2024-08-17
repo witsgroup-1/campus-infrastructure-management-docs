@@ -520,7 +520,7 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 # Testing and Quality Assurance :test_tube:
 
 ---
-##Test Plan
+## Test Plan
 
 Jest was used to do testing. The first tests were...
 
