@@ -59,8 +59,11 @@ Home
 ![Users Table](media/ChlWireframe1.jpg)
 
 ### Mockups
+![Mockup 1](image-1.png)
+![Mockup 2](image-2.png)
 
 ### Prototypes
+
 
 
 ## Key Features
