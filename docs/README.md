@@ -63,8 +63,9 @@ Home
 ![Users Table](media/ChlWireframe1.jpg)
 
 ### Mockups
-![Chloe Mockup 1](media/chlMock1.png)
+![Chloe Mockup 1](media/chlMockup1.png)
 ![Chloe Mockup 2](media/chlMock2.png)
+
 
 ### Prototypes
 
