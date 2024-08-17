@@ -71,7 +71,10 @@ Home
 
 
 ## Key Features
-
+- Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors can book tutorial rooms and users can book them as well.
+- Schedule Integration: Lecturers can integrate there schedules to make automatic bookings for there classes.
+- Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
+- Notifications: Users except staff can recieve notifications whilst staff can recieve maintenence notifications. 
 
 
 ## Integration with Other Systems
