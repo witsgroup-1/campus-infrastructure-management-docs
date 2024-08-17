@@ -66,6 +66,7 @@ Home
 ![Chloe Mockup 1](media/chlMockup1.png)
 ![Chloe Mockup 2](media/chlMock2.png)
 
+![May Mockup](media/mockup.png)
 
 ### Prototypes
 
