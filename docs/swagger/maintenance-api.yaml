@@ -1,0 +1,273 @@
+openapi: 3.0.0
+info:
+  title: Maintenance API
+  description: API for managing maintenance requests, logs, and room details.
+  version: 1.0.0
+
+paths:
+  /maintenanceRequests:
+    post:
+      summary: Create a new maintenance request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaintenanceRequest'
+      responses:
+        '201':
+          description: Maintenance request created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateRequestResponse'
+
+    get:
+      summary: Get all maintenance requests
+      responses:
+        '200':
+          description: List of maintenance requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MaintenanceRequest'
+
+  /maintenanceRequests/{requestId}:
+    get:
+      summary: Get details of a specific maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Maintenance request details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MaintenanceRequest'
+
+    put:
+      summary: Update a specific maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaintenanceRequest'
+      responses:
+        '200':
+          description: Maintenance request updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+    delete:
+      summary: Delete a specific maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Maintenance request deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+  /maintenanceRequests/{requestId}/logs:
+    post:
+      summary: Add a log entry to a maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaintenanceLog'
+      responses:
+        '201':
+          description: Log entry added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LogResponse'
+
+    get:
+      summary: Get all log entries for a specific maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of log entries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MaintenanceLog'
+
+  /maintenanceRequests/{requestId}/rooms:
+    post:
+      summary: Add room details to a maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Room'
+      responses:
+        '201':
+          description: Room details added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoomResponse'
+
+    get:
+      summary: Get room details for a specific maintenance request
+      parameters:
+        - in: path
+          name: requestId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Room details retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Room'
+
+components:
+  schemas:
+    MaintenanceRequest:
+      type: object
+      properties:
+        roomId:
+          type: string
+          description: Identifier for the room where the issue was reported
+        userId:
+          type: string
+          description: Unique identifier for the user who reported the issue
+        issueType:
+          type: string
+          description: The type of issue reported (e.g., "Electrical", "Plumbing")
+        description:
+          type: string
+          description: Detailed description of the issue
+        status:
+          type: string
+          description: Current status of the request (e.g., "Open", "In Progress", "Resolved")
+        createdAt:
+          type: string
+          format: date-time
+          description: Date and time when the request was created
+        assignedTo:
+          type: string
+          description: Identifier for the staff member assigned to the request
+
+    MaintenanceLog:
+      type: object
+      properties:
+        logId:
+          type: string
+          description: Unique identifier for the log entry
+        actionTaken:
+          type: string
+          description: Description of the action taken (e.g., "Request created", "Status changed")
+        actionBy:
+          type: string
+          description: Identifier for the user who performed the action
+        timestamp:
+          type: string
+          format: date-time
+          description: Date and time when the action was taken
+
+    Room:
+      type: object
+      properties:
+        roomId:
+          type: string
+          description: Unique identifier for the room
+        building:
+          type: string
+          description: The building where the room is located
+        floor:
+          type: string
+          description: The floor on which the room is located
+        roomType:
+          type: string
+          description: The type of room (e.g., "Classroom", "Lab")
+        capacity:
+          type: integer
+          description: The capacity of the room
+
+    CreateRequestResponse:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: Unique identifier for the created request
+        message:
+          type: string
+          description: Confirmation message
+
+    LogResponse:
+      type: object
+      properties:
+        logId:
+          type: string
+          description: Unique identifier for the created log entry
+        message:
+          type: string
+          description: Confirmation message
+
+    RoomResponse:
+      type: object
+      properties:
+        roomId:
+          type: string
+          description: Unique identifier for the room
+        message:
+          type: string
+          description: Confirmation message
+
+    SuccessResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Confirmation message

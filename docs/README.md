@@ -96,12 +96,14 @@ Home
 
 ## Booking API :calendar:
 
-<iframe src="./swagger/swagger-ui.html" width="100%" height="800px"></iframe>
+<iframe src="./swagger/booking-api.html" width="100%" height="800px"></iframe>
 
 
 ## Schedule API :watch:
 
 ## Maintenance API :hammer_and_wrench:
+
+<iframe src="./swagger/maintenance-api.html" width="100%" height="800px"></iframe>
 
 ## Notification API :bell:
 
