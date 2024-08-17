@@ -101,6 +101,8 @@ Home
 
 ## User Management API :bust_in_silhouette:
 
+<iframe src="./swagger/user-api.html" width="100%" height="800px"></iframe>
+
 ## Booking API :calendar:
 
 <iframe src="./swagger/booking-api.html" width="100%" height="800px"></iframe>
