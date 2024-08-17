@@ -82,7 +82,13 @@ Home
 - Campus Safety App: Call their API to provide emergency contact information
 
 ## Timelines
-
+8th -20th Auguast - Plan the software (UI/UX and architecture)
+20th August - 1st Marking
+17th September - 2nd Marking
+01st October - 3rd Marking
+07th October - Group Report and Documentation 
+08-17th October - Demo
+20th October - Individual Reports
 
 ---
 
@@ -511,6 +517,12 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 # Testing and Quality Assurance :test_tube:
 
 ---
+##Test Plan
+
+Jest was used to do testing. The first tests were...
+
+
+
 
 # Deployment and Integration :rocket:
 
