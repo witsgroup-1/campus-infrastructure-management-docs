@@ -139,10 +139,11 @@ For our project, we use a **Hierarchical Model**, which organizes data in a “t
 - `faculty`: User’s faculty or department (string)
 - `is_tutor`: Indicates if the user is a tutor (boolean)
 - `is_lecturer`: Indicates if the user is a lecturer (boolean)
+- `{bookings}`: Contains all the bookings that the user made in the form of documents(collection).
+-`{courses}`: Contains all the user's courses in the form of documents(collection).
 
 **Example Document:** <br>
-In the example below, the user should be able to make venue bookings since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to book venues.
-
+In the example below, the the staff user should be able to make bookings for lecture halls, meeting rooms, tutorial rooms, and exam venues since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to do so.
 > ```json
 > {
 >   "name": "John",
@@ -156,7 +157,7 @@ In the example below, the user should be able to make venue bookings since the `
 > ```
 
 **Example Document:** <br>
-In the following example, the user should be able to make bookings since the `is_tutor` field is set to `true`. If it was set to `false`, they would not have the priviledge to book venues.
+In the following example, the student user should be able to make bookings for tutorial rooms since the `is_tutor` field is set to `true`.
 
 
 > ```json
@@ -171,6 +172,23 @@ In the following example, the user should be able to make bookings since the `is
 > }
 > ```
 
+
+**Example Document:** <br>
+In the following example, the student user should be able to make bookings for study rooms only since the `is_tutor` field is set to `false`. 
+
+
+> ```json
+> {
+>   "name": "Mitsy",
+>   "surname": "Nkuna",
+>   "email": "2538929632@students.wits.ac.za",
+>   "role": "student",
+>   "faculty": "science",
+>   "is_tutor": false,
+>   "is_lecturer": true
+> }
+> ```
+
 **2. Bookings Subcollection**
 
 **Subcollection**: `bookings` (inside each user document)
@@ -179,19 +197,21 @@ In the following example, the user should be able to make bookings since the `is
 
 **Document Fields:**
 
-- `room`: The unique identifier for the room (string) – e.g., `wss1`
+- `venue_id`: The unique identifier for the venue in the collection that consists all venues on campus (string)
+-`name`: The name of the venue. e.g., WSS1.
 - `start_time`: The start time of the booking (timestamp)
 - `end_time`: The end time of the booking (timestamp)
-- `booker_id`: The email of the user who made the booking (string)
+- `booker_email`: The email of the user who made the booking (string)
 
 **Example Document**
 
 > ```json
 > {
->   "room": "wss1",
+    "venue_id":"DcGxOJax93od7C4B8VQ8"
+>   "name": "wss1",
 >   "start_time": "2024-10-19T10:15:00Z",
 >   "end_time": "2024-10-19T11:00:00Z",
->   "booker_id": "john.doe@wits.ac.za"
+>   "booker_email": "joh0n.doe@wits.ac.za"
 > }
 > ```
 
@@ -203,15 +223,15 @@ In the following example, the user should be able to make bookings since the `is
 
 **Document Fields:**
 
-- `course_code`: The code of the course (string) – e.g., `COMS1018A`
-- `lecturer_email`: The email of the course instructor, since they are responsible for making the booking. (string) – e.g., `john.doe@wits.ac.za`
+- `course_id`: The unique_id for the document belonging to that course in the collection containing all courses.
+- `lecturer_id`: The `firebase_uid` for the lecturer user.
 
 **Example Document:**
 
 > ```json
 > {
->   "course_code": "COMS1018A",
->   "lecturer_email": "john.doe@wits.ac.za"
+>   "course_id": "Wh89K9693odHom85230K",
+>   "lecturer_id": "Hcd9xOJax93o72djh3dHgP"
 > }
 > ```
 

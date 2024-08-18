@@ -3,13 +3,8 @@ info:
   title: User Management API
   description: "API for managing users, authentication, authorization, and profiles."
   version: 1.0.0
-servers:
-- url: https://virtserver.swaggerhub.com/CHILOANEDINEO/Users/1.0.0
-  description: SwaggerHub API Auto Mocking
-- url: https://api.yourdomain.com/v1
-  description: Production server
-security:
-- firebaseAuth: []
+
+
 paths:
   /users/{userId}:
     get:
