@@ -1,248 +1,338 @@
 openapi: 3.0.0
 info:
   title: User Management API
-  description: "API for managing users, authentication, authorization, and profiles."
+  description: API for managing user authentication, authorization, and profiles.
   version: 1.0.0
 
 
+
 paths:
+  /users:
+    get:
+      summary: Get a list of all users
+      operationId: getUsers
+      tags:
+        - Users
+      responses:
+        '200':
+          description: A list of users.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+    post:
+      summary: Create a new user
+      operationId: createUser
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: User created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
   /users/{userId}:
     get:
+      summary: Get a user by userId
+      operationId: getUserById
       tags:
-      - Users
-      summary: Get user profile
+        - Users
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
-        "200":
-          description: User profile retrieved successfully
+        '200':
+          description: A single user.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
-        "404":
+                $ref: '#/components/schemas/User'
+        '404':
           description: User not found
+
     put:
+      summary: Update a user by userId
+      operationId: updateUserById
       tags:
-      - Users
-      summary: Update user profile
+        - Users
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
+        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/users_userId_body'
-        required: true
+              $ref: '#/components/schemas/User'
       responses:
-        "200":
-          description: User profile updated successfully
-        "400":
-          description: Invalid input
-        "404":
+        '200':
+          description: User updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
           description: User not found
+
     delete:
+      summary: Delete a user by userId
+      operationId: deleteUserById
       tags:
-      - Users
-      summary: Delete user
+        - Users
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
-        "204":
+        '204':
           description: User deleted successfully
-        "404":
+        '404':
           description: User not found
+
   /users/{userId}/bookings:
     get:
+      summary: Get all bookings for a user
+      operationId: getUserBookings
       tags:
-      - Bookings
-      summary: List all bookings for a user
+        - Bookings
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
-        "200":
-          description: List of bookings retrieved successfully
+        '200':
+          description: A list of bookings.
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/inline_response_200_1'
-        "404":
-          description: User not found
+                  $ref: '#/components/schemas/Booking'
+
     post:
+      summary: Create a booking for a user
+      operationId: createBooking
       tags:
-      - Bookings
-      summary: Create a new booking for a user
+        - Bookings
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
+        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/userId_bookings_body'
-        required: true
+              $ref: '#/components/schemas/Booking'
       responses:
-        "201":
-          description: Booking created successfully
-        "400":
-          description: Invalid input
-        "404":
-          description: User not found
+        '201':
+          description: Booking created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+
+  /users/{userId}/bookings/{bookingId}:
+    get:
+      summary: Get a booking by bookingId
+      operationId: getBookingById
+      tags:
+        - Bookings
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A single booking.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '404':
+          description: Booking not found
+
+    delete:
+      summary: Delete a booking by bookingId
+      operationId: deleteBookingById
+      tags:
+        - Bookings
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Booking deleted successfully
+        '404':
+          description: Booking not found
+
   /users/{userId}/courses:
     get:
+      summary: Get all courses for a user
+      operationId: getUserCourses
       tags:
-      - Courses
-      summary: List all courses for a user
+        - Courses
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
-        "200":
-          description: List of courses retrieved successfully
+        '200':
+          description: A list of courses.
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/inline_response_200_2'
-        "404":
-          description: User not found
+                  $ref: '#/components/schemas/Course'
+
     post:
+      summary: Create a course for a user
+      operationId: createCourse
       tags:
-      - Courses
-      summary: Add a course to a user
+        - Courses
       parameters:
-      - name: userId
-        in: path
-        description: Unique ID of the user
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
+        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/userId_courses_body'
-        required: true
+              $ref: '#/components/schemas/Course'
       responses:
-        "201":
-          description: Course added successfully
-        "400":
-          description: Invalid input
-        "404":
-          description: User not found
+        '201':
+          description: Course created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+
+  /users/{userId}/courses/{courseId}:
+    get:
+      summary: Get a course by courseId
+      operationId: getCourseById
+      tags:
+        - Courses
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: courseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A single course.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+        '404':
+          description: Course not found
+
+    delete:
+      summary: Delete a course by courseId
+      operationId: deleteCourseById
+      tags:
+        - Courses
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: courseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Course deleted successfully
+        '404':
+          description: Course not found
+
 components:
   schemas:
-    users_userId_body:
+    User:
       type: object
       properties:
+        userId:
+          type: string
+          description: Unique identifier for the user
         name:
           type: string
+          description: User’s first name
         surname:
           type: string
-        faculty:
-          type: string
-    inline_response_200_1:
-      type: object
-      properties:
-        room:
-          type: string
-        start_time:
-          type: string
-          format: date-time
-        end_time:
-          type: string
-          format: date-time
-        booker_id:
-          type: string
-    inline_response_200:
-      type: object
-      properties:
-        name:
-          type: string
-        surname:
-          type: string
+          description: User’s last name
         email:
           type: string
+          description: User’s Wits email address
         role:
           type: string
+          description: User’s role (e.g., student, staff)
         faculty:
           type: string
+          description: User’s faculty or department
         is_tutor:
           type: boolean
+          description: Indicates if the user is a tutor
         is_lecturer:
           type: boolean
-    inline_response_200_2:
-      type: object
-      properties:
-        course_code:
-          type: string
-        lecturer_email:
-          type: string
-    userId_bookings_body:
-      type: object
-      properties:
-        room:
-          type: string
-        start_time:
-          type: string
-          format: date-time
-        end_time:
-          type: string
-          format: date-time
-    userId_courses_body:
-      type: object
-      properties:
-        course_code:
-          type: string
-        lecturer_email:
-          type: string
-  securitySchemes:
-    firebaseAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+          description: Indicates if the user is a lecturer
+        bookings:
+          type: subcollection
+          description: contains all bookings the user made
+        courses:
+          type: subcollection
+          description: contains all courses the user takes
+  

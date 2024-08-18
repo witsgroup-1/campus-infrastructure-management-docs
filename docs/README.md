@@ -1,5 +1,5 @@
 # Welcome to Campus Infrastructure Management Docs! :paperclips:
-https://witsgroup-1.github.io/campus-infrastructure-management-docs/
+<!-- https://witsgroup-1.github.io/campus-infrastructure-management-docs/ -->
 ---
 
 <p style="text-align: center;">
@@ -28,7 +28,7 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 # Development Process :gear:
 
-## Planning of Architecture
+## Planning of Architecture 
 At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
 
 ![Users Table](media/UseCaseDiagramUpdated.drawio.png)
@@ -48,7 +48,7 @@ The system components can be seen below in the component diagram.
 
 ## UI/UX Design Process
 
-### Wireframes
+### Wireframes  <!-- {docsify-ignore} -->
 
 We did a couple of wireframes in order to perfect our design.
 
@@ -62,13 +62,13 @@ Home
 ![Users Table](media/ClaWireframe1.jpg)
 ![Users Table](media/ChlWireframe1.jpg)
 
-### Mockups
+### Mockups  <!-- {docsify-ignore} -->
 ![Chloe Mockup 1](media/chlMockup1.png)
 ![Chloe Mockup 2](media/chlMock2.png)
 
 ![May Mockup](media/mockup.png)
 
-### Prototypes
+### Prototypes  <!-- {docsify-ignore} -->
 
 
 
@@ -111,13 +111,13 @@ Home
 
 ## Schedule API :watch:
 
-### Purpose
+### Purpose  <!-- {docsify-ignore} -->
 
 The Schedule API integrates with academic schedules and allows users (primarily lecturers) to create, update, and retrieve schedules.
 
-### Endpoints
+### Endpoints  <!-- {docsify-ignore} -->
 
-#### Create Schedule
+#### Create Schedule  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `POST /api/schedules`
 * **Description:** Create a new schedule for a classroom or venue.
@@ -143,7 +143,7 @@ The Schedule API integrates with academic schedules and allows users (primarily 
 }
 ```
 
-#### Get Schedule
+#### Get Schedule  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `GET /api/schedules/{scheduleId}`
 * **Description:** Retrieve a specific schedule by its ID.
@@ -163,7 +163,7 @@ The Schedule API integrates with academic schedules and allows users (primarily 
 }
 ```
 
-#### Update Schedule
+#### Update Schedule  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `PUT /api/schedules/{scheduleId}`
 * **Description:** Update an existing schedule.
@@ -183,7 +183,7 @@ The Schedule API integrates with academic schedules and allows users (primarily 
 }
 ```
 
-#### Delete Schedule
+#### Delete Schedule  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `DELETE /api/schedules/{scheduleId}`
 * **Description:** Delete a specific schedule by its ID.
@@ -194,7 +194,7 @@ The Schedule API integrates with academic schedules and allows users (primarily 
 }
 ```
 
-#### Get Schedules by Room
+#### Get Schedules by Room  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `GET /api/schedules/room/{roomId}`
 * **Description:** Retrieve all schedules for a specific room.
@@ -218,15 +218,15 @@ The Schedule API integrates with academic schedules and allows users (primarily 
 
 <iframe src="./swagger/maintenance-api.html" width="100%" height="800px"></iframe>
 
-## Notification API :bell:
+## Notification API :bell: 
 
-### Purpose
+### Purpose  <!-- {docsify-ignore} -->
 
 The Notification API handles the scheduling and delivery of notifications to users, including reminders for upcoming bookings and updates on maintenance requests.
 
-### Endpoints
+### Endpoints  <!-- {docsify-ignore} -->
 
-#### Create Notification
+#### Create Notification  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `POST /api/notifications`
 * **Description:** Create a new notification to be sent at a specific time.
@@ -247,7 +247,7 @@ The Notification API handles the scheduling and delivery of notifications to use
 }
 ```
 
-#### Get Notifications for User
+#### Get Notifications for User  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `GET /api/notifications/user/{userId}`
 * **Description:** Retrieve all notifications scheduled for a specific user.
@@ -264,7 +264,7 @@ The Notification API handles the scheduling and delivery of notifications to use
 ]
 ```
 
-#### Update Notification
+#### Update Notification  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `PUT /api/notifications/{notificationId}`
 * **Description:** Update an existing notification (e.g., change the message or send time).
@@ -283,7 +283,7 @@ The Notification API handles the scheduling and delivery of notifications to use
 }
 ```
 
-#### Delete Notification
+#### Delete Notification  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `DELETE /api/notifications/{notificationId}`
 * **Description:** Delete a scheduled notification.
@@ -294,7 +294,7 @@ The Notification API handles the scheduling and delivery of notifications to use
 }
 ```
 
-#### Send Immediate Notification
+#### Send Immediate Notification  <!-- {docsify-ignore} -->
 
 * **Endpoint:** `POST /api/notifications/send`
 * **Description:** Send a notification immediately without scheduling.
@@ -330,7 +330,7 @@ For our project, we use a **Hierarchical Model**, which organizes data in a “t
 
 - `name`: User’s first name (string)
 - `surname`: User’s last name (string)
-- `email`: User’s email address (string)
+- `email`: User’s Wits email address (string)
 - `role`: User’s role (string) – e.g., student, or staff
 - `faculty`: User’s faculty or department (string)
 - `is_tutor`: Indicates if the user is a tutor (boolean)
@@ -339,7 +339,7 @@ For our project, we use a **Hierarchical Model**, which organizes data in a “t
 -`{courses}`: Contains all the user's courses in the form of documents(collection).
 
 **Example Document:** <br>
-In the example below, the the staff user should be able to make bookings for lecture halls, meeting rooms, tutorial rooms, and exam venues since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to do so.
+In the example below, the `staff` user should be able to make bookings for lecture halls, meeting rooms, tutorial rooms, and exam venues since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to do so.
 > ```json
 > {
 >   "name": "John",
@@ -348,7 +348,9 @@ In the example below, the the staff user should be able to make bookings for lec
 >   "role": "staff",
 >   "faculty": "science",
 >   "is_tutor": false,
->   "is_lecturer": true
+>   "is_lecturer": true,
+>   {bookings},
+>   {courses}
 > }
 > ```
 
@@ -364,7 +366,9 @@ In the following example, the student user should be able to make bookings for t
 >   "role": "student",
 >   "faculty": "science",
 >   "is_tutor": true,
->   "is_lecturer": true
+>   "is_lecturer": true,
+>   {bookings},
+>   {courses}
 > }
 > ```
 
@@ -381,7 +385,9 @@ In the following example, the student user should be able to make bookings for s
 >   "role": "student",
 >   "faculty": "science",
 >   "is_tutor": false,
->   "is_lecturer": true
+>   "is_lecturer": true,
+>   {bookings},
+>   {courses}
 > }
 > ```
 
@@ -394,20 +400,19 @@ In the following example, the student user should be able to make bookings for s
 **Document Fields:**
 
 - `venue_id`: The unique identifier for the venue in the collection that consists all venues on campus (string)
--`name`: The name of the venue. e.g., WSS1.
+- `name`: The name of the venue. e.g., WSS1.
 - `start_time`: The start time of the booking (timestamp)
 - `end_time`: The end time of the booking (timestamp)
-- `booker_email`: The email of the user who made the booking (string)
+
 
 **Example Document**
 
 > ```json
 > {
-    "venue_id":"DcGxOJax93od7C4B8VQ8"
+>   "venue_id":"DcGxOJax93od7C4B8VQ8",
 >   "name": "wss1",
 >   "start_time": "2024-10-19T10:15:00Z",
 >   "end_time": "2024-10-19T11:00:00Z",
->   "booker_email": "joh0n.doe@wits.ac.za"
 > }
 > ```
 
@@ -420,7 +425,7 @@ In the following example, the student user should be able to make bookings for s
 **Document Fields:**
 
 - `course_id`: The unique_id for the document belonging to that course in the collection containing all courses.
-- `lecturer_id`: The `firebase_uid` for the lecturer user.
+- `lecturer_id`: The `userId` for the lecturer user.
 
 **Example Document:**
 
