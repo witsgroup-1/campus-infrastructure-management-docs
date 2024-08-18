@@ -4,8 +4,6 @@ info:
   description: API for managing user authentication, authorization, and profiles.
   version: 1.0.0
 
-
-
 paths:
   /users:
     get:
@@ -330,9 +328,46 @@ components:
           type: boolean
           description: Indicates if the user is a lecturer
         bookings:
-          type: subcollection
-          description: contains all bookings the user made
+          type: array
+          items:
+            $ref: '#/components/schemas/Booking'
+          description: Contains all bookings the user made
         courses:
-          type: subcollection
-          description: contains all courses the user takes
-  
+          type: array
+          items:
+            $ref: '#/components/schemas/Course'
+          description: Contains all courses the user is enrolled in
+
+    Booking:
+      type: object
+      properties:
+        bookingId:
+          type: string
+          description: Unique identifier for the booking
+        venue_id:
+          type: string
+          description: The unique identifier for the venue
+        name:
+          type: string
+          description: The name of the venue
+        start_time:
+          type: string
+          format: date-time
+          description: The start time of the booking
+        end_time:
+          type: string
+          format: date-time
+          description: The end time of the booking
+
+    Course:
+      type: object
+      properties:
+        courseId:
+          type: string
+          description: Unique identifier for the course
+        course_id:
+          type: string
+          description: The unique identifier for the course document
+        lecturer_id:
+          type: string
+          description: The userId of the lecturer for the course
