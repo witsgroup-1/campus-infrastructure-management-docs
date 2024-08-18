@@ -111,13 +111,208 @@ Home
 
 ## Schedule API :watch:
 
+### Purpose
+
+The Schedule API integrates with academic schedules and allows users (primarily lecturers) to create, update, and retrieve schedules.
+
+### Endpoints
+
+#### Create Schedule
+
+* **Endpoint:** `POST /api/schedules`
+* **Description:** Create a new schedule for a classroom or venue.
+* **Request Body:**
+```json
+{
+  "roomId": "Room101",
+  "courseId": "COMS3011A",
+  "startTime": "10:00",
+  "endTime": "12:00",
+  "daysOfWeek": "Monday",
+  "startDate": "2024-01-24",
+  "endDate": "2024-06-08",
+  "recurring": true,
+  "userId": "Lecturer1923"
+}
+```
+* **Response:**
+```json
+{
+  "scheduleId": "abc123",
+  "message": "Schedule created successfully."
+}
+```
+
+#### Get Schedule
+
+* **Endpoint:** `GET /api/schedules/{scheduleId}`
+* **Description:** Retrieve a specific schedule by its ID.
+* **Response:**
+```json
+{
+  "scheduleId": "abc123",
+  "roomId": "Room101",
+  "courseId": "COMS3011A",
+  "startTime": "10:00",
+  "endTime": "12:00",
+  "daysOfWeek": "Monday",
+  "startDate": "2024-01-24",
+  "endDate": "2024-06-08",
+  "recurring": true,
+  "userId": "Lecturer1923"
+}
+```
+
+#### Update Schedule
+
+* **Endpoint:** `PUT /api/schedules/{scheduleId}`
+* **Description:** Update an existing schedule.
+* **Request Body:**
+```json
+{
+  "startTime": "11:00",
+  "endTime": "13:00",
+  "daysOfWeek": "Wednesday"
+}
+```
+* **Response:**
+```json
+{
+  "scheduleId": "abc123",
+  "message": "Schedule updated successfully."
+}
+```
+
+#### Delete Schedule
+
+* **Endpoint:** `DELETE /api/schedules/{scheduleId}`
+* **Description:** Delete a specific schedule by its ID.
+* **Response:**
+```json
+{
+  "message": "Schedule deleted successfully."
+}
+```
+
+#### Get Schedules by Room
+
+* **Endpoint:** `GET /api/schedules/room/{roomId}`
+* **Description:** Retrieve all schedules for a specific room.
+* **Response:**
+```json
+[
+  {
+    "scheduleId": "abc123",
+    "courseId": "COMS3011A",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "daysOfWeek": "Monday",
+    "startDate": "2024-01-24",
+    "endDate": "2024-06-08"
+  },
+  ...
+]
+```
+
 ## Maintenance API :hammer_and_wrench:
 
 <iframe src="./swagger/maintenance-api.html" width="100%" height="800px"></iframe>
 
 ## Notification API :bell:
 
----
+### Purpose
+
+The Notification API handles the scheduling and delivery of notifications to users, including reminders for upcoming bookings and updates on maintenance requests.
+
+### Endpoints
+
+#### Create Notification
+
+* **Endpoint:** `POST /api/notifications`
+* **Description:** Create a new notification to be sent at a specific time.
+* **Request Body:**
+```json
+{
+  "userId": "Lecturer1923",
+  "type": "booking_reminder",
+  "message": "Reminder: Your booking for Room101 starts in 30 minutes.",
+  "sendAt": "2024-08-19T09:30:00Z"
+}
+```
+* **Response:**
+```json
+{
+  "notificationId": "notif123",
+  "message": "Notification scheduled successfully."
+}
+```
+
+#### Get Notifications for User
+
+* **Endpoint:** `GET /api/notifications/user/{userId}`
+* **Description:** Retrieve all notifications scheduled for a specific user.
+* **Response:**
+```json
+[
+  {
+    "notificationId": "notif123",
+    "type": "booking_reminder",
+    "message": "Reminder: Your booking for Room101 starts in 30 minutes.",
+    "sendAt": "2024-08-19T09:30:00Z"
+  },
+  ...
+]
+```
+
+#### Update Notification
+
+* **Endpoint:** `PUT /api/notifications/{notificationId}`
+* **Description:** Update an existing notification (e.g., change the message or send time).
+* **Request Body:**
+```json
+{
+  "message": "Reminder: Your booking for Room101 starts in 15 minutes.",
+  "sendAt": "2024-08-19T09:45:00Z"
+}
+```
+* **Response:**
+```json
+{
+  "notificationId": "notif123",
+  "message": "Notification updated successfully."
+}
+```
+
+#### Delete Notification
+
+* **Endpoint:** `DELETE /api/notifications/{notificationId}`
+* **Description:** Delete a scheduled notification.
+* **Response:**
+```json
+{
+  "message": "Notification deleted successfully."
+}
+```
+
+#### Send Immediate Notification
+
+* **Endpoint:** `POST /api/notifications/send`
+* **Description:** Send a notification immediately without scheduling.
+* **Request Body:**
+```json
+{
+  "userId": "Lecturer1923",
+  "type": "booking_reminder",
+  "message": "Immediate notification: Your booking for Room101 is starting now."
+}
+```
+* **Response:**
+```json
+{
+  "notificationId": "notif124",
+  "message": "Notification sent successfully."
+}
+```
 
 # Database Schema :floppy_disk:
 
