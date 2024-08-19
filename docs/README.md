@@ -31,8 +31,6 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 ## Planning of Architecture 
 At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
 
-![Users Table](media/UseCaseDiagramUpdated.drawio.png)
-
 The project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
@@ -44,12 +42,17 @@ The technology stack is:
 
 ## Diagrans
 
-The Deployment diagram to illustrate how our website deploys.
+### Use Case Diagram
+The Use case diagram to illustrate basic features.
+![Users Table](media/UseCaseDiagramUpdated.drawio.png)
 
+
+### Deployment Diagram
+The Deployment diagram to illustrate how our website deploys.
 ![Users Table](media/DeploymentDiagram.drawio.png)
 
+### Component Diagram
 The system components can be seen below in the component diagram.
-
 ![Users Table](media/ComponentDiagramSDP.drawio.png)
 
 
