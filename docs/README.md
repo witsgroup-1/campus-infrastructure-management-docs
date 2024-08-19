@@ -24,6 +24,10 @@ Key features include a room booking system that allows users to reserve classroo
 
 While push notifications are a stretch goal, the app’s secure and scalable infrastructure is built to ensure data integrity and availability. The user-friendly dashboard and robust APIs for booking, scheduling, maintenance, notifications, and user management together provide a comprehensive solution for optimizing space utilization on campus.
 
+## Important Links
+Code Repository: https://github.com/witsgroup-1/campus-infrastructure-management
+Documentation Repository: https://github.com/witsgroup-1/campus-infrastructure-management-docs
+Documentation Website: https://witsgroup-1.github.io/campus-infrastructure-management-docs/#/?id=schedule-api-watch
 ---
 
 # Development Process :gear:
