@@ -40,7 +40,7 @@ The project architecture is: Multi-tier architecture
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
 The technology stack is: 
-- Frontend: HTML, CSS ,[]  - (This is good for mobile-first development)
+- Frontend: HTML, CSS , Tailwind  - (This is good for mobile-first development)
 - Backend: Node Js, Express Js 
 - Databases: Firebase, Firebase Firestore 
 
