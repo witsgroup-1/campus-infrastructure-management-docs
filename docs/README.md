@@ -772,6 +772,3 @@ The Client
 - Client’s requests: heat map for booking (stretch goal), ticket system, dark mode, and more filters for choosing rooms, separated documents (i.e. API documentation separate from database documentation).
 
 
-
-
-```
