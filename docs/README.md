@@ -80,18 +80,31 @@ The Mockups based off of the wireframes (but also more refinied)
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
 - Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications. 
 
+
+### Implementation of the key features
+
+The specifications for their respective databases and API endpoints are shown below.
+
+#### Basics of implementing the key features
+- First we will implement the prototype via html, css and tailwind.
+- Then the API's and the Databases will be created and implemented based on their respective specifications.
+- We will create the Js functions to make use of the API calls and link with the database.
+- Create tests around Js functions.
+
+
 ## Integration with Other Systems
 - Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
 - Campus Safety App: Call their API to provide emergency contact information
 
 ## Timelines
--8th -20th Auguast - Plan the software (UI/UX and architecture)
--20th August - 1st Marking
--17th September - 2nd Marking
--01st October - 3rd Marking
--07th October - Group Report and Documentation 
--08-17th October - Demo
--20th October - Individual Reports
+- 8th -20th Auguast - Plan the software (UI/UX and architecture)
+- 20th August - 1st Marking
+- 20th -26th August - begin programming the key features.
+- 17th September - 2nd Marking
+- 01st October - 3rd Marking
+- 07th October - Group Report and Documentation 
+- 08-17th October - Demo
+- 20th October - Individual Reports
 
 ---
 
