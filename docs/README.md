@@ -37,7 +37,14 @@ The project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
-Here is the deployment diagram to illustrate how our website deploys.
+The technology stack is: 
+- Frontend: HTML, CSS ,[]
+- Backend: Node Js, Express Js
+- Databases: Firebase, Firebase Firestore
+
+## Diagrans
+
+The Deployment diagram to illustrate how our website deploys.
 
 ![Users Table](media/DeploymentDiagram.drawio.png)
 
@@ -679,6 +686,7 @@ Branch management guidlines were given to help ensure a lack of mix ups:
 
 - It is better to create your own branch to use for implementing big features.
 - If you want\need to commit broken code then commit to a branch.
+- Make sure your tests pass before deployment.
 - Always pull new updates before you push your new updates.
 - Give your commits meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
 
