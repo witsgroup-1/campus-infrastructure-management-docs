@@ -33,7 +33,7 @@ At the begining of the process we focused on the technology choices, the high-le
 
 ![Users Table](media/UseCaseDiagramUpdated.drawio.png)
 
-The initial project architecture is: Multi-tier architecture
+The project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
@@ -63,6 +63,8 @@ Home
 ![Users Table](media/ChlWireframe1.jpg)
 
 ### Mockups  <!-- {docsify-ignore} -->
+The Mockups based off of the wireframes (but also more refinied)
+
 ![Chloe Mockup 1](media/chlMockup1.png)
 ![Chloe Mockup 2](media/chlMock2.png)
 
@@ -78,19 +80,18 @@ Home
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
 - Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications. 
 
-
 ## Integration with Other Systems
 - Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
 - Campus Safety App: Call their API to provide emergency contact information
 
 ## Timelines
-8th -20th Auguast - Plan the software (UI/UX and architecture)
-20th August - 1st Marking
-17th September - 2nd Marking
-01st October - 3rd Marking
-07th October - Group Report and Documentation 
-08-17th October - Demo
-20th October - Individual Reports
+-8th -20th Auguast - Plan the software (UI/UX and architecture)
+-20th August - 1st Marking
+-17th September - 2nd Marking
+-01st October - 3rd Marking
+-07th October - Group Report and Documentation 
+-08-17th October - Demo
+-20th October - Individual Reports
 
 ---
 
@@ -112,7 +113,6 @@ Home
 ## Schedule API :watch:
 
 <iframe src="./swagger/schedule-api.html" width="100%" height="800px"></iframe>
-
 
 
 
