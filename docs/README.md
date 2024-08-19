@@ -661,7 +661,7 @@ The website deploys via Azure Web app services using Github actions CI/CD pipeli
 ### Version Control
 
 Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc. 
-Brancg management guidlines were given to help ensure a lack of problems:
+Branch management guidlines were given to help ensure a lack of mix ups:
 
 - It is better to create your own branch to use for implementing big features.
 - If you want\need to commit broken code then commit to a branch.
