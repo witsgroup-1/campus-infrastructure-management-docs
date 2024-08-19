@@ -719,13 +719,13 @@ Branch management guidlines were given to help ensure a lack of mix ups:
 ## Meeting Minutes
 
 ### Meeting 1
-Date: 09/08/2024
-Attendance: 
-Mayuri Balakistan(2543986)
-Chloe Dube (2602515)
-Claire Newman (2549861)
-Dineo Chiloane (2563191)
-Busisiwe Vemba(2561620)
+- Date: 09/08/2024
+- Attendance: 
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
 
 - Discussion of rubric/project breakdown
 - Web app must be able to resize to  fit all screens (mobile first aproach)
@@ -738,28 +738,28 @@ Busisiwe Vemba(2561620)
 - Backend: Azure
 - Frontend: Html, css and perhaps bootstrap (to be discussed further).
 
-Questions:
-Only 3rd party providers?
-One database for entire system or each group own database?
+- Questions:
+- Only 3rd party providers?
+- One database for entire system or each group own database?
 
-Plan of action
-Design website
-Configure CI/CD pipeline and testing
-Plan API endpoints, schemas
-Deploy Hello World website
+- Plan of action
+- Design website
+- Configure CI/CD pipeline and testing
+- Plan API endpoints, schemas
+- Deploy Hello World website
 
 
 
 ### Meeting 2 
-Date: 13/08/2024
-Attendees:
-Mayuri Balakistan(2543986)
-Chloe Dube (2602515)
-Claire Newman ()
-Dineo Chiloane (2563191)
-Busisiwe Vemba(2561620)
-Menzi Shazi(2453308)
-The Client 
+- Date: 13/08/2024
+- Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman ()
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+- The Client 
 
 - Issues with website deployment
 - Must focus on API specifications, designs and database schemas.
