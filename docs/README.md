@@ -73,10 +73,10 @@ Home
 
 
 ## Key Features
-- Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors can book tutorial rooms and users can book them as well.
+- Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors and students can book tutorial rooms.
 - Schedule Integration: Lecturers can integrate there schedules to make automatic bookings for there classes.
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
-- Notifications: Users except staff can recieve notifications whilst staff can recieve maintenence notifications. 
+- Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications. 
 
 
 ## Integration with Other Systems
@@ -646,7 +646,7 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 ---
 ## Test Plan
 
-Jest was used to do testing. The first tests were...
+Jest was used to do testing. 
 
 
 
@@ -654,6 +654,23 @@ Jest was used to do testing. The first tests were...
 # Deployment and Integration :rocket:
 
 ---
+## Deployment
+
+The website deploys via Azure Web app services using Github actions CI/CD pipeline. 
+
+### Version Control
+
+Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc. 
+Brancg management guidlines were given to help ensure a lack of problems:
+
+- It is better to create your own branch to use for implementing big features.
+- If you want\need to commit broken code then commit to a branch.
+- Always pull new updates before you push your new updates.
+- Give your commits meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
+
+
+
+
 
 # Challenges and Solutions :thinking:
 
