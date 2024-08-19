@@ -659,7 +659,8 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 ---
 ## Test Plan
 
-Jest was used to do testing. 
+- Jest was used to do testing.
+- Tests will be made for functions after they are coded so we can test them before deployment.
 
 
 
