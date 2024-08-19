@@ -1,0 +1,210 @@
+openapi: 3.0.0
+info:
+  title: Schedule API
+  description: The Schedule API integrates with academic schedules and allows users (primarily lecturers) to create, update, and retrieve schedules.
+  version: 1.0.0
+paths:
+  /api/schedules:
+    post:
+      summary: Create a new schedule for a classroom or venue.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roomId:
+                  type: string
+                  example: "Room101"
+                courseId:
+                  type: string
+                  example: "COMS3011A"
+                startTime:
+                  type: string
+                  example: "10:00"
+                endTime:
+                  type: string
+                  example: "12:00"
+                daysOfWeek:
+                  type: string
+                  example: "Monday"
+                startDate:
+                  type: string
+                  format: date
+                  example: "2024-01-24"
+                endDate:
+                  type: string
+                  format: date
+                  example: "2024-06-08"
+                recurring:
+                  type: boolean
+                  example: true
+                userId:
+                  type: string
+                  example: "Lecturer1923"
+      responses:
+        '200':
+          description: Schedule created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  scheduleId:
+                    type: string
+                    example: "abc123"
+                  message:
+                    type: string
+                    example: "Schedule created successfully."
+
+  /api/schedules/{scheduleId}:
+    get:
+      summary: Retrieve a specific schedule by its ID.
+      parameters:
+        - name: scheduleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Schedule retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  scheduleId:
+                    type: string
+                    example: "abc123"
+                  roomId:
+                    type: string
+                    example: "Room101"
+                  courseId:
+                    type: string
+                    example: "COMS3011A"
+                  startTime:
+                    type: string
+                    example: "10:00"
+                  endTime:
+                    type: string
+                    example: "12:00"
+                  daysOfWeek:
+                    type: string
+                    example: "Monday"
+                  startDate:
+                    type: string
+                    format: date
+                    example: "2024-01-24"
+                  endDate:
+                    type: string
+                    format: date
+                    example: "2024-06-08"
+                  recurring:
+                    type: boolean
+                    example: true
+                  userId:
+                    type: string
+                    example: "Lecturer1923"
+    put:
+      summary: Update an existing schedule.
+      parameters:
+        - name: scheduleId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                startTime:
+                  type: string
+                  example: "11:00"
+                endTime:
+                  type: string
+                  example: "13:00"
+                daysOfWeek:
+                  type: string
+                  example: "Wednesday"
+      responses:
+        '200':
+          description: Schedule updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  scheduleId:
+                    type: string
+                    example: "abc123"
+                  message:
+                    type: string
+                    example: "Schedule updated successfully."
+
+    delete:
+      summary: Delete a specific schedule by its ID.
+      parameters:
+        - name: scheduleId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Schedule deleted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Schedule deleted successfully."
+
+  /api/schedules/room/{roomId}:
+    get:
+      summary: Retrieve all schedules for a specific room.
+      parameters:
+        - name: roomId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Schedules retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    scheduleId:
+                      type: string
+                      example: "abc123"
+                    courseId:
+                      type: string
+                      example: "COMS3011A"
+                    startTime:
+                      type: string
+                      example: "10:00"
+                    endTime:
+                      type: string
+                      example: "12:00"
+                    daysOfWeek:
+                      type: string
+                      example: "Monday"
+                    startDate:
+                      type: string
+                      format: date
+                      example: "2024-01-24"
+                    endDate:
+                      type: string
+                      format: date
+                      example: "2024-06-08"

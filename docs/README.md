@@ -111,108 +111,10 @@ Home
 
 ## Schedule API :watch:
 
-### Purpose  <!-- {docsify-ignore} -->
+<iframe src="./swagger/schedule-api.html" width="100%" height="800px"></iframe>
 
-The Schedule API integrates with academic schedules and allows users (primarily lecturers) to create, update, and retrieve schedules.
 
-### Endpoints  <!-- {docsify-ignore} -->
 
-#### Create Schedule  <!-- {docsify-ignore} -->
-
-* **Endpoint:** `POST /api/schedules`
-* **Description:** Create a new schedule for a classroom or venue.
-* **Request Body:**
-```json
-{
-  "roomId": "Room101",
-  "courseId": "COMS3011A",
-  "startTime": "10:00",
-  "endTime": "12:00",
-  "daysOfWeek": "Monday",
-  "startDate": "2024-01-24",
-  "endDate": "2024-06-08",
-  "recurring": true,
-  "userId": "Lecturer1923"
-}
-```
-* **Response:**
-```json
-{
-  "scheduleId": "abc123",
-  "message": "Schedule created successfully."
-}
-```
-
-#### Get Schedule  <!-- {docsify-ignore} -->
-
-* **Endpoint:** `GET /api/schedules/{scheduleId}`
-* **Description:** Retrieve a specific schedule by its ID.
-* **Response:**
-```json
-{
-  "scheduleId": "abc123",
-  "roomId": "Room101",
-  "courseId": "COMS3011A",
-  "startTime": "10:00",
-  "endTime": "12:00",
-  "daysOfWeek": "Monday",
-  "startDate": "2024-01-24",
-  "endDate": "2024-06-08",
-  "recurring": true,
-  "userId": "Lecturer1923"
-}
-```
-
-#### Update Schedule  <!-- {docsify-ignore} -->
-
-* **Endpoint:** `PUT /api/schedules/{scheduleId}`
-* **Description:** Update an existing schedule.
-* **Request Body:**
-```json
-{
-  "startTime": "11:00",
-  "endTime": "13:00",
-  "daysOfWeek": "Wednesday"
-}
-```
-* **Response:**
-```json
-{
-  "scheduleId": "abc123",
-  "message": "Schedule updated successfully."
-}
-```
-
-#### Delete Schedule  <!-- {docsify-ignore} -->
-
-* **Endpoint:** `DELETE /api/schedules/{scheduleId}`
-* **Description:** Delete a specific schedule by its ID.
-* **Response:**
-```json
-{
-  "message": "Schedule deleted successfully."
-}
-```
-
-#### Get Schedules by Room  <!-- {docsify-ignore} -->
-
-* **Endpoint:** `GET /api/schedules/room/{roomId}`
-* **Description:** Retrieve all schedules for a specific room.
-* **Response:**
-```json
-[
-  {
-    "scheduleId": "abc123",
-    "courseId": "COMS3011A",
-    "startTime": "10:00",
-    "endTime": "12:00",
-    "daysOfWeek": "Monday",
-    "startDate": "2024-01-24",
-    "endDate": "2024-06-08"
-  },
-  ...
-]
-```
 
 ## Maintenance API :hammer_and_wrench:
 
@@ -313,6 +215,7 @@ The Notification API handles the scheduling and delivery of notifications to use
   "message": "Notification sent successfully."
 }
 ```
+
 
 # Database Schema :floppy_disk:
 

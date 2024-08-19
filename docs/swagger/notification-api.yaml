@@ -1,0 +1,170 @@
+openapi: 3.0.0
+info:
+  title: Notification API
+  description: API for scheduling and delivering notifications, including reminders for upcoming bookings and updates on maintenance requests.
+  version: 1.0.0
+
+paths:
+  /api/notifications:
+    post:
+      summary: Create a new notification to be sent at a specific time.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Notification'
+      responses:
+        '200':
+          description: Notification scheduled successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationResponse'
+
+  /api/notifications/user/{userId}:
+    get:
+      summary: Retrieve all notifications scheduled for a specific user.
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of notifications retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Notification'
+
+  /api/notifications/{notificationId}:
+    put:
+      summary: Update an existing notification.
+      parameters:
+        - in: path
+          name: notificationId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotificationUpdate'
+      responses:
+        '200':
+          description: Notification updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationResponse'
+
+    delete:
+      summary: Delete a scheduled notification.
+      parameters:
+        - in: path
+          name: notificationId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Notification deleted successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+  /api/notifications/send:
+    post:
+      summary: Send a notification immediately without scheduling.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImmediateNotification'
+      responses:
+        '200':
+          description: Notification sent successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationResponse'
+
+components:
+  schemas:
+    Notification:
+      type: object
+      properties:
+        userId:
+          type: string
+          description: Unique identifier for the user
+          example: "Lecturer1923"
+        type:
+          type: string
+          description: Type of notification (e.g., "booking_reminder")
+          example: "booking_reminder"
+        message:
+          type: string
+          description: The notification message
+          example: "Reminder: Your booking for Room101 starts in 30 minutes."
+        sendAt:
+          type: string
+          format: date-time
+          description: Date and time when the notification should be sent
+          example: "2024-08-19T09:30:00Z"
+
+    NotificationUpdate:
+      type: object
+      properties:
+        message:
+          type: string
+          description: The updated notification message
+          example: "Reminder: Your booking for Room101 starts in 15 minutes."
+        sendAt:
+          type: string
+          format: date-time
+          description: Updated date and time for sending the notification
+          example: "2024-08-19T09:45:00Z"
+
+    ImmediateNotification:
+      type: object
+      properties:
+        userId:
+          type: string
+          description: Unique identifier for the user
+          example: "Lecturer1923"
+        type:
+          type: string
+          description: Type of notification (e.g., "booking_reminder")
+          example: "booking_reminder"
+        message:
+          type: string
+          description: The notification message
+          example: "Immediate notification: Your booking for Room101 is starting now."
+
+    NotificationResponse:
+      type: object
+      properties:
+        notificationId:
+          type: string
+          description: Unique identifier for the notification
+          example: "notif123"
+        message:
+          type: string
+          description: Confirmation message
+          example: "Notification scheduled successfully."
+
+    SuccessResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Confirmation message
+          example: "Operation completed successfully."
