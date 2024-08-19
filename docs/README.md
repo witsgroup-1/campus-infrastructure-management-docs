@@ -36,9 +36,10 @@ The project architecture is: Multi-tier architecture
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
 The technology stack is: 
-- Frontend: HTML, CSS ,[]
-- Backend: Node Js, Express Js
-- Databases: Firebase, Firebase Firestore
+- Frontend: HTML, CSS ,[]  - (This is good for mobile-first development)
+- Backend: Node Js, Express Js 
+- Databases: Firebase, Firebase Firestore 
+
 
 ## Diagrans
 
@@ -57,6 +58,8 @@ The system components can be seen below in the component diagram.
 
 
 ## UI/UX Design Process
+
+We foucsed on the mobile design first as our website application is more geared to the mobile first aproach.
 
 ### Wireframes  <!-- {docsify-ignore} -->
 
@@ -106,10 +109,11 @@ The specifications for their respective databases and API endpoints are shown be
 - Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
 - Campus Safety App: Call their API to provide emergency contact information
 
+
 ## Timelines
 - 8th -20th Auguast - Plan the software (UI/UX and architecture)
 - 20th August - 1st Marking
-- 20th -26th August - begin programming the key features.
+- 20th -26th August - begin programming the key features - DB, API, Frontend.
 - 17th September - 2nd Marking
 - 01st October - 3rd Marking
 - 07th October - Group Report and Documentation 
