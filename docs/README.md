@@ -89,9 +89,17 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ### Prototypes  <!-- {docsify-ignore} -->
 
+### Details on Frontend Components
 
+- Fonts:
+- Main Colours:
+- Colour Tints:
+  
+Button Specification:
+- Primary Button:
+- Secondary Button:
 
-## Key Features
+## Key Features Overview
 - Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors and students can book tutorial rooms.
 - Schedule Integration: Lecturers can integrate there schedules to make automatic bookings for there classes.
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
