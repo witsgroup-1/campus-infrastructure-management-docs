@@ -692,6 +692,12 @@ The website deploys via Azure Web app services using Github actions CI/CD pipeli
 
 ### Version Control
 
+When it comes to version control we need to define some things first:
+- Product: A product is what we can offer to the user to fufill their requirments.
+- Product feature: A products specific characteristics or functions that are important to the customer - so desin and functionality are included.
+
+Ref https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
+
 Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc. 
 Branch management guidlines were given to help ensure a lack of mix ups:
 
@@ -710,8 +716,7 @@ The branch names are set as:
 - May
 - Menzi
  
-
-
+  
 # Challenges and Solutions :thinking:
 
 ---
