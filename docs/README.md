@@ -695,14 +695,21 @@ The website deploys via Azure Web app services using Github actions CI/CD pipeli
 Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc. 
 Branch management guidlines were given to help ensure a lack of mix ups:
 
-- It is better to create your own branch to use for implementing big features.
-- If you want\need to commit broken code then commit to a branch.
-- Make sure your tests pass before deployment.
-- Always pull new updates before you push your new updates.
-- Give your commits meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
+- Each collaborator must commit to their own respective branch (labled by their username) or the "Bugs-and-Problems" branch for any problematic code.
+- Always pull new updates before you push your new updates to you respective branches.
+- Make sure your tests pass before commits.
+- Give your commits to your branch meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
 
-
-
+The branch names are set as:
+- main
+- Bugs-and-Problems
+- Chloe
+- Busi
+- Dineo
+- Lunar
+- May
+- Menzi
+ 
 
 
 # Challenges and Solutions :thinking:
