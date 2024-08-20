@@ -118,6 +118,10 @@ The specifications for their respective databases and API endpoints are shown be
 
 ## Details of Features
 ### Login
+
+- whitelist: certain emails that are not wits affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
+
+
 ### Users
 ### Book Venues
 ### Schedule Integration
