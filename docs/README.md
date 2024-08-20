@@ -771,4 +771,24 @@ Branch management guidlines were given to help ensure a lack of mix ups:
 - Users: staff, students, admin. Use of wits email and whitelist.
 - Client’s requests: heat map for booking (stretch goal), ticket system, dark mode, and more filters for choosing rooms, separated documents (i.e. API documentation separate from database documentation).
 
+### Meeting 3
+- Date: 18 August 2024
+- Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+- Resolved issue with app deployment.
+- In progress of completing API specifications and database schemas.
+- Decided on tech stack: 
+-	Backend: Azure, JavaScript, Node.js
+- 	Frontend: HTML, CSS, Tailwind
+-	Database: Firebase
+- Decided which other APIs to make use of:
+-	Events API
+-   Campus Security API
+- Issues to keep an eye on moving forward: working around other subsystems
 
