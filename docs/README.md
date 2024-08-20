@@ -116,19 +116,6 @@ The specifications for their respective databases and API endpoints are shown be
 - We will create the Js functions to make use of the API calls and link with the database.
 - Create tests around Js functions.
 
-## Details of Features
-### Login
-
-- whitelist: certain emails that are not wits affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
-
-
-### Users
-### Book Venues
-### Schedule Integration
-### Maintenence Reports
-### Notifications
-
-
 ## Integration with Other Systems
 - Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
 - Campus Safety App: Call their API to provide emergency contact information
@@ -150,6 +137,22 @@ The specifications for their respective databases and API endpoints are shown be
 # Component Details :wrench:
 
 ---
+
+## Details of Features
+### Login
+
+- whitelist: certain emails that are not wits affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
+
+
+### Users
+### Book Venues
+### Schedule Integration
+### Maintenence Reports
+### Notifications
+
+
+
+
 
 # API Specifications :memo:
 
