@@ -115,9 +115,10 @@ The specifications for their respective databases and API endpoints are shown be
 
 
 ## Timelines
-- 8th -20th Auguast - Plan the software (UI/UX and architecture)
+- 8th -20th Auguast - Sprint 1 -Plan the software (UI/UX and architecture)
 - 20th August - 1st Marking
-- 20th -26th August - begin programming the key features - DB, API, Frontend.
+- 20th -27th August - Sprint 2 - begin programming the key features - DB, API, Frontend.
+- 27th August -3rd September - Sprint 3 -
 - 17th September - 2nd Marking
 - 01st October - 3rd Marking
 - 07th October - Group Report and Documentation 
