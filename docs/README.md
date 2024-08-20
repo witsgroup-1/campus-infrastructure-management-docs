@@ -110,11 +110,19 @@ Button Specification:
 
 The specifications for their respective databases and API endpoints are shown below.
 
-#### Basics of implementing the key features
+### Basics of implementing the key features
 - First we will implement the prototype via html, css and tailwind.
 - Then the API's and the Databases will be created and implemented based on their respective specifications.
 - We will create the Js functions to make use of the API calls and link with the database.
 - Create tests around Js functions.
+
+## Details of Features
+### Login
+### Users
+### Book Venues
+### Schedule Integration
+### Maintenence Reports
+### Notifications
 
 
 ## Integration with Other Systems
