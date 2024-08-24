@@ -105,10 +105,9 @@ Button Specification:
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
 - Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications. 
 
+### Implementation of the key features Overview
 
-### Implementation of the key features
-
-The specifications for their respective databases and API endpoints are shown below.
+The specifications for their respective databases and API endpoints are shown further below.
 
 ### Basics of implementing the key features
 - First we will implement the prototype via html, css and tailwind.
@@ -140,14 +139,31 @@ The specifications for their respective databases and API endpoints are shown be
 
 ## Details of Features
 ### Login
-
-- whitelist: certain emails that are not wits affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
-
+- authentication: 
+- whitelist: certain emails that are not The University of Witwatersrand affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
+- required information:
 
 ### Users
+- Student: Permisions -> 
+- Student (tutor): Permisions -> 
+- Lecturer: Permisions -> 
+- Staff: Permisions -> 
+
 ### Book Venues
+#### venue Types
+- Lecture Halls
+- Tutorial Rooms
+- Labratories
+- Computer Labratories
+- Confrence rooms
+- ...
+
 ### Schedule Integration
+
+
 ### Maintenence Reports
+
+
 ### Notifications
 
 
@@ -739,7 +755,14 @@ The branch names are set as:
 - Lunar
 - May
 - Menzi
- 
+
+
+## Integration
+- Transport: silence so far
+- Events Management: Resonse but they need until coming friday
+- Saftey: No response as of yet???
+- Dining: ??? do not know yet
+
   
 # Challenges and Solutions :thinking:
 
