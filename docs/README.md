@@ -146,7 +146,7 @@ The specifications for their respective databases and API endpoints are shown fu
 ### Users
 - Student: Permisions -> 
 - Student (tutor): Permisions -> 
-- Lecturer: Permisions -> 
+- Staff (Lecturer): Permisions -> 
 - Staff: Permisions -> 
 
 ### Book Venues
