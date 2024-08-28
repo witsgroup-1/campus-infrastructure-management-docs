@@ -947,7 +947,7 @@ Attendees:
 - Menzi Shazi(2453308)
 - Client
 
-- Minutes with client
+Minutes with client
 - The client likes the new design and is happy with integration progress.
 - Discussed API’s:
 - What to do when other API’s fail.
