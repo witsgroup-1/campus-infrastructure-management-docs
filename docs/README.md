@@ -120,11 +120,16 @@ The Mockups based off of the wireframes (but also more refinied)
   - Blue: #003B5C
   - Gold: #917248
 - Colour Tints:
-
+  - Lighter blue when hovering: #01517d
+  - Darker gold when hovering: #806541
+  
 Button Specification:
+- Primary Button: Gold
+- Secondary Button: Blue
 
-- Primary Button:
-- Secondary Button:
+Background Specification:
+- Blue for headers
+- Otherwise white(#ffffff)
 
 ## Key Features Overview
 
