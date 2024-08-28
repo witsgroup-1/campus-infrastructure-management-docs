@@ -94,15 +94,22 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ### Desktop mockups
 
-#### Use case: User books meal
+#### Use case: User books a venue
 
-![Frame 1](media/bookvenue/Frame1.png)
-![Frame 2](media/bookvenue/Frame2.png)
-![Frame 3](media/bookvenue/Frame3.png)
-![Frame 4](media/bookvenue/Frame4.png)
-![Frame 5](media/bookvenue/Frame5.png)
-![Frame 6](media/bookvenue/Frame6.png)
-![Frame 7](media/bookvenue/Frame7.png)
+> Frame 1:
+> ![Frame 1](media/bookvenue/Frame1.png)
+> Frame 2:
+> ![Frame 2](media/bookvenue/Frame2.png)
+> Frame 3:
+> ![Frame 3](media/bookvenue/Frame3.png)
+> Frame 4:
+> ![Frame 4](media/bookvenue/Frame4.png)
+> Frame 5:
+> ![Frame 5](media/bookvenue/Frame5.png)
+> Frame 6:
+> ![Frame 6](media/bookvenue/Frame6.png)
+> Frame 7:
+> ![Frame 7](media/bookvenue/Frame7.png)
 
 ### Prototypes <!-- {docsify-ignore} -->
 
