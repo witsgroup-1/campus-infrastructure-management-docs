@@ -933,3 +933,31 @@ Ten-minute intermission.
 - Settled on 3 user dashboards.
 - Created a user story for Login and Sign up, we will be creating the mobile and desktop versions of the UI for these elements.
   End of meeting.
+
+### Meeting 5
+
+Date: 28 August 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+- Client
+
+- Minutes with client
+- The client likes the new design and is happy with integration progress.
+- Discussed API’s:
+- What to do when other API’s fail.
+- For example, hard code directions/security details. 
+- Don’t integrate for integrations sake.
+- Why integrate?- for relevant, update information.
+
+- Discussed what to do moving forward:
+- Work on making API’s
+- Create databases.
+- Create more designs.
+- Start with frontend.
+- Hopefully, progress will speed up over break.
