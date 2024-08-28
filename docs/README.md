@@ -766,7 +766,7 @@ When it comes to version control we need to define some things first:
 - Product: A product is what we can offer to the user to fufill their requirments.
 - Product feature: A products specific characteristics or functions that are important to the customer - so desin and functionality are included.
 
-Ref https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
+Ref: https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
 
 Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc.
 Branch management guidlines were given to help ensure a lack of mix ups:
@@ -790,12 +790,13 @@ The branch names are set as:
 
 ## Integration
 
-- Transport: silence so far
+- Transport: will get docs soon.
 - Events Management: Resonse but they need until coming friday
 - Saftey: No response as of yet???
-- Dining: ??? do not know yet
+- Dining: They will consider it
 
 # Challenges and Solutions :thinking:
+- Getting the other groups to talk to us at the begining.
 
 ---
 
