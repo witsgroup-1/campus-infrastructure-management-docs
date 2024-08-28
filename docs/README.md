@@ -1,6 +1,6 @@
 # Welcome to Campus Infrastructure Management Docs! :paperclips:
-<!-- https://witsgroup-1.github.io/campus-infrastructure-management-docs/ -->
----
+
+## <!-- https://witsgroup-1.github.io/campus-infrastructure-management-docs/ -->
 
 <p style="text-align: center;">
     <img src="media/docscover.svg" alt="Users Table" width="500" height="auto"/>
@@ -25,47 +25,51 @@ Key features include a room booking system that allows users to reserve classroo
 While push notifications are a stretch goal, the app’s secure and scalable infrastructure is built to ensure data integrity and availability. The user-friendly dashboard and robust APIs for booking, scheduling, maintenance, notifications, and user management together provide a comprehensive solution for optimizing space utilization on campus.
 
 ## Important Links
+
 - Code Repository: https://github.com/witsgroup-1/campus-infrastructure-management
 - Documentation Repository: https://github.com/witsgroup-1/campus-infrastructure-management-docs
 - Documentation Website: https://witsgroup-1.github.io/campus-infrastructure-management-docs/#/?id=welcome-to-campus-infrastructure-management-docs-paperclips
+
 ---
 
 # Development Process :gear:
 
-## Planning of Architecture 
+## Planning of Architecture
+
 At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
 
 The project architecture is: Multi-tier architecture
 
 We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
 
-The technology stack is: 
-- Frontend: HTML, CSS , Tailwind  - (This is good for mobile-first development)
-- Backend: Node Js, Express Js 
-- Databases: Firebase, Firebase Firestore 
+The technology stack is:
 
+- Frontend: HTML, CSS , Tailwind - (This is good for mobile-first development)
+- Backend: Node Js, Express Js
+- Databases: Firebase, Firebase Firestore
 
 ## Diagrans
 
 ### Use Case Diagram
+
 The Use case diagram to illustrate basic features.
 ![Users Table](media/UseCaseDiagramUpdated.drawio.png)
 
-
 ### Deployment Diagram
+
 The Deployment diagram to illustrate how our website deploys.
 ![Users Table](media/DeploymentDiagram.drawio.png)
 
 ### Component Diagram
+
 The system components can be seen below in the component diagram.
 ![Users Table](media/ComponentDiagramSDP.drawio.png)
-
 
 ## UI/UX Design Process
 
 We foucsed on the mobile design first as our website application is more geared to the mobile first aproach.
 
-### Wireframes  <!-- {docsify-ignore} -->
+### Wireframes <!-- {docsify-ignore} -->
 
 We did a couple of wireframes in order to perfect our design.
 
@@ -79,7 +83,8 @@ Home
 ![Users Table](media/ClaWireframe1.jpg)
 ![Users Table](media/ChlWireframe1.jpg)
 
-### Mockups  <!-- {docsify-ignore} -->
+### Mockups <!-- {docsify-ignore} -->
+
 The Mockups based off of the wireframes (but also more refinied)
 
 ![Chloe Mockup 1](media/chlMockup1.png)
@@ -87,7 +92,26 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ![May Mockup](media/mockup.png)
 
-### Prototypes  <!-- {docsify-ignore} -->
+### Desktop mockups
+
+#### Use case: User books a venue
+
+> Frame 1:
+> ![Frame 1](media/bookvenue/Frame1.png)
+> Frame 2:
+> ![Frame 2](media/bookvenue/Frame2.png)
+> Frame 3:
+> ![Frame 3](media/bookvenue/Frame3.png)
+> Frame 4:
+> ![Frame 4](media/bookvenue/Frame4.png)
+> Frame 5:
+> ![Frame 5](media/bookvenue/Frame5.png)
+> Frame 6:
+> ![Frame 6](media/bookvenue/Frame6.png)
+> Frame 7:
+> ![Frame 7](media/bookvenue/Frame7.png)
+
+### Prototypes <!-- {docsify-ignore} -->
 
 ### Details on Frontend Components
 
@@ -96,46 +120,45 @@ The Mockups based off of the wireframes (but also more refinied)
   - Blue: #003B5C
   - Gold: #917248
 - Colour Tints:
-  - Lighter blue when hovering: #01517d
-  - Darker gold when hovering: #806541
-  
-Button Specification:
-- Primary Button: Gold
-- Secondary Button: Blue
 
-Background Specification:
-- Blue for headers
+Button Specification:
+
+- Primary Button:
+- Secondary Button:
 
 ## Key Features Overview
+
 - Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors and students can book tutorial rooms.
 - Schedule Integration: Lecturers can integrate there schedules to make automatic bookings for there classes.
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
-- Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications. 
+- Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications.
 
+### Implementation of the key features Overview
 
-### Implementation of the key features
-
-The specifications for their respective databases and API endpoints are shown below.
+The specifications for their respective databases and API endpoints are shown further below.
 
 ### Basics of implementing the key features
+
 - First we will implement the prototype via html, css and tailwind.
 - Then the API's and the Databases will be created and implemented based on their respective specifications.
 - We will create the Js functions to make use of the API calls and link with the database.
 - Create tests around Js functions.
 
 ## Integration with Other Systems
-- Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
+
+- Transport App: Map API for navigation to venues.
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity - to make sure we are synchronised
 - Campus Safety App: Call their API to provide emergency contact information
 
-
 ## Timelines
+
 - 8th -20th Auguast - Sprint 1 -Plan the software (UI/UX and architecture)
 - 20th August - 1st Marking
 - 20th -27th August - Sprint 2 - begin programming the key features - DB, API, Frontend.
-- 27th August -3rd September - Sprint 3 -
+- 27th August -3rd September - Sprint 3 - finalise APIs, finalise integration???, Create frontend pages(user dashboard, other pages)
 - 17th September - 2nd Marking
 - 01st October - 3rd Marking
-- 07th October - Group Report and Documentation 
+- 07th October - Group Report and Documentation
 - 08-17th October - Demo
 - 20th October - Individual Reports
 
@@ -146,20 +169,36 @@ The specifications for their respective databases and API endpoints are shown be
 ---
 
 ## Details of Features
+
 ### Login
 
-- whitelist: certain emails that are not wits affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers 
-
+- authentication:
+- whitelist: certain emails that are not The University of Witwatersrand affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers
+- required information:
 
 ### Users
+
+- Student: Permisions ->
+- Student (tutor): Permisions ->
+- Staff (Lecturer): Permisions ->
+- Staff: Permisions ->
+
 ### Book Venues
+
+#### venue Types
+
+- Lecture Halls
+- Tutorial Rooms
+- Labratories
+- Computer Labratories
+- Confrence rooms
+- ...
+
 ### Schedule Integration
+
 ### Maintenence Reports
+
 ### Notifications
-
-
-
-
 
 # API Specifications :memo:
 
@@ -171,30 +210,28 @@ The specifications for their respective databases and API endpoints are shown be
 
 <iframe src="./swagger/booking-api.html" width="100%" height="800px"></iframe>
 
-
 ## Schedule API :watch:
 
 <iframe src="./swagger/schedule-api.html" width="100%" height="800px"></iframe>
-
-
 
 ## Maintenance API :hammer_and_wrench:
 
 <iframe src="./swagger/maintenance-api.html" width="100%" height="800px"></iframe>
 
-## Notification API :bell: 
+## Notification API :bell:
 
-### Purpose  <!-- {docsify-ignore} -->
+### Purpose <!-- {docsify-ignore} -->
 
 The Notification API handles the scheduling and delivery of notifications to users, including reminders for upcoming bookings and updates on maintenance requests.
 
-### Endpoints  <!-- {docsify-ignore} -->
+### Endpoints <!-- {docsify-ignore} -->
 
-#### Create Notification  <!-- {docsify-ignore} -->
+#### Create Notification <!-- {docsify-ignore} -->
 
-* **Endpoint:** `POST /api/notifications`
-* **Description:** Create a new notification to be sent at a specific time.
-* **Request Body:**
+- **Endpoint:** `POST /api/notifications`
+- **Description:** Create a new notification to be sent at a specific time.
+- **Request Body:**
+
 ```json
 {
   "userId": "Lecturer1923",
@@ -203,7 +240,9 @@ The Notification API handles the scheduling and delivery of notifications to use
   "sendAt": "2024-08-19T09:30:00Z"
 }
 ```
-* **Response:**
+
+- **Response:**
+
 ```json
 {
   "notificationId": "notif123",
@@ -211,11 +250,12 @@ The Notification API handles the scheduling and delivery of notifications to use
 }
 ```
 
-#### Get Notifications for User  <!-- {docsify-ignore} -->
+#### Get Notifications for User <!-- {docsify-ignore} -->
 
-* **Endpoint:** `GET /api/notifications/user/{userId}`
-* **Description:** Retrieve all notifications scheduled for a specific user.
-* **Response:**
+- **Endpoint:** `GET /api/notifications/user/{userId}`
+- **Description:** Retrieve all notifications scheduled for a specific user.
+- **Response:**
+
 ```json
 [
   {
@@ -228,18 +268,21 @@ The Notification API handles the scheduling and delivery of notifications to use
 ]
 ```
 
-#### Update Notification  <!-- {docsify-ignore} -->
+#### Update Notification <!-- {docsify-ignore} -->
 
-* **Endpoint:** `PUT /api/notifications/{notificationId}`
-* **Description:** Update an existing notification (e.g., change the message or send time).
-* **Request Body:**
+- **Endpoint:** `PUT /api/notifications/{notificationId}`
+- **Description:** Update an existing notification (e.g., change the message or send time).
+- **Request Body:**
+
 ```json
 {
   "message": "Reminder: Your booking for Room101 starts in 15 minutes.",
   "sendAt": "2024-08-19T09:45:00Z"
 }
 ```
-* **Response:**
+
+- **Response:**
+
 ```json
 {
   "notificationId": "notif123",
@@ -247,22 +290,24 @@ The Notification API handles the scheduling and delivery of notifications to use
 }
 ```
 
-#### Delete Notification  <!-- {docsify-ignore} -->
+#### Delete Notification <!-- {docsify-ignore} -->
 
-* **Endpoint:** `DELETE /api/notifications/{notificationId}`
-* **Description:** Delete a scheduled notification.
-* **Response:**
+- **Endpoint:** `DELETE /api/notifications/{notificationId}`
+- **Description:** Delete a scheduled notification.
+- **Response:**
+
 ```json
 {
   "message": "Notification deleted successfully."
 }
 ```
 
-#### Send Immediate Notification  <!-- {docsify-ignore} -->
+#### Send Immediate Notification <!-- {docsify-ignore} -->
 
-* **Endpoint:** `POST /api/notifications/send`
-* **Description:** Send a notification immediately without scheduling.
-* **Request Body:**
+- **Endpoint:** `POST /api/notifications/send`
+- **Description:** Send a notification immediately without scheduling.
+- **Request Body:**
+
 ```json
 {
   "userId": "Lecturer1923",
@@ -270,14 +315,15 @@ The Notification API handles the scheduling and delivery of notifications to use
   "message": "Immediate notification: Your booking for Room101 is starting now."
 }
 ```
-* **Response:**
+
+- **Response:**
+
 ```json
 {
   "notificationId": "notif124",
   "message": "Notification sent successfully."
 }
 ```
-
 
 # Database Schema :floppy_disk:
 
@@ -300,11 +346,11 @@ For our project, we use a **Hierarchical Model**, which organizes data in a “t
 - `faculty`: User’s faculty or department (string)
 - `is_tutor`: Indicates if the user is a tutor (boolean)
 - `is_lecturer`: Indicates if the user is a lecturer (boolean)
-- `{bookings}`: Contains all the bookings that the user made in the form of documents(collection).
--`{courses}`: Contains all the user's courses in the form of documents(collection).
+- `{bookings}`: Contains all the bookings that the user made in the form of documents(collection). -`{courses}`: Contains all the user's courses in the form of documents(collection).
 
 **Example Document:** <br>
 In the example below, the `staff` user should be able to make bookings for lecture halls, meeting rooms, tutorial rooms, and exam venues since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to do so.
+
 > ```json
 > {
 >   "name": "John",
@@ -322,7 +368,6 @@ In the example below, the `staff` user should be able to make bookings for lectu
 **Example Document:** <br>
 In the following example, the student user should be able to make bookings for tutorial rooms since the `is_tutor` field is set to `true`.
 
-
 > ```json
 > {
 >   "name": "Mitsy",
@@ -337,10 +382,8 @@ In the following example, the student user should be able to make bookings for t
 > }
 > ```
 
-
 **Example Document:** <br>
-In the following example, the student user should be able to make bookings for study rooms only since the `is_tutor` field is set to `false`. 
-
+In the following example, the student user should be able to make bookings for study rooms only since the `is_tutor` field is set to `false`.
 
 > ```json
 > {
@@ -369,15 +412,14 @@ In the following example, the student user should be able to make bookings for s
 - `start_time`: The start time of the booking (timestamp)
 - `end_time`: The end time of the booking (timestamp)
 
-
 **Example Document**
 
 > ```json
 > {
->   "venue_id":"DcGxOJax93od7C4B8VQ8",
+>   "venue_id": "DcGxOJax93od7C4B8VQ8",
 >   "name": "wss1",
 >   "start_time": "2024-10-19T10:15:00Z",
->   "end_time": "2024-10-19T11:00:00Z",
+>   "end_time": "2024-10-19T11:00:00Z"
 > }
 > ```
 
@@ -434,7 +476,7 @@ In the following example, the student user should be able to make bookings for s
 {
   "bookingId": "1234",
   "venueId": "0001",
-  "roomID":"100",
+  "roomID": "100",
   "userId": "1000",
   "start_time": "2024-08-14T09:00:00Z",
   "end_time": "2024-08-14T10:00:00Z",
@@ -456,16 +498,13 @@ In the following example, the student user should be able to make bookings for s
 - **`venueId`** (String, **Unique Identifier**): A unique identifier for each venue.
 - **`name`** (String): The name of the venue.
 
-
 **Example Document:**
 
 ```json
 {
   "venueId": "0001",
-  "name": "FNB Building",
+  "name": "FNB Building"
 }
-
-
 ```
 
 **Subcollection:** `rooms` (inside each venue document)
@@ -478,7 +517,7 @@ In the following example, the student user should be able to make bookings for s
 `name`: Actual name of the room (string)
 `location`: Physical location of the room within the venue (string)
 `capacity`: Maximum number of people the room can accommodate (integer)
-`features`: List of features available in that room  (array of strings, optional)
+`features`: List of features available in that room (array of strings, optional)
 
 **Document Example**:
 
@@ -490,16 +529,16 @@ In the following example, the student user should be able to make bookings for s
   "capacity": 40,
   "features": ["Projector", "Whiteboard", "Wi-Fi"]
 }
-
 ```
+
 **Summary of Schema Structure**
 
 ![Users Table](media/booking.drawio.svg)
 
-
 ---
 
 ## Schedule Database :calendar:
+
 **Schedule Collection**
 
 **1. Collection** : `schedules`
@@ -507,32 +546,32 @@ In the following example, the student user should be able to make bookings for s
 **Document** : `{scheduleId}`
 
 **Document Fields** :
- 
- - `roomId` (string): the room/venue where the lesson will take place.
- - `courseId` (string): the course that will be taught.
- - `startTime` (timestamp): the time at which the lesson begins.
- - `endTime` (timestamp): the time at which the lesson ends.
- - `daysOfWeek` (string): the days on which the lesson takes place.
- - `startDate` (timestamp): the date on which the lessons begin.
- - `endDate` (timestamp): the date on which the lessons end.
- - `recurring` (boolean): indicates whether the lesson recurs on a timely basis.
- - `userId` (string): the identifier for the lecturer that created the schedule. (Only lecturers can create schedules.)
 
- **Example Document:** <br>
+- `roomId` (string): the room/venue where the lesson will take place.
+- `courseId` (string): the course that will be taught.
+- `startTime` (timestamp): the time at which the lesson begins.
+- `endTime` (timestamp): the time at which the lesson ends.
+- `daysOfWeek` (string): the days on which the lesson takes place.
+- `startDate` (timestamp): the date on which the lessons begin.
+- `endDate` (timestamp): the date on which the lessons end.
+- `recurring` (boolean): indicates whether the lesson recurs on a timely basis.
+- `userId` (string): the identifier for the lecturer that created the schedule. (Only lecturers can create schedules.)
 
->```json
->{
->  "roomId": "Room101",
->  "courseId": "COMS3011A",
->  "startTime": "10:00",
->  "endTime": "12:00",
->  "daysOfWeek": "Monday",
->  "startDate": "24 January 2024",
->  "endDate": "8 June 2024",
->  "recurring": "True",
->  "userId": "Lecturer1923"
->}
->```
+**Example Document:** <br>
+
+> ```json
+> {
+>   "roomId": "Room101",
+>   "courseId": "COMS3011A",
+>   "startTime": "10:00",
+>   "endTime": "12:00",
+>   "daysOfWeek": "Monday",
+>   "startDate": "24 January 2024",
+>   "endDate": "8 June 2024",
+>   "recurring": "True",
+>   "userId": "Lecturer1923"
+> }
+> ```
 
 **2. Subcollection** : `rooms`
 
@@ -540,7 +579,7 @@ The `rooms` subcollection is found inside every `schedule` collection. It contai
 
 **Document** : `{roomsId}`
 
- **Document Fields:**
+**Document Fields:**
 
 - `roomId` (String): The identifier for the room or venue.
 - `building` (String): The building where the room is located.
@@ -548,17 +587,17 @@ The `rooms` subcollection is found inside every `schedule` collection. It contai
 - `roomType` (String): The type of room.
 - `capacity` (Number): The capacity of the room.
 
- **Example Document:**
+  **Example Document:**
 
->```json
->{
->  "roomId": "Room101",
->  "building": "Science Building",
->  "floor": "2nd",
->  "roomType": "Tutorial Room",
->  "capacity": 20,
->}
->```
+> ```json
+> {
+>   "roomId": "Room101",
+>   "building": "Science Building",
+>   "floor": "2nd",
+>   "roomType": "Tutorial Room",
+>   "capacity": 20
+> }
+> ```
 
 **Reference** : `courses`
 
@@ -584,8 +623,8 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 
 ![Users Table](media//Schedule_database.drawio.svg)
 
-
 ## Maintenance Database :hammer_and_wrench:
+
 **Maintenance Collection**
 
 **1. Collection** : `maintenanceRequests`
@@ -603,17 +642,17 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 
 **Example Document:** <br>
 
->```json
->{
->  "roomId": "Room101",
->  "userId": "User123",
->  "issueType": "Electrical",
->  "description": "Light not working",
->  "status": "Open",
->  "createdAt": "2024-08-12T09:00:00Z",
->  "assignedTo": "Staff456"
->}
->```
+> ```json
+> {
+>   "roomId": "Room101",
+>   "userId": "User123",
+>   "issueType": "Electrical",
+>   "description": "Light not working",
+>   "status": "Open",
+>   "createdAt": "2024-08-12T09:00:00Z",
+>   "assignedTo": "Staff456"
+> }
+> ```
 
 **2. Subcollection: `maintenanceLogs`**
 
@@ -621,6 +660,7 @@ This subcollection is found inside each `maintenanceRequests` document. It track
 **Document**: `{logId}`
 
 **Document Fields:**
+
 - `logId` (String): Unique identifier for the log entry.
 - `actionTaken` (String): Description of the action – e.g., "Request created," "Status changed to In Progress."
 - `actionBy` (String): Identifier for the user who performed the action.
@@ -628,14 +668,14 @@ This subcollection is found inside each `maintenanceRequests` document. It track
 
 **Example Document:** <br>
 
->```json
->{
->  "logId": "Log001",
->  "actionTaken": "Request created",
->  "actionBy": "User123",
->  "timestamp": "2024-08-12T09:01:00Z"
->}
->```
+> ```json
+> {
+>   "logId": "Log001",
+>   "actionTaken": "Request created",
+>   "actionBy": "User123",
+>   "timestamp": "2024-08-12T09:01:00Z"
+> }
+> ```
 
 **3. Subcollection: `rooms`**
 
@@ -643,24 +683,25 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 
 **Document**:`roomId`
 
- **Document Fields:**
+**Document Fields:**
+
 - `roomId` (String): Unique identifier for the room or venue – e.g., "Room101."
 - `building` (String): The building where the room is located – e.g., "Science Building."
 - `floor` (String): The floor on which the room is located.
 - `roomType` (String): The type of room – e.g., "Classroom," "Lecture Hall," "Lab."
 - `capacity` (Number): The capacity of the room – e.g., 30 students.
 
- **Example Document:**
+  **Example Document:**
 
->```json
->{
->  "roomId": "Room101",
->  "building": "Science Building",
->  "floor": "1st",
->  "roomType": "Classroom",
->  "capacity": 30,
->}
->```
+> ```json
+> {
+>   "roomId": "Room101",
+>   "building": "Science Building",
+>   "floor": "1st",
+>   "roomType": "Classroom",
+>   "capacity": 30
+> }
+> ```
 
 **Overall Structure:**
 
@@ -689,55 +730,57 @@ This subcollection is found inside each `maintenanceRequests` document. It conta
 **Summary:**
 
 - **Main Collection: `maintenanceRequests`**
+
   - Stores general information about each maintenance request.
 
 - **Subcollection: `rooms`**
+
   - Contains details about the specific room(s) involved in the maintenance request.
 
 - **Subcollection: `maintenanceLogs`**
   - Tracks the history of actions taken related to the maintenance request.
 
-
 **Summary of schema structure:**
 ![Maintenance Table](media/maintenancetable.png)
-
-
 
 # Testing and Quality Assurance :test_tube:
 
 ---
+
 ## Test Plan
 
 - Jest was used to do testing.
 - Tests will be made for functions after they are coded so we can test them before deployment.
 - The test coverage reports will be uploaded to Code Cov.
 
-
-
 # Deployment and Integration :rocket:
 
 ---
+
 ## Deployment
 
-The website deploys via Azure Web app services using Github actions CI/CD pipeline. 
+The website deploys via Azure Web app services using Github actions CI/CD pipeline.
 
 ### Version Control
 
 When it comes to version control we need to define some things first:
+
 - Product: A product is what we can offer to the user to fufill their requirments.
 - Product feature: A products specific characteristics or functions that are important to the customer - so desin and functionality are included.
 
-Ref https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
+Ref: https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
 
-Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc. 
+Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc.
 Branch management guidlines were given to help ensure a lack of mix ups:
 
 - Each collaborator must commit to their own respective branch (labled by their username) or the "Bugs-and-Problems" branch for any problematic code.
 - Always pull new updates before you push your new updates to you respective branches.
 - Make sure your tests pass before commits.
 - Give your commits to your branch meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
+- Do not merge to main without the agreement of all devs.
 
 The branch names are set as:
+
 - main
 - Bugs-and-Problems
 - Chloe
@@ -746,9 +789,16 @@ The branch names are set as:
 - Lunar
 - May
 - Menzi
- 
-  
+
+## Integration
+
+- Transport: will get docs soon.
+- Events Management: Resonse but they need until coming friday
+- Saftey: No response as of yet???
+- Dining: They will consider it
+
 # Challenges and Solutions :thinking:
+- Getting the other groups to talk to us at the begining.
 
 ---
 
@@ -757,13 +807,15 @@ The branch names are set as:
 ---
 
 # Appendices :file_cabinet:
+
 ---
 
 ## Meeting Minutes
 
 ### Sprint 1 Meeting 1
+
 - Date: 09/08/2024
-- Attendance: 
+- Attendance:
 - Mayuri Balakistan(2543986)
 - Chloe Dube (2602515)
 - Claire Newman (2549861)
@@ -771,11 +823,11 @@ The branch names are set as:
 - Busisiwe Vemba(2561620)
 
 - Discussion of rubric/project breakdown
-- Web app must be able to resize to  fit all screens (mobile first aproach)
+- Web app must be able to resize to fit all screens (mobile first aproach)
 - Discussion of how to deal with other groups
 - Work on launching “Hello World”, and starting on testing, CI/CD
 - Colour Palette discussed (planning on going with Wits related colours)
-- Testing: Jest 
+- Testing: Jest
 - Database options: CosmoDB, MongoDB, Firebase, Azure. To be discussed further.
 - Codecov for code coverage
 - Backend: Azure
@@ -791,9 +843,8 @@ The branch names are set as:
 - Plan API endpoints, schemas
 - Deploy Hello World website
 
+### Meeting 2
 
-
-### Meeting 2 
 - Date: 13/08/2024
 - Attendees:
 - Mayuri Balakistan(2543986)
@@ -802,7 +853,7 @@ The branch names are set as:
 - Dineo Chiloane (2563191)
 - Busisiwe Vemba(2561620)
 - Menzi Shazi(2453308)
-- The Client 
+- The Client
 
 - Issues with website deployment
 - Must focus on API specifications, designs and database schemas.
@@ -810,11 +861,12 @@ The branch names are set as:
 - Discussion with client:
 - Colour palette: Wits colours, dark mode if possible.
 - Integration: design API in a way that is useful to other groups, make sure our app does not fail if another API were to fail.
-- UI/UX: discussed the 60,30,10 rule, the use of Tailwind and consistency of text size. 
+- UI/UX: discussed the 60,30,10 rule, the use of Tailwind and consistency of text size.
 - Users: staff, students, admin. Use of wits email and whitelist.
 - Client’s requests: heat map for booking (stretch goal), ticket system, dark mode, and more filters for choosing rooms, separated documents (i.e. API documentation separate from database documentation).
 
 ### Meeting 3
+
 - Date: 18 August 2024
 - Attendees:
 - Mayuri Balakistan(2543986)
@@ -826,21 +878,20 @@ The branch names are set as:
 
 - Resolved issue with app deployment.
 - In progress of completing API specifications and database schemas.
-- Decided on tech stack: 
--	Backend: Azure, JavaScript, Node.js
-- 	Frontend: HTML, CSS, Tailwind
--	Database: Firebase
+- Decided on tech stack:
+- Backend: Azure, JavaScript, Node.js
+-     Frontend: HTML, CSS, Tailwind
+- Database: Firebase
 - Decided which other APIs to make use of:
--	Events API
--   Campus Security API
+- Events API
+- Campus Security API
 - Issues to keep an eye on moving forward: working around other subsystems
 
-
-
 ### Sprint 2 Meeting 4
+
 Date: 20/08/2024
 
-- Attendees: 
+- Attendees:
 - Claire Newman
 - Busisiwe Vemba
 - Mayuri Balakistan
@@ -848,7 +899,7 @@ Date: 20/08/2024
 - Menzi Shazi
 - Chloe Dube
 
-Discussion: 
+Discussion:
 
 - Deciding on the implementation of databases, who will do it and how.
 - Acknowledged that we are working on authentication
@@ -876,8 +927,4 @@ Ten-minute intermission.
 - We started discussing what views people would be able to see on the UI based on their role, e.g difference between staff and students.
 - Settled on 3 user dashboards.
 - Created a user story for Login and Sign up, we will be creating the mobile and desktop versions of the UI for these elements.
-End of meeting.
-
-
-
-
+  End of meeting.
