@@ -144,7 +144,8 @@ The specifications for their respective databases and API endpoints are shown fu
 
 ## Integration with Other Systems
 
-- Events and Activities App: Call their API to find out if any venues are booked for an event or activity.
+- Transport App: Map API for navigation to venues.
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity - to make sure we are synchronised
 - Campus Safety App: Call their API to provide emergency contact information
 
 ## Timelines
@@ -152,7 +153,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - 8th -20th Auguast - Sprint 1 -Plan the software (UI/UX and architecture)
 - 20th August - 1st Marking
 - 20th -27th August - Sprint 2 - begin programming the key features - DB, API, Frontend.
-- 27th August -3rd September - Sprint 3 -
+- 27th August -3rd September - Sprint 3 - finalise APIs, finalise integration???, Create frontend pages(user dashboard, other pages)
 - 17th September - 2nd Marking
 - 01st October - 3rd Marking
 - 07th October - Group Report and Documentation
