@@ -92,12 +92,19 @@ The Mockups based off of the wireframes (but also more refinied)
 ### Details on Frontend Components
 
 - Fonts:
-- Main Colours:
+- Main Colours: Wits colours
+  - Blue: #003B5C
+  - Gold: #917248
 - Colour Tints:
+  - Lighter blue when hovering: #01517d
+  - Darker gold when hovering: #806541
   
 Button Specification:
-- Primary Button:
-- Secondary Button:
+- Primary Button: Gold
+- Secondary Button: Blue
+
+Background Specification:
+- Blue for headers
 
 ## Key Features Overview
 - Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors and students can book tutorial rooms.
