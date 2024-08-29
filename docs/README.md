@@ -111,6 +111,13 @@ The Mockups based off of the wireframes (but also more refinied)
 > Frame 7:
 > ![Frame 7](media/bookvenue/Frame7.png)
 
+#### Use case: General user main dashboard
+> Frame 1:
+> ![Frame 1](media/userdashboard/5%20Search%20Results.png)
+> Frame 2:
+> ![Frame 2](media/userdashboard/5%20Search%20Results-1.png)
+
+
 ### Prototypes <!-- {docsify-ignore} -->
 
 ### Details on Frontend Components
