@@ -117,6 +117,9 @@ The Mockups based off of the wireframes (but also more refinied)
 > Frame 2:
 > ![Frame 2](media/userdashboard/5%20Search%20Results-1.png)
 
+#### Use case: General maintenance reports and logs
+![Cla Mockup 1](media/LunarMockup1.png)
+
 
 ### Prototypes <!-- {docsify-ignore} -->
 
