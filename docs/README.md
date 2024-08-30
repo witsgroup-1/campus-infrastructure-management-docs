@@ -45,10 +45,13 @@ We chose this architecture as we have a front-end, a web hosting server, api and
 The technology stack is:
 
 - Frontend: HTML, CSS , Tailwind - (This is good for mobile-first development)
+- Authentication: 
 - Backend: Node Js, Express Js
 - Databases: Firebase Firestore
 
 Why use an API with firestore: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
+
+
 
 ## Diagrans
 
