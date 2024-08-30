@@ -53,7 +53,7 @@ The technology stack is:
 ### Use Case Diagram
 
 The Use case diagram to illustrate basic features.
-![Users Table](media/UseCaseDiagramUpdated.drawio.png)
+![Users Table](media/UseCaseDiagram.drawio(1).png)
 
 ### Deployment Diagram
 
