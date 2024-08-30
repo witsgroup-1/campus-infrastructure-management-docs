@@ -46,7 +46,9 @@ The technology stack is:
 
 - Frontend: HTML, CSS , Tailwind - (This is good for mobile-first development)
 - Backend: Node Js, Express Js
-- Databases: Firebase, Firebase Firestore
+- Databases: Firebase Firestore
+
+Why use an API with firestore: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
 
 ## Diagrans
 
@@ -213,6 +215,8 @@ The specifications for their respective databases and API endpoints are shown fu
 ### Schedule Integration
 
 ### Maintenence Reports
+- make a report: (report fields: Name and Surname, Report Type, Venue, Description), (generated data with report: createdAt timestamp, status, userId of user who submitted the issue, log ticket information).
+- log page: shows the status of a maintenance request as a log. If you click on the maintenace log you can see more information and set its status, the staff assigned, and when it is scheduled to be done.
 
 ### Notifications
 
@@ -808,10 +812,18 @@ The branch names are set as:
 
 ## Integration
 
-- Transport: will get docs soon.
-- Events Management: Resonse but they need until coming friday
-- Saftey: No response as of yet???
-- Dining: They will consider it
+- Transport: Why integrate. The Map API can give us the most up to date locations of venues within our Application.
+- Events Management: Why integrate. To keep our booking system up to date so that we do not face clashes.
+- Saftey: Why integrate. For security details we can get the most up to date security information.
+- Dining: Why integrate. We can allow our users to book a reservation for a meeting etc.
+
+### How will we stubb their data
+
+- Transport: Hardcode some locations for major venues.
+- Events Management: hardcode some events to make sure our system is aware of them and up to date.
+- Saftey: Hardcode some known security information.
+- Dining: We will have some hardcoded resturants to make reservations too in our venue data collection. The reservations will be noted down in a list and acted upon in a timely manner.
+
 
 # Challenges and Solutions :thinking:
 - Getting the other groups to talk to us at the begining.
