@@ -159,11 +159,12 @@ The specifications for their respective databases and API endpoints are shown fu
 - We will create the Js functions to make use of the API calls and link with the database.
 - Create tests around Js functions.
 
-## Integration with Other Systems
+## Integration with Other Systems Overview
 
 - Transport App: Map API for navigation to venues.
-- Events and Activities App: Call their API to find out if any venues are booked for an event or activity - to make sure we are synchronised
-- Campus Safety App: Call their API to provide emergency contact information
+- Events and Activities App: Call their API to find out if any venues are booked for an event or activity - to make sure we are synchronised.
+- Campus Safety App: Call their API to provide emergency contact information.
+- Dining Services: Book reservations through our app.
 
 ## Timelines
 
