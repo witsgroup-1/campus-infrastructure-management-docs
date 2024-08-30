@@ -51,7 +51,7 @@ The technology stack is:
 
 Why use an API with firestore: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
 
-
+It was important that we hosted our website in our home country: Since our application was designed for use by our university it is important that everything is hosted as close to our country as possible. So we hosted our database and our web server in our country.
 
 ## Diagrans
 
