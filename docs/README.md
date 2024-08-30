@@ -58,7 +58,7 @@ The Use case diagram to illustrate basic features.
 ### Deployment Diagram
 
 The Deployment diagram to illustrate how our website deploys.
-![Users Table](media/DeploymentDiagram.drawio.png)
+![Users Table](media/DeploymentDiagram.drawio(1).png)
 
 ### Component Diagram
 
