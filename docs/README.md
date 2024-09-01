@@ -490,6 +490,7 @@ In the following example, the student user should be able to make bookings for s
 - **`userId`** (String, **Foreign Key**): The unique identifier of the user who made the booking.
 - **`start_time`** (Timestamp): The start time of the booking (ISO 8601 format).
 - **`end_time`** (Timestamp): The end time of the booking (ISO 8601 format).
+- **`date`** (Timestamp): The date of the booking
 - **`purpose`** (String, Optional): The purpose of the booking.
 - **`status`** (String): The status of the booking (e.g., "Confirmed", "Pending", "Cancelled").
 
@@ -501,8 +502,9 @@ In the following example, the student user should be able to make bookings for s
   "venueId": "0001",
   "roomID": "100",
   "userId": "1000",
-  "start_time": "2024-08-14T09:00:00Z",
-  "end_time": "2024-08-14T10:00:00Z",
+  "start_time": "T09:00:00Z",
+  "end_time": "T10:00:00Z",
+  "date": "2024-09-01",
   "purpose": "SDP Lecture",
   "status": "Confirmed"
 }
@@ -520,13 +522,15 @@ In the following example, the student user should be able to make bookings for s
 
 - **`venueId`** (String, **Unique Identifier**): A unique identifier for each venue.
 - **`name`** (String): The name of the venue.
+- **`category`** (String): The type of venue that it is (lecture hall, exam venue, dining...)
 
 **Example Document:**
 
 ```json
 {
   "venueId": "0001",
-  "name": "FNB Building"
+  "name": "FNB Building",
+  "category": "Lecture Venue"
 }
 ```
 
@@ -589,8 +593,8 @@ In the following example, the student user should be able to make bookings for s
 >   "startTime": "10:00",
 >   "endTime": "12:00",
 >   "daysOfWeek": "Monday",
->   "startDate": "24 January 2024",
->   "endDate": "8 June 2024",
+>   "startDate": "2024-01-24",
+>   "endDate": "2024-06-14",
 >   "recurring": "True",
 >   "userId": "Lecturer1923"
 > }
