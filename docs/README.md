@@ -49,7 +49,10 @@ The technology stack is:
 - Backend: Node Js, Express Js
 - Databases: Firebase Firestore
 
-Why use an API with firestore: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
+Some frequently asked questions:
+- Why use Firestore NOSQL database: It is good for mobile development due to its flexibility and scalability. It has real time data sychronisation and is very customisable in its security rules.
+    (ref: https://cloud.google.com/blog/topics/developers-practitioners/all-you-need-know-about-firestore-cheatsheet)
+- Why use an API with a firestore NOSQL database: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
 
 It was important that we hosted our website in our home country: Since our application was designed for use by our university it is important that everything is hosted as close to our country as possible. So we hosted our database and our web server in our country.
 
