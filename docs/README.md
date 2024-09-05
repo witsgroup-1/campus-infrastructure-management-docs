@@ -100,6 +100,10 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ![May Mockup](media/mockup.png)
 
+Revised mockup designs based on Brendan Griffiths' criticism
+
+![Busi Mockup](image-1.png)
+![Busi Mockup](image-2.png)
 ### Desktop mockups
 
 #### Use case: User books a venue
