@@ -26,8 +26,8 @@ While push notifications are a stretch goal, the app’s secure and scalable inf
 
 ## Important Links
 
-- Code Repository: https://github.com/witsgroup-1/campus-infrastructure-management
-- Documentation Repository: https://github.com/witsgroup-1/campus-infrastructure-management-docs
-- Documentation Website: https://witsgroup-1.github.io/campus-infrastructure-management-docs/#/?id=welcome-to-campus-infrastructure-management-docs-paperclips
+- [Code Repository](https://github.com/witsgroup-1/campus-infrastructure-management)
+- [Documentation Repository](https://github.com/witsgroup-1/campus-infrastructure-management-docs)
+- [Documentation Website](https://witsgroup-1.github.io/campus-infrastructure-management-docs/#/?id=welcome-to-campus-infrastructure-management-docs-paperclips)
 
 ---

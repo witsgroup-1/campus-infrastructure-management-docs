@@ -21,7 +21,9 @@ For our project, we use a **Hierarchical Model**, which organizes data in a “t
 - `faculty`: User’s faculty or department (string)
 - `is_tutor`: Indicates if the user is a tutor (boolean)
 - `is_lecturer`: Indicates if the user is a lecturer (boolean)
-- `{bookings}`: Contains all the bookings that the user made in the form of documents(collection). -`{courses}`: Contains all the user's courses in the form of documents(collection).
+- `{bookings}`: Contains all the bookings that the user made in the form of documents(collection).
+- `{courses}`: Contains all the user's courses in the form of documents(collection).
+- `{notifications}`: Contains all the user's notifications.
 
 **Example Document:** <br>
 In the example below, the `staff` user should be able to make bookings for lecture halls, meeting rooms, tutorial rooms, and exam venues since the `is_lecturer` field is set to `true`. If it was set to `false`, they would not have the priviledge to do so.
@@ -36,7 +38,8 @@ In the example below, the `staff` user should be able to make bookings for lectu
 >   "is_tutor": false,
 >   "is_lecturer": true,
 >   {bookings},
->   {courses}
+>   {courses},
+>   {notifications}
 > }
 > ```
 
@@ -53,7 +56,8 @@ In the following example, the student user should be able to make bookings for t
 >   "is_tutor": true,
 >   "is_lecturer": true,
 >   {bookings},
->   {courses}
+>   {courses},
+>   {notifications}
 > }
 > ```
 
@@ -70,7 +74,8 @@ In the following example, the student user should be able to make bookings for s
 >   "is_tutor": false,
 >   "is_lecturer": true,
 >   {bookings},
->   {courses}
+>   {courses},
+>   {notifications}
 > }
 > ```
 
@@ -117,6 +122,31 @@ In the following example, the student user should be able to make bookings for s
 >   "lecturer_id": "Hcd9xOJax93o72djh3dHgP"
 > }
 > ```
+
+**4. Notifications Subcollection**
+
+**Subcollection**: `notifications` (inside each user document)
+
+**Document**: `{notificationId}` (Document ID for each course)
+
+**Document Fields:**
+- createdAt (string)
+- message (string)
+- sendAt (timestamp)
+- read (boolean)
+- type (string)
+
+**Example Document:**
+>```json
+> {
+> createdAt: "2024-09-05T11:55:04.172Z"
+> message: "Your booking is tomorrow!"
+> sendAt: "2024-09-05T10:00:00"
+> read: true
+> type: "reminder"
+> }
+>```
+
 
 **Summary of Schema Structure**
 

@@ -39,8 +39,8 @@ paths:
                     createdAt:
                       type: string
                       format: date-time
-                    status:
-                      type: string
+                    read:
+                      type: boolean
         '500':
           description: Error getting notifications
 
@@ -122,8 +122,8 @@ paths:
                   createdAt:
                     type: string
                     format: date-time
-                  status:
-                    type: string
+                  read:
+                    type: boolean
         '404':
           description: Notification not found
         '500':
@@ -160,9 +160,9 @@ paths:
                 sendAt:
                   type: string
                   format: date-time
-                status:
-                  type: string
-                  example: pending
+                read:
+                  type: boolean
+                  example: true
       responses:
         '200':
           description: Notification updated successfully

@@ -13,7 +13,7 @@ We chose this architecture as we have a front-end, a web hosting server, api and
 The technology stack is:
 
 - Frontend: HTML, CSS , Tailwind - (This is good for mobile-first development)
-- Authentication: 
+- Authentication: OAuth, and Firebase authentication
 - Backend: Node Js, Express Js
 - Databases: Firebase Firestore
 
@@ -24,7 +24,7 @@ Some frequently asked questions:
 
 It was important that we hosted our website in our home country: Since our application was designed for use by our university it is important that everything is hosted as close to our country as possible. So we hosted our database and our web server in our country.
 
-## Diagrans
+## Diagrams
 
 ### Use Case Diagram
 
@@ -43,7 +43,7 @@ The system components can be seen below in the component diagram.
 
 ## UI/UX Design Process
 
-We foucsed on the mobile design first as our website application is more geared to the mobile first aproach.
+We focused on the mobile design first as our website application is more geared to the mobile first aproach.
 
 ### Wireframes <!-- {docsify-ignore} -->
 
@@ -123,7 +123,7 @@ Background Specification:
 
 ## Key Features Overview
 
-- Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, whilst tutors and students can book tutorial rooms.
+- Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, students who are not tutors can only book study rooms, and students who are tutors can book tutorial rooms in addition to study rooms.
 - Schedule Integration: Lecturers can integrate there schedules to make automatic bookings for there classes.
 - Maintenence Reports: Users can report whether a room requires maintenence and Staff can view these in order to resolve them.
 - Notifications: Users except staff can recieve booking notifications whilst staff can recieve maintenence notifications.

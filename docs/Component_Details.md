@@ -14,20 +14,23 @@
 
 ### Users
 
-- Student: Permisions ->
-- Student (tutor): Permisions ->
-- Staff (Lecturer): Permisions ->
-- Staff: Permisions ->
+- Student: Permissions ->
+- Student (tutor): Permissions ->
+- Staff (Lecturer): Permissions ->
+- Staff: Permissions ->
 
 ### Book Venues
 
-#### venue Types
+
+#### Venue Types
 
 - Lecture Halls
 - Tutorial Rooms
-- Labratories
-- Computer Labratories
-- Confrence rooms
+- Computer Laboratories
+- Chemistry Laboratories
+- Conference rooms
+- Study rooms
+- Exam Halls
 - ...
 
 ### Schedule Integration
