@@ -68,7 +68,7 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ![May Mockup](media/mockup.png)
 
-Revised mockup designs based on Brendan Griffiths' criticism
+Revised mockup designs based on the clients feedback.
 
 ![Busi Mockup](image-1.png)
 ![Busi Mockup](image-2.png)
@@ -96,6 +96,10 @@ Revised mockup designs based on Brendan Griffiths' criticism
 > ![Frame 1](media/userdashboard/5%20Search%20Results.png)
 > Frame 2:
 > ![Frame 2](media/userdashboard/5%20Search%20Results-1.png)
+
+#### Use case: Onboarding Pages
+> ![Frame 1](media/LunarMockup3.png)
+
 
 #### Use case: General maintenance reports and logs
 ![Cla Mockup 1](media/LunarMockup2.png)
