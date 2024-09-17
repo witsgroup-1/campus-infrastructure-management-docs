@@ -125,3 +125,14 @@ These tests ensure that the utility functions in editBookings.js perform their i
 - Given that I am a user, when I receive notification, then i can stay up to date.
 - Given that I am a user, when I see security contact information, then i am able to contact security.
 
+
+
+## Why is our code coverage ___%
+### For Milestone 2 
+We focused our attention on unit tests for the core features.
+
+Some lines of code are not covered as thouroughly: This is not a bad thing as some lines are not nessacary to cover or do not need to be as strongly covered as they are functions not prone to error/pointless in the grand scheme of the project.
+
+Patch Coverage is higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
+(ref: https://about.codecov.io/blog/why-patch-coverage-is-more-important-than-project-coverage/)
+
