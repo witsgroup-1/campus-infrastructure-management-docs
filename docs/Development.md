@@ -180,22 +180,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - As a user, I want to be able to receive notifications so that I can stay up to date.
 - As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
 
-### User acceptance tests
 
-- Given that I am a user, when I log into the app, then I am able to make a booking.
-- Given that I am a user, when I specify my role, then i am able to access the right functionality.
-- Given that I am a user, when I view all venues, then i can choose one to book.
-- Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
-- Given that I am a user, when I view all past bookings, then i can keep a record of them.
-- Given that I am a user, when I view all my schedules, then i can prepare for them.
-- Given that I am a user, when I add a new schedule, then i can keep my life organized.
-- Given that I am a user, when I view all scheduled maintenance requests, then i can delegate them.
-- Given that I am a user, when I view all in progress maintenance requests, then i can make sure they finish.
-- Given that I am a user, when I view all completed maintenance requests, then i can keep a reord of them.
-- Given that I am a user, when I report a maintenance issue, then i can prevent sny accidents.
-- Given that I am a user, when I log out, then i am able to keep my information safe.
-- Given that I am a user, when I receive notification, then i can stay up to date.
-- Given that I am a user, when I see security contact information, then i am able to contact security.
 
 
 ---
