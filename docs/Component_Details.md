@@ -1,29 +1,40 @@
 # Component Details :wrench:
 
----
-
 ## Details of Features
+
+### Login
+
+#### Authentication
+- **Purpose**: Allows users to log in using their credentials.
+- **Required Information**: Name, surname, faculty, role. Optionally, check if they are a tutor or lecturer.
+- **Whitelisting**: Certain emails not affiliated with The University of Witwatersrand may be whitelisted if they have valid reasons (e.g., guest lecturers).
+
+#### Users
+- **Student**: Access to study resources, booking venues, and academic activities.
+- **Student (Tutor)**: Additional permissions for tutoring activities and resources.
+- **Staff (Lecturer)**: Permissions include booking venues, managing academic schedules, and accessing staff resources.
+- **Staff**: Permissions include managing staff activities and accessing staff resources.
 
 ### Schedule Integration
 
-- **Create a Schedule**: 
-  - Fields: Name and Surname, Course, Venue, Day of the Week, Times, Date, and Recurrence.
+- **Create a Schedule**:
+  - **Fields**: Name and Surname, Course, Venue, Day of the Week, Times, Date, and Recurrence.
   - **Time** type is used to input times, and **Date** type is used to input a date.
   - If Recurrence is "Yes", an option to add an end date is provided.
   - **Submit** button adds the information to the database.
 
-- **Schedule Timetable**: 
+- **Schedule Timetable**:
   - Displays all timetables made by the user, including the day, date, course, venue, and times.
   - Includes a delete button to remove a schedule.
   - A button at the bottom takes the user to the form to add a schedule.
 
 ### Maintenance
 
-- **Make a Report**: 
-  - Fields: Name and Surname, Report Type, Venue, Description.
-  - Generated Data: `createdAt` timestamp, status, `userId` of the user who submitted the issue.
+- **Make a Report**:
+  - **Fields**: Name and Surname, Report Type, Venue, Description.
+  - **Generated Data**: `createdAt` timestamp, status, `userId` of the user who submitted the issue.
 
-- **Log Page**: 
+- **Log Page**:
   - Shows the status of a maintenance request as a log.
   - Clicking on the maintenance log reveals a popup with more information where you can set the status, assigned staff, and scheduled completion time.
 
@@ -45,66 +56,165 @@
 
 ## User Guides
 
-## Onboarding Process
+### Onboarding User Guide
 
-The onboarding process is designed to gather essential information from users before they can fully access the site's features. It involves a step-by-step form that users must complete. The onboarding process is intended for new users accessing the site for the first time. If this is not the first time using the site, users are led to their dashboard. After completing the onboarding process, the page redirects to the dashboard.
+#### Overview
+The onboarding process is designed to collect essential information about you before you can fully access our platform. The process is divided into four steps:
+1. **Welcome**
+2. **Name and Surname**
+3. **Faculty and Role**
+4. **Checkboxes and Finish**
 
-### Login
+#### Step-by-Step Instructions
 
-- **Authentication**: Users must log in using their credentials. The system whitelists certain emails not affiliated with The University of Witwatersrand if they have a valid reason to use the university's services (e.g., guest lecturers).
-- **Required Information**: Users need to provide their name, surname, faculty, role, and optionally check if they are a tutor or lecturer.
+##### Step 1: Welcome
+1. **Access the Onboarding Page**:
+   - Open the onboarding page from the provided link.
+2. **Introduction**:
+   - You will see a welcome message inviting you to tell us more about yourself.
+3. **Start the Onboarding Process**:
+   - Click the **"Get Started"** button to proceed to the next step.
 
-### Users
+##### Step 2: Name and Surname
+1. **Enter Your Information**:
+   - **Name**: Enter your first name.
+   - **Surname**: Enter your last name.
+2. **Validation**:
+   - Ensure that both fields are filled out before proceeding.
+3. **Proceed to Next Step**:
+   - Click the **"Next"** button to move on.
 
-- **Student**: Permissions include accessing study resources, booking venues, and participating in academic activities.
-- **Student (Tutor)**: Additional permissions for tutoring activities and resources.
-- **Staff (Lecturer)**: Permissions include booking venues, managing academic schedules, and accessing staff resources.
-- **Staff**: Permissions include managing staff activities and accessing staff resources.
+##### Step 3: Faculty and Role
+1. **Select Your Faculty**:
+   - Choose your faculty from the dropdown menu:
+     - Commerce, Law and Management
+     - Engineering and the Built environment
+     - Health Sciences
+     - Humanities
+     - Science
+     - Other
+2. **Select Your Role**:
+   - Choose your role from the dropdown menu:
+     - Student
+     - Staff
+3. **Validation**:
+   - Ensure that both the faculty and role fields are selected before proceeding.
+4. **Proceed to Next Step**:
+   - Click the **"Next"** button to continue.
 
-## Book Venues
+##### Step 4: Checkboxes and Finish
+1. **Select Your Roles (if applicable)**:
+   - **Tutor**: Check the box if you are a tutor.
+   - **Lecturer**: Check the box if you are a lecturer.
+2. **Validation**:
+   - You must select at least one checkbox (either tutor or lecturer) to complete the onboarding process.
+3. **Complete Onboarding**:
+   - Click the **"Finish"** button to submit your information.
+4. **Completion**:
+   - You will see a confirmation message. You will be redirected to the user dashboard upon successful completion.
 
-### User Acceptance Tests
+#### Troubleshooting
+- **Form Validation Errors**:
+  - Ensure all required fields are filled out.
+  - Verify that at least one checkbox in the final step is selected.
+- **Submission Issues**:
+  - If you encounter any issues, check your network connection and try again. If the problem persists, contact support.
 
-As a **Lecturer**, I can:
+### User Guide: Dashboard
 
-1. **Search for a Venue**: 
-   - Use the search bar to find available rooms by name or category, such as chemistry laboratories or lecture halls.
-   - The system will display only rooms that match my search query and selected filters.
+#### Overview
+Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including managing bookings, viewing past and upcoming bookings, and accessing account details.
 
-2. **Filter by Room Type**: 
-   - Filter search results by room type, e.g., selecting "Chemistry Laboratories" or "Lecture Halls."
-   - Only venues that match the room type will appear in the list.
+#### Dashboard Layout
 
-3. **View Available Rooms**:
-   - View details of available venues, including the room name, type, and a "Book" button for each venue.
-   - Click the "Book" button to view more detailed information and proceed with booking.
+##### Header
+- **Back Button**: Located at the top left of the header, this button allows users to navigate back to the previous page.
+- **Title**: Displays the page title (e.g., "Your Bookings") in the center of the header.
 
-4. **Book a Venue**:
-   - After selecting a venue, be redirected to the booking details page to pick a time slot and specify the purpose of the booking.
-   - Finalize the booking by clicking the "Book Now" button, which confirms the reservation for the chosen time slot.
+##### Main Content
 
-#### Example Scenario
+###### Desktop View
+- **Upcoming Bookings**:
+  - **Description**: Shows all bookings scheduled for the future. You can view details and manage these bookings.
+  - **Pagination**: If there are more bookings than can fit on one page, you can use pagination controls to navigate through multiple pages.
+- **Past Bookings**:
+  - **Description**: Lists all bookings that have already occurred. This section helps you keep track of completed events.
+  - **Pagination**: Provides controls for navigating through pages of past bookings if there are many.
 
-As a **Lecturer**, I need to book a **Chemistry Lab** for an experiment demonstration next week. I can:
-- Search for "Chemistry Lab" using the search bar.
-- Filter the search results to show only chemistry labs.
-- Select a lab, choose an available time slot, and provide the purpose of my booking ("Experiment demo for Chemistry 101").
-- Confirm the booking.
+###### Mobile View
+- **Upcoming Bookings**:
+  - **Description**: Provides a summarized view of upcoming bookings, optimized for mobile devices.
+- **Past Bookings**:
+  - **Description**: Shows a summarized view of past bookings, designed for mobile users.
 
-#### Additional Functionality
+##### Back to Top Button
+- **Functionality**: A button that appears when the user scrolls down the page, allowing them to quickly return to the top.
+- **Location**: Positioned at the bottom right corner of the page.
 
-- The page allows users to dynamically filter venues and receive real-time results.
-- Booking requests are sent through an API, and the system responds based on availability.
+#### Features
 
-#### Venue Types
+##### Viewing Bookings
+- **Desktop**: The desktop view displays both upcoming and past bookings in separate sections with pagination controls.
+- **Mobile**: The mobile view provides a compact summary of bookings, with one item displayed from upcoming and past bookings respectively.
 
-- Lecture Halls
-- Tutorial Rooms
-- Computer Laboratories
-- Chemistry Laboratories
-- Conference Rooms
-- Study Rooms
-- Exam Halls
+##### Booking Management
+- **Cancel Booking**: Cancels the selected booking.
+- **Rebook**: Rebooks the selected past booking.
+
+##### Pagination Controls
+- **Previous Button**: Allows navigation to the previous page of bookings.
+- **Next Button**: Allows navigation to the next page of bookings.
+- **Visibility**: Pagination controls are visible only when there are multiple pages of bookings.
+
+#### Functionality
+- **Loading State**: Displays a loading message while fetching booking data.
+- **Date and Time Formatting**:
+  - **Date**: `DD/MM/YY`
+  - **Time Slot**: `HH:MM-HH:MM`
+
+### Venue Booking System
+
+#### Overview
+This guide provides instructions on how to use the venue booking system. It covers two main pages:
+1. **Book a Venue** - For searching and filtering available venues.
+2. **Booking Details** - For viewing detailed information about a selected venue and making a booking.
+
+#### 1. Book a Venue
+
+##### Page Overview
+The "Book a Venue" page allows you to search and filter available venues. You can select a venue to view its details and make a booking.
+
+##### Features
+- **Search Bar**:
+  - Located at the top of the page.
+  - Type the name of the room or venue you are looking for.
+  - Results will dynamically update based on your input.
+- **Filter Dropdown**:
+  - Allows you to filter venues by type (e.g., Lecture Hall, Tutorial Room, Boardroom, Exam Venue).
+  - Options are displayed as a dropdown menu.
+- **Venue List**:
+  - Displays available venues based on search and filter criteria.
+  - Each venue card includes an image, brief description, and a "View Details" button.
+- **View Details Button**:
+  - Takes you to the Booking Details page where you can view more information and make a booking.
+
+#### 2. Booking Details
+
+##### Page Overview
+The "Booking Details" page provides detailed information about a selected venue and allows you to book the venue.
+
+##### Features
+- **Venue Information**:
+  - Displays detailed information about the selected venue, including its name, type, and available features.
+  - **Image**: Shows a large image of the venue.
+- **Booking Form**:
+  - **Date**: Select the date you want to book the venue.
+  - **Start Time**: Choose the start time for your booking.
+  - **End Time**: Choose the end time for your booking.
+  - **Purpose**: Enter the purpose of the booking.
+  - **Submit Button**: Completes the booking process and adds the venue booking to the system.
+- **Booking Confirmation**:
+  - After submission, you will receive a confirmation message and be redirected to your bookings page.
 
 ### Maintenance
 
