@@ -125,6 +125,23 @@ Background Specification:
 - Blue for headers
 - Otherwise white(#ffffff)
 
+### User stories
+- As a user, I want to be able to log in to the app so that i can make bookings.
+- As a user, I want to be able to be able to specify my role so that I can access the right functionality.
+- As a user, I want to be able to view all venues so that I can choose one to book.
+- As a user, I want to be able to view all my upcoming bookings so that I will not forget them.
+- As a user, I want to be able to view all my past bookings so that I can have a record of them.
+- As a user, I want to be able to view all my schedules so that I can prepare for them.
+- As a user, I want to be able to add a new schedule so that I can keep my life organized.
+- As a user, I want to be able to view all scheduled maintenance requests so that I can delegate them.
+- As a user, I want to be able to view all in progress maintenance requests so that I can make sure they are finished.
+- As a user, I want to be able to view all completed maintenance requests so that I can keep a record of them.
+- As a user, I want to be able to report a maintenance issue, so that I can prevent any accidents.
+- As a user, I want to be able to log out so that I can keep my information safe.
+- As a user, I want to be able to receive notifications so that I can stay up to date.
+- As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
+
+
 ## Key Features Overview
 
 - Book venues: Users can book various venues. Lecturers can book most venues such as classes and lecture halls, students who are not tutors can only book study rooms, and students who are tutors can book tutorial rooms in addition to study rooms.
@@ -163,24 +180,5 @@ The specifications for their respective databases and API endpoints are shown fu
 - 07th October - Group Report and Documentation
 - 08-17th October - Demo
 - 20th October - Individual Reports
-
-### User stories
-- As a user, I want to be able to log in to the app so that i can make bookings.
-- As a user, I want to be able to be able to specify my role so that I can access the right functionality.
-- As a user, I want to be able to view all venues so that I can choose one to book.
-- As a user, I want to be able to view all my upcoming bookings so that I will not forget them.
-- As a user, I want to be able to view all my past bookings so that I can have a record of them.
-- As a user, I want to be able to view all my schedules so that I can prepare for them.
-- As a user, I want to be able to add a new schedule so that I can keep my life organized.
-- As a user, I want to be able to view all scheduled maintenance requests so that I can delegate them.
-- As a user, I want to be able to view all in progress maintenance requests so that I can make sure they are finished.
-- As a user, I want to be able to view all completed maintenance requests so that I can keep a record of them.
-- As a user, I want to be able to report a maintenance issue, so that I can prevent any accidents.
-- As a user, I want to be able to log out so that I can keep my information safe.
-- As a user, I want to be able to receive notifications so that I can stay up to date.
-- As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
-
-
-
 
 ---
