@@ -164,7 +164,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - 08-17th October - Demo
 - 20th October - Individual Reports
 
-### User strories
+### User stories
 - As a user, I want to be able to log in to the app so that i can make bookings.
 - As a user, I want to be able to be able to specify my role so that I can access the right functionality.
 - As a user, I want to be able to view all venues so that I can choose one to book.
@@ -180,7 +180,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - As a user, I want to be able to receive notifications so that I can stay up to date.
 - As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
 
-### User acceaptance tests
+### User acceptance tests
 
 - Given that I am a user, when I log into the app, then I am able to make a booking.
 - Given that I am a user, when I specify my role, then i am able to access the right functionality.
