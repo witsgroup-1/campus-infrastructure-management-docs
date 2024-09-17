@@ -181,4 +181,13 @@ The specifications for their respective databases and API endpoints are shown fu
 - 08-17th October - Demo
 - 20th October - Individual Reports
 
+## Important Client Feedback:
+- Different colour scheme from initial design
+- Recomends tailwind (we used it)
+- Website needs a whitelist
+- ticket system for maintenace logs.
+- Onboarding process
+- Do not need sign up page.
+
+
 ---
