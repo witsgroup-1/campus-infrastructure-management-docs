@@ -111,3 +111,22 @@ Maintenance Logs:
 ## User Guides
 
 ### Maintenance
+
+### Maintenance
+#### How to make a maintenance Report
+1. Click the plus on your user dashboard and select Report.
+2. Fill in your name.
+3. Fill in the venue where this took place - so you can fill in the name of the lecture hall, tutorial room, confrence hall, labratory (computers etc.).
+4. Select an issue type - Electrical, Ventilation, Pests and Rodents, Roofinf and Ceiling ,Other.
+5. Write a short description of what you witnessed.
+6. Click Submit. The input should clear.
+7. Press the back arrow in the top left corner to return to the user dashboard.
+#### How to work with maintenance logs
+1. Click maintenance on your user dashboard.
+2. arrive at the page to see columns of "Scheduled", "In Progress" and "Completed".
+3. Click on a block that says Venue: name, with a date.
+4. View the popup.
+5. Can edit fields, Assigned to, the date picker and the Status bar dropdown.
+6. Save changes to save your changes and reload the page
+7. Otherwise Close the popup to go back without saving.
+8. Press the maintenance log page back arrow on the top left corner to go back the user dashboard.
