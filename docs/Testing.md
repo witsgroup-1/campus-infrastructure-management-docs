@@ -58,26 +58,6 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Given that I am a user, when I edit a maintenance log popup field and click save changes it should then update the information on the screen: Expected   Input entered and once changes saved see the popup in a new column. Input (status: Completed, assignedTo: staff123, timestamp: 17th September 2024 09:00 ). Test outcome: Pass - The maintenance request was updated and in the new column.
 -  Given that I am a user, when I click close on a maintenance log popup then I should see the popup closing and go back to the main screen: Expected   Popup closed. Test outcome: Pass - Saw the popup close.
 
-
-### Manage Bookings Testing
-
-### Manage Bookings UATs
-
-- Given the page is loaded, when `fetchVenues` is called, then the venue dropdown should be populated with data from the API and the correct venue should be selected based on the booking ID.
-- Given the page is loaded, when `fetchBookings` is called, then bookings should be fetched from the API and stored in the `bookings` array.
-- Given `populateVenues` is called with venue data, when the dropdown with ID `venueSelector` is updated, then it should contain options for each venue with the venue ID as the value and the venue name as the text.
-- Given a venue ID is provided, when `isValidVenue` is called, then it should return `true` for a valid venue ID and `false` for an invalid one.
-- Given a date string is provided, when `isValidDate` is called, then it should return `true` for a valid date and `false` for an invalid date.
-- Given a time slot string is provided, when `isValidTimeSlot` is called, then it should return `true` for a correctly formatted time slot and `false` otherwise.
-- Given valid venue, date, and time slot data are provided, when `saveChanges` is called, then the booking should be successfully updated via the API and an alert should notify "Booking edited successfully."
-- Given an invalid venue is selected, when `saveChanges` is called, then an alert should notify "Please select a valid venue."
-- Given an invalid date is entered, when `saveChanges` is called, then an alert should notify "Please enter a valid date."
-- Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
-- Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
-- Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
-
-
-
 ### Testing for editBookings.js
 
 ## Overview
@@ -110,3 +90,38 @@ Test Cases: The function should return true for the valid time slot string '9:00
 Global Mock: fetch is mocked globally to prevent actual network requests during tests.
 Reset State: Before each test, the mock for fetch is cleared, and any necessary global or DOM state is reset.
 These tests ensure that the utility functions in editBookings.js perform their intended tasks accurately, contributing to the overall robustness of the application.
+
+### Manage Bookings Testing
+
+### Manage Bookings UATs
+
+- Given the page is loaded, when `fetchVenues` is called, then the venue dropdown should be populated with data from the API and the correct venue should be selected based on the booking ID.
+- Given the page is loaded, when `fetchBookings` is called, then bookings should be fetched from the API and stored in the `bookings` array.
+- Given `populateVenues` is called with venue data, when the dropdown with ID `venueSelector` is updated, then it should contain options for each venue with the venue ID as the value and the venue name as the text.
+- Given a venue ID is provided, when `isValidVenue` is called, then it should return `true` for a valid venue ID and `false` for an invalid one.
+- Given a date string is provided, when `isValidDate` is called, then it should return `true` for a valid date and `false` for an invalid date.
+- Given a time slot string is provided, when `isValidTimeSlot` is called, then it should return `true` for a correctly formatted time slot and `false` otherwise.
+- Given valid venue, date, and time slot data are provided, when `saveChanges` is called, then the booking should be successfully updated via the API and an alert should notify "Booking edited successfully."
+- Given an invalid venue is selected, when `saveChanges` is called, then an alert should notify "Please select a valid venue."
+- Given an invalid date is entered, when `saveChanges` is called, then an alert should notify "Please enter a valid date."
+- Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
+- Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
+- Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
+
+### User acceptance tests for Schedules
+
+- Given that I am a user, when I log into the app, then I am able to make a booking.
+- Given that I am a user, when I specify my role, then i am able to access the right functionality.
+- Given that I am a user, when I view all venues, then i can choose one to book.
+- Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
+- Given that I am a user, when I view all past bookings, then i can keep a record of them.
+- Given that I am a user, when I view all my schedules, then i can prepare for them.
+- Given that I am a user, when I add a new schedule, then i can keep my life organized.
+- Given that I am a user, when I view all scheduled maintenance requests, then i can delegate them.
+- Given that I am a user, when I view all in progress maintenance requests, then i can make sure they finish.
+- Given that I am a user, when I view all completed maintenance requests, then i can keep a reord of them.
+- Given that I am a user, when I report a maintenance issue, then i can prevent sny accidents.
+- Given that I am a user, when I log out, then i am able to keep my information safe.
+- Given that I am a user, when I receive notification, then i can stay up to date.
+- Given that I am a user, when I see security contact information, then i am able to contact security.
+
