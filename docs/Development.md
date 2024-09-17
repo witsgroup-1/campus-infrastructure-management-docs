@@ -196,5 +196,17 @@ The specifications for their respective databases and API endpoints are shown fu
 - Given that I am a user, when I log out, then i am able to keep my information safe.
 - Given that I am a user, when I receive notification, then i can stay up to date.
 - Given that I am a user, when I see security contact information, then i am able to contact security.
+- Given the page is loaded, when `fetchVenues` is called, then the venue dropdown should be populated with data from the API and the correct venue should be selected based on the booking ID.
+- Given the page is loaded, when `fetchBookings` is called, then bookings should be fetched from the API and stored in the `bookings` array.
+- Given `populateVenues` is called with venue data, when the dropdown with ID `venueSelector` is updated, then it should contain options for each venue with the venue ID as the value and the venue name as the text.
+- Given a venue ID is provided, when `isValidVenue` is called, then it should return `true` for a valid venue ID and `false` for an invalid one.
+- Given a date string is provided, when `isValidDate` is called, then it should return `true` for a valid date and `false` for an invalid date.
+- Given a time slot string is provided, when `isValidTimeSlot` is called, then it should return `true` for a correctly formatted time slot and `false` otherwise.
+- Given valid venue, date, and time slot data are provided, when `saveChanges` is called, then the booking should be successfully updated via the API and an alert should notify "Booking edited successfully."
+- Given an invalid venue is selected, when `saveChanges` is called, then an alert should notify "Please select a valid venue."
+- Given an invalid date is entered, when `saveChanges` is called, then an alert should notify "Please enter a valid date."
+- Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
+- Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
+- Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
 
 ---
