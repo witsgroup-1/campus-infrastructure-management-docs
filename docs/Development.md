@@ -164,4 +164,37 @@ The specifications for their respective databases and API endpoints are shown fu
 - 08-17th October - Demo
 - 20th October - Individual Reports
 
+### User strories
+- As a user, I want to be able to log in to the app so that i can make bookings.
+- As a user, I want to be able to be able to specify my role so that I can access the right functionality.
+- As a user, I want to be able to view all venues so that I can choose one to book.
+- As a user, I want to be able to view all my upcoming bookings so that I will not forget them.
+- As a user, I want to be able to view all my past bookings so that I can have a record of them.
+- As a user, I want to be able to view all my schedules so that I can prepare for them.
+- As a user, I want to be able to add a new schedule so that I can keep my life organized.
+- As a user, I want to be able to view all scheduled maintenance requests so that I can delegate them.
+- As a user, I want to be able to view all in progress maintenance requests so that I can make sure they are finished.
+- As a user, I want to be able to view all completed maintenance requests so that I can keep a record of them.
+- As a user, I want to be able to report a maintenance issue, so that I can prevent any accidents.
+- As a user, I want to be able to log out so that I can keep my information safe.
+- As a user, I want to be able to receive notifications so that I can stay up to date.
+- As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
+
+### User acceaptance tests
+
+- Given that I am a user, when I log into the app, then I am able to make a booking.
+- Given that I am a user, when I specify my role, then i am able to access the right functionality.
+- Given that I am a user, when I view all venues, then i can choose one to book.
+- Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
+- Given that I am a user, when I view all past bookings, then i can keep a record of them.
+- Given that I am a user, when I view all my schedules, then i can prepare for them.
+- Given that I am a user, when I add a new schedule, then i can keep my life organized.
+- Given that I am a user, when I view all scheduled maintenance requests, then i can delegate them.
+- Given that I am a user, when I view all in progress maintenance requests, then i can make sure they finish.
+- Given that I am a user, when I view all completed maintenance requests, then i can keep a reord of them.
+- Given that I am a user, when I report a maintenance issue, then i can prevent sny accidents.
+- Given that I am a user, when I log out, then i am able to keep my information safe.
+- Given that I am a user, when I receive notification, then i can stay up to date.
+- Given that I am a user, when I see security contact information, then i am able to contact security.
+
 ---

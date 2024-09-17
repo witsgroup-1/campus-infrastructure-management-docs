@@ -53,5 +53,5 @@ Plan to stub - hardcode/stub
 
 - Transport: Hardcode some locations for major venues.
 - Events Management: hardcode some events to make sure our system is aware of them and up to date.
-- Saftey: Hardcode some known security information.
+- Saftey: Hardcode some known security information (contact details for security of every campus).
 - Dining: We will have some hardcoded resturants to make reservations too in our venue data collection. The reservations will be noted down in a list and acted upon in a timely manner.

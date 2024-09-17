@@ -81,7 +81,27 @@
 - Campus Security API
 - Issues to keep an eye on moving forward: working around other subsystems
 
-### Sprint 2 Meeting 4
+
+### Sprint 1 Retrospective
+
+Date: 20/08/2024
+
+- Attendees:
+- Claire Newman
+- Busisiwe Vemba
+- Mayuri Balakistan
+- Dineo Chiloane
+- Menzi Shazi
+- Chloe Dube
+
+- documentation is good, but needs to be more descriptive and specific.
+- overall documentation structure was liked by the client
+- client hopes that we can make document information more accessable (different pages for different headings).
+- marks were lost on lack of communication between subsystems.
+- the team worked well together and finished their work well in advance.
+- next sprint, focus on communicating with other groups.
+
+### Sprint 2 Meeting 4 (Sprint Planning)
 
 Date: 20/08/2024
 
@@ -150,3 +170,51 @@ Minutes with client
 - Create more designs.
 - Start with frontend.
 - Hopefully, progress will speed up over break.
+- client asked for no signup page (just login with GoogleAuth)
+
+### Meeting 6
+
+Date: 3 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+- Progression in the creatoin of APIs
+- Currently, most members are testing their API's and making it more robust (specific GET conditions, PUT etc.)
+- mockups are completed for all UI.
+- next we must contact other groups for their API information.
+- new work was delegated: 
+  - google Auth, map API. login front-end and back-end: Menzi
+  - making a booking functionality, onboarding functionality: Dineo
+  - functionality for maintenance reports and logs, onboarding front-end: Claire
+  - manage bookings functionality, dining reservation API: Busi
+  - Schedule front-end and functionality, security API: Mayuri
+  - My bookings functionality, user dashboard front- and back-end: Chloe
+- onboarding pages requested by client.
+
+### Meeting 7 (Sprint Review)
+
+Date: 10 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+- client
+
+Minutes of meeting with client
+- Client likes our newest version of the UI.
+- Members are worried about API integration.
+- APIs are unavailable, so we must stub them.
+- Stubbing security API by hardcoding contact information, dining API by hardcoding reservations and transportation by hardcoding major locations for some venues.
+- We must focus on getting our backend to work and integrate well.
+- We must also remember to test our code (unit, integration tests etc.)
