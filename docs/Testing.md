@@ -20,7 +20,7 @@ We were testing the Maintenance Request Form where we mocked the structure of th
 - Unit test 1: checks if the form submits the form and resets it -> So spies on the console logs and errors afer submitting the required mock values using a fireEvent. It expects a successful log.
 - Unit test 2: checks if the form logs an error on failed request -> So it spies on the console logs and errors after submitting required mock values using a fireEven. It expects an error to be logged.
 - Integration test: Testing both of these on similar inputs to check if both work as intended on similar inputs.
-
+Overall 100% coverage of this file.
 #### Testing Maintenance Logs
 We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
 - Unit test 1: Fetches maintenance requests and displays them -> it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
@@ -31,7 +31,7 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Unit test 6: Saves changes and updates request -> tests that the mocked fetch request for the post method is successful and that the popup becomes hidded after saving the changes that we posted.
 - Unit test 7: Closes popup -> tests that the popup closes when we click close.
 - Integration test: Testing that all these functions work on the same mock input.
-
+Overall 89% coverage of this file- the left our lines of coverage were not integral for testing.
 
 ### Testing for editBookings.js
 
@@ -136,10 +136,12 @@ The application and the designs of this application was given to family members 
 
 ## Why is our code coverage ___%
 ### For Milestone 2 
-We focused our attention on unit tests for the core features.
+We focused our attention on unit tests for the core features. 
 
 Some lines of code are not covered as thouroughly: This is not a bad thing as some lines are not nessacary to cover or do not need to be as strongly covered as they are functions not prone to error/pointless in the grand scheme of the project.
 
-Patch Coverage is higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
+Some functions have not been unit tested yet and some tests have not been integrated with the main repository.
+
+Patch Coverage is sometimes higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
 (ref: https://about.codecov.io/blog/why-patch-coverage-is-more-important-than-project-coverage/)
 
