@@ -98,6 +98,7 @@ Date: 20/08/2024
 - overall documentation structure was liked by the client
 - client hopes that we can make document information more accessable (different pages for different headings).
 - marks were lost on lack of communication between subsystems.
+- we had difficulty working in a large sub-system and integrating with other groups.
 - the team worked well together and finished their work well in advance.
 - next sprint, focus on communicating with other groups.
 
@@ -130,20 +131,29 @@ Discussion:
 - Tackled the idea of integrating with Dining services, but essentially decided they may diverge too much from the ideas of our application.
 - Expanded on the list of possible integrations.
 
-Ten-minute intermission.
+### Sprint 2 Meeting 5
 
-- Started delegating API implementations.
-- User API: Dineo and Chloe
-- Maintenance API: Claire
-- Schedule API: Menzi
-- Booking API: Mayuri and Busi
-- Notification API: Mayuri, Dineo, Busi, Chloe.
-- We started discussing what views people would be able to see on the UI based on their role, e.g difference between staff and students.
-- Settled on 3 user dashboards.
-- Created a user story for Login and Sign up, we will be creating the mobile and desktop versions of the UI for these elements.
-  End of meeting.
+Date: 25 August 2024
 
-### Meeting 5
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes:
+- Basic mockups and wireframes completed.
+- Progress on creating databases. 
+- Databases must be completed by the end of the sprint and begin creating APIs next sprint.
+- We were finally able to get in touch with other groups.
+- Security said we can have their contact information API.
+- Dining asked for our list of venues API:
+  - An extra API and database must be created to deal with this.
+- Documentation must be continually updated so information is recent and correct.
+
+### Sprint 2 Meeting 6 (Sprint Review)
 
 Date: 28 August 2024
 
@@ -172,7 +182,79 @@ Minutes with client
 - Hopefully, progress will speed up over break.
 - client asked for no signup page (just login with GoogleAuth)
 
-### Meeting 6
+### Sprint 2 Retrospective
+
+Date: 28 August 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+- Not all databases were created on time. 
+- All mockups were completed and appeoved by fellow teammates and the client as well.
+- This showed that we were integrating feedback, but fell behind on work.
+
+Challenges we faced during Sprint 2:
+- As we were writing tests and focussed on other projects, we fell behind schedule on our website. 
+- Communicating with other groups was difficult.
+
+How to improve:
+- Focus on the website in the upcoming sprints.
+- have fallbacks when the other groups dont pull through.
+
+### Sprint 3 Meeting 7 (Sprint Planning)
+
+Date: 30 August 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+- Started delegating API implementations.
+- User API: Dineo and Chloe
+- Maintenance API: Claire
+- Schedule API: Menzi
+- Booking API: Mayuri and Busi
+- Notification API: Mayuri, Dineo, Busi, Chloe.
+- We started discussing what views people would be able to see on the UI based on their role, e.g difference between staff and students.
+- Settled on 3 user dashboards.
+- Created a user story for Login and Sign up, we will be creating the mobile and desktop versions of the UI for these elements.
+  End of meeting.
+
+### Sprint 3 Meeting 8
+
+Date: 1 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes:
+- all databases have now been completed according to the documentation.
+- Progression in the creating of APIs.
+- API creation may take time because it is a new skill for many members.
+- API creation may fall into the next sprint as well.
+- members must use the break to make up time.
+- work has begun on creating the ui.
+
+- new work will be delegated in the next sprint.
+- focus will be on creating core functionaily.
+
+
+### Sprint 3 Retrospective
 
 Date: 3 September 2024
 
@@ -184,21 +266,63 @@ Attendees:
 - Busisiwe Vemba(2561620)
 - Menzi Shazi(2453308)
 
+- we were not able to complete all our APIs.
+- this was expected, but we hope to finish them in the next sprint.
+
+Challenges we were faced with:
+- API creation because it was not something we were used to.
+
+Moving forward:
+- help each other out as much as you can.
+- those will more knowledge in one section should help those who are recently learning it.
+
+(Note that Sprint 3 had no Sprint Review as it took place over a semester break. Both the team and the client agreed that the next review will be held in the next sprint.)
+
+### Sprint 4 Meeting 9 (Sprint Planning)
+
+Date: 4 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
 Minutes
-- Progression in the creatoin of APIs
 - Currently, most members are testing their API's and making it more robust (specific GET conditions, PUT etc.)
-- mockups are completed for all UI.
 - next we must contact other groups for their API information.
 - new work was delegated: 
-  - google Auth, map API. login front-end and back-end: Menzi
-  - making a booking functionality, onboarding functionality: Dineo
-  - functionality for maintenance reports and logs, onboarding front-end: Claire
-  - manage bookings functionality, dining reservation API: Busi
-  - Schedule front-end and functionality, security API: Mayuri
+  - google Auth, login front-end and back-end: Menzi
+  - making a booking ui and functionality: Dineo
+  - maintenance reports and logs ui and functionality: Claire
+  - manage bookings ui and functionality: Busi
+  - Your bookings ui and Schedule front- and back-end: Mayuri
   - My bookings functionality, user dashboard front- and back-end: Chloe
 - onboarding pages requested by client.
 
-### Meeting 7 (Sprint Review)
+### Sprint 4 Meeting 10
+
+Date: 8 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes: 
+- most of the ui is completed and work has begun on the functionality.
+- it was decided that similar pages will follow the same ui design (such as all forms having the same layout).
+- some ui differs from the mockups:
+  - must update the changed designs in the documentation.
+- settled on design choices such as only the dashboard having a sidebar, what links the sidebar will have and how the onboarding will work. 
+- focus must be on functionality in order to get the work done on time.
+
+### Sprint 4 Meeting 11 (Sprint Review)
 
 Date: 10 September 2024
 
@@ -218,3 +342,74 @@ Minutes of meeting with client
 - Stubbing security API by hardcoding contact information, dining API by hardcoding reservations and transportation by hardcoding major locations for some venues.
 - We must focus on getting our backend to work and integrate well.
 - We must also remember to test our code (unit, integration tests etc.)
+
+### Sprint 4 Retrospection
+
+Date: 10 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+- all APIs are now completed and all ui is created.
+- we were unable to complete the functionality.
+- this is a problem since we also have to complete basic testing.
+
+Challenges we faced:
+- time management
+- the break broke our flow of teamwork
+
+How to deal with it in the next sprint:
+- try to complete the work as fast and early as possible to make integration quicker and less stressful.
+- communicate better with each other.
+
+### Sprint 5 Meeting 12 (Sprint Planning)
+
+Date: 10 September 2024 (whatsapp)
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+- other groups have stated that we will only get their apis later in the week.
+- this may be too late to integrate it with our work, therefore we must plan of mocking the API information.
+
+- new work was delegated: 
+  - Menzi: mocking map API
+  - Dineo: onboarding page functionality
+  - Claire: onboarding page ui
+  - Busi: dining reservation mocking
+  - Mayuri: security api mocking
+  - Chloe: whitelist implementation (requested by client)
+- new focus is on testing.
+- this may also be difficult because the members are not used to it.
+
+### Sprint 5 Meeting 13
+
+Date: 13 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+ 
+Meeting:
+- most core functionality is completed.
+- members are struggling with testing.
+- the focus is on functionality, even if testing is not completed.
+- we have decided that core functionality will be completed by Sunday evening
+- api stubs will be completed by monday evening.
+- documenatation must be ready to go by tuesday morning.
+
