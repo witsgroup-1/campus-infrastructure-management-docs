@@ -38,8 +38,22 @@
 schedule timetable: a table is present showcasing all the timetables that a user has made. This includes the dy, date, course, venue and times, as well as a delete button to remove a schedule. At the bottom, there is a button that takes the user to the form to add a schedule.
 
 
-### Maintenence Reports
+### Maintenence
 - make a report: (report fields: Name and Surname, Report Type, Venue, Description), (generated data with report: createdAt timestamp, status, userId of user who submitted the issue, log ticket information).
-- log page: shows the status of a maintenance request as a log. If you click on the maintenace log you can see more information and set its status, the staff assigned, and when it is scheduled to be done.
+- log page: shows the status of a maintenance request as a log. If you click on the maintenace log you can see a popup with more information and set its status, the staff assigned, and when it is scheduled to be done (you can edit these respective fields) and then save changes and close the popup.
+
+#### How it wad implemented
+Maintenance Report:
+- The frontend makes a fetch request of type POST to the API, with the inputed values from the html form once the submit button has been clicked. The form input will clear with the submission.
+Maintenance Logs:
+- The form does a fetch request of type GET for all maintenance requests. They will display in different colummns depending on their status ("Scheduled", "In Progress")
+
 
 ### Notifications
+
+
+
+
+## User Guides
+
+### Maintenance
