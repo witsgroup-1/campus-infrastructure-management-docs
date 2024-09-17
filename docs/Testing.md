@@ -59,6 +59,7 @@ We were testing the different functions of the maintenance logs where we mocked 
 -  Given that I am a user, when I click close on a maintenance log popup then I should see the popup closing and go back to the main screen: Expected   Popup closed. Test outcome: Pass - Saw the popup close.
 
 
+### Manage Bookings Testing
 
 ### Manage Bookings UATs
 
@@ -74,3 +75,38 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
 - Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
 - Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
+
+
+
+### Testing for editBookings.js
+
+## Overview
+
+The test suite for editBookings.js focuses on validating the correctness of utility functions related to date formatting, time slot extraction, and validation of dates and time slots. The tests use the Jest framework to ensure these functions behave as expected under various scenarios.
+
+## Test Descriptions
+
+`formatDateDMY` Function:
+
+Purpose: To verify that the formatDateDMY function correctly formats a given date string into the "Day Month Year" format.
+Test Case: For the input date string '2024-09-17', the function should return '17 September 2024'.
+
+`extractStartEndTime` Function:
+
+Purpose: To ensure that the extractStartEndTime function accurately extracts and returns the start and end times from a time slot string.
+Test Case: For the input time slot '9:00 AM - 11:00 AM', the function should return an object { startTime: '9:00 AM', endTime: '11:00 AM' }.
+
+`isValidDate` Function:
+
+Purpose: To check if the isValidDate function correctly identifies valid and invalid date strings.
+Test Cases: The function should return true for the valid date string '2024-09-17' and false for an invalid date string 'Invalid Date'.
+
+`isValidTimeSlot` Function:
+
+Purpose: To verify that the isValidTimeSlot function correctly validates time slot strings based on the expected format.
+Test Cases: The function should return true for the valid time slot string '9:00 AM - 11:00 AM' and false for an invalid time slot string 'Invalid Time Slot'.
+
+## Setup and Teardown
+Global Mock: fetch is mocked globally to prevent actual network requests during tests.
+Reset State: Before each test, the mock for fetch is cleared, and any necessary global or DOM state is reset.
+These tests ensure that the utility functions in editBookings.js perform their intended tasks accurately, contributing to the overall robustness of the application.
