@@ -33,7 +33,7 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Integration test: Testing that all these functions work on the same mock input.
 
 ### User Acceptance Tests
-### Maintenance
+### Maintenance UATs
 - Given that I am a user, when I submit a filled in maintenance report then it must be submitted successfully: Expected  console log "Maintenance request created successfully!" and a cleared input form. Test outcome: Pass - recieved the log and a cleared  input form.
 - Given that I am a user, when I submit an unfilled in maintenance report then it must tell me to enter data into the required fields: Expected  a field to appear under one of the inputs saying to fill in the required fields. Test outcome: Pass - recieved the message.
 
