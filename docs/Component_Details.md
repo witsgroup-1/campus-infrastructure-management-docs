@@ -51,7 +51,8 @@ Maintenance Logs:
 - If the content is desktop they will be all outputted but if it is mobile then only one in each column will appear until you click "show more". So we baisically have two functions to handle the general display of the data in the columns.
 - These desktop and mobile display functions call a function to create a Request Block which will baisically dynaimally create the html and CSS tailwind style for the request blocks that appear in the columns. The method also calls the Open Popup function.
 - The Open Popup function allows each maintenance request to be clicked so that more information can be displayed such as the venue, the issue type, the problem description, who it was assigned to, the status ("Scheduled" etc.), the created at timestamp if in the scheduled status column or the timestamp otherwise. In this popup you can edit the time (unless it is in "Scheduled"), who it is assigned to and the status. Once edited Click save changes to reload the page - else if not editing click close.
-- 
+- Save changes is a function that will get the id of the request and POST the changes to the database via the API fetch request. Once succesfull it will reload the page.
+- Close Popupu is a function that will hide the popup from view so that we return to the normal maintenance logs screen.
 
 ### Notifications
 
