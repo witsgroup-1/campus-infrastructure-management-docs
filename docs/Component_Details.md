@@ -117,7 +117,7 @@ Maintenance Logs:
 1. Click the plus on your user dashboard and select Report.
 2. Fill in your name.
 3. Fill in the venue where this took place - so you can fill in the name of the lecture hall, tutorial room, confrence hall, labratory (computers etc.).
-4. Select an issue type - Electrical, Ventilation, Pests and Rodents, Roofinf and Ceiling ,Other.
+4. Select an issue type - Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling and Other.
 5. Write a short description of what you witnessed.
 6. Click Submit. The input should clear.
 7. Press the back arrow in the top left corner to return to the user dashboard.
