@@ -20,23 +20,6 @@ The onboarding process is designed to gather essential information from users be
 - **Staff (Lecturer)**: Permissions include booking venues, managing academic schedules, and accessing staff resources.
 - **Staff**: Permissions include managing staff activities and accessing staff resources.
 
-### User Acceptance Tests
-
-#### As a Student
-
-1. **Onboarding Process**: 
-   - As a student, I can go through the onboarding process the first time I access the site. This process will collect my basic information and set up my account, allowing me to use the site's features.
-
-#### As a Lecturer
-
-1. **Onboarding Process**:
-   - As a lecturer, I can complete the onboarding process when I first access the site. This will include specifying my faculty and role, and optionally indicating if I am a tutor or lecturer. This setup will allow me to access and use all relevant site features.
-
-#### As a Staff Member
-
-1. **Onboarding Process**:
-   - As a staff member, I can complete the onboarding process upon first accessing the site. I will need to provide necessary information and complete any optional sections to fully access the site's features.
-
 ## Book Venues
 
 #### User Acceptance Tests
