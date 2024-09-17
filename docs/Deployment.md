@@ -55,6 +55,8 @@ The branch names are set as:
 #### Transport
 We plan to show users the venue location of venues in our application by displaying the map location.
 - We will fetch their MAP API and display the locations of venues
+How to stub:
+- Implement a google maps of wits.
 
 #### Events Managment (requires there API):
 
@@ -66,10 +68,11 @@ What if the externel API is not working
 
 #### Dining
 When a user books a venue they must get a popup asking if they want to book a reservation along with their venue booking. 
-- So fetch request of different dining options
-- Click on your desired eatery.
+- So fetch request of different meal options
+- Click on your desired meal.
+- choose an establishment
 - State how many will attend
 - close popup.
-What if the externel API is not workingl:
-- We will hardcode some places to eat with their contact information.
+What if the externel API is not working:
+- We will hardcode some places to eat and their menyes with their contact information.
 - It will be up to the user discretion to call the establishments.
