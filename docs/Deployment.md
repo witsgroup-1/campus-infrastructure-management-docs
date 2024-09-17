@@ -44,6 +44,11 @@ The branch names are set as:
 - Saftey: Why integrate. For security details we can get the most up to date security information.
 - Dining: Why integrate. We can allow our users to book a reservation for a meeting etc.
 
+### Details on Integration Implementation:
+#### heading of your integration
+Plan if works - display latest info ...
+Plan to stub - hardcode/stub
+
 ### How will we stub their data
 
 - Transport: Hardcode some locations for major venues.

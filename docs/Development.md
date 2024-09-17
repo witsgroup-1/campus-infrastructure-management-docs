@@ -68,7 +68,7 @@ The Mockups based off of the wireframes (but also more refinied)
 
 ![May Mockup](media/mockup.png)
 
-Revised mockup designs based on Brendan Griffiths' criticism
+Revised mockup designs based on the clients feedback.
 
 ![Busi Mockup](image-1.png)
 ![Busi Mockup](image-2.png)
@@ -96,6 +96,10 @@ Revised mockup designs based on Brendan Griffiths' criticism
 > ![Frame 1](media/userdashboard/5%20Search%20Results.png)
 > Frame 2:
 > ![Frame 2](media/userdashboard/5%20Search%20Results-1.png)
+
+#### Use case: Onboarding Pages
+> ![Frame 1](media/LunarMockup3.png)
+
 
 #### Use case: General maintenance reports and logs
 ![Cla Mockup 1](media/LunarMockup2.png)
@@ -153,7 +157,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - 20th -27th August - Sprint 2 - begin programming the key features - DB, API, Frontend.
 - 27th August -3rd September - Sprint 3 - finalise APIs, finalise integration plans, Create frontend pages(user dashboard, other pages).
 - 4th - 10th September - Sprint 4 - Begin implementing core features, finalise frontend pages, secure API, integrate with other systems.
-- 11th - 16th September - Sprint 5 -
+- 11th - 16th September - Sprint 5 - Begin Unit and Integration Testing of the core features, Stub integrations if have not recieved their API access.
 - 17th September - 2nd Marking
 - 01st October - 3rd Marking
 - 07th October - Group Report and Documentation
