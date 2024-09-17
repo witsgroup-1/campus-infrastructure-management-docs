@@ -413,3 +413,54 @@ Meeting:
 - api stubs will be completed by monday evening.
 - documenatation must be ready to go by tuesday morning.
 
+### Sprint 5 Meeting 14 (Sprint Review)
+
+Date: 17 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+- client
+
+Observations made by the client plus improvements that could be made:
+- client likes our front-end/ui.
+- clearing maintenance logs after a specific time.
+- admin must be able to edit, delete venues
+- admins must be able to manage whitelist.
+- record access to API keys: increment count every time x===API_KEY to use as proof if nobody uses our keys.
+- use a Google form with graphs and charts to record user feedback.
+- mock APIs instead of hardcoding it.
+- clean up and rectify testing.
+- remove apple and facebook logos from login.
+- only allow wits accounts to log in.
+- hopefully implement dark mode.
+
+
+### Sprint 5 Retrospective
+Date: 17 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+- we were unable to complete all testing.
+- most functionality was working, although there were bugs.
+
+Challenges:
+- our time management and working well alongside other projects.
+- API integration
+- testing
+
+How to proceed:
+- we plan on having more meetings, so we can better deal with our progress and time management.
+- properly mock APIs
+- spend time on getting testing to work accurately.
+- study the rubric so we can have everything we need and more.

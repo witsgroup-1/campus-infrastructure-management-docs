@@ -127,6 +127,7 @@ Background Specification:
 
 ### User stories
 - As a user, I want to be able to log in to the app so that i can make bookings.
+- As a user, I want to be able to use GoogleAuth so that the logging in process in simpler.
 - As a user, I want to be able to be able to specify my role so that I can access the right functionality.
 - As a user, I want to be able to view all venues so that I can choose one to book.
 - As a user, I want to be able to view all my upcoming bookings so that I will not forget them.
@@ -140,7 +141,7 @@ Background Specification:
 - As a user, I want to be able to log out so that I can keep my information safe.
 - As a user, I want to be able to receive notifications so that I can stay up to date.
 - As a user, I want to be able to see security contact information so that I can contact security in case of an emergency.
-
+- As a user, I want to be able to make a dining reservation, so that I can be sure that my place in the dining hall is booked.
 
 ## Key Features Overview
 

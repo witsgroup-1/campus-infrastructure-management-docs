@@ -118,6 +118,7 @@ The application and the designs of this application was given to family members 
 ### User acceptance tests for Schedules
 
 - Given that I am a user, when I log into the app, then I am able to make a booking.
+- Given that I am a user, when i log in using GoogleAuth, then the process is simpler.
 - Given that I am a user, when I specify my role, then i am able to access the right functionality.
 - Given that I am a user, when I view all venues, then i can choose one to book.
 - Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
@@ -131,7 +132,7 @@ The application and the designs of this application was given to family members 
 - Given that I am a user, when I log out, then i am able to keep my information safe.
 - Given that I am a user, when I receive notification, then i can stay up to date.
 - Given that I am a user, when I see security contact information, then i am able to contact security.
-
+- Given that I am a user, when i make a dining reservation, then i am sure that my place in the dining hall is booked.
 
 
 ## Why is our code coverage ___%
