@@ -45,13 +45,31 @@ The branch names are set as:
 - Dining: Why integrate. We can allow our users to book a reservation for a meeting etc.
 
 ### Details on Integration Implementation:
-#### heading of your integration
-Plan if works - display latest info ...
-Plan to stub - hardcode/stub
-
 ### How will we stub their data
 
 - Transport: Hardcode some locations for major venues.
 - Events Management: hardcode some events to make sure our system is aware of them and up to date.
 - Saftey: Hardcode some known security information (contact details for security of every campus).
 - Dining: We will have some hardcoded resturants to make reservations too in our venue data collection. The reservations will be noted down in a list and acted upon in a timely manner.
+  
+#### Transport
+We plan to show users the venue location of venues in our application by displaying the map location.
+- We will fetch their MAP API and display the locations of venues
+
+#### Events Managment (requires there API):
+
+#### Safety
+On the footer of the user dashboard we will call the Security applications API of most relevent security contact information incase someone needs an emergency number. 
+- so preform a fetch request on the externel API and disply the information on the user dashboard footer.
+What if the externel API is not working
+- We will hardcode emergency contact information to display in the footer.
+
+#### Dining
+When a user books a venue they must get a popup asking if they want to book a reservation along with their venue booking. 
+- So fetch request of different dining options
+- Click on your desired eatery.
+- State how many will attend
+- close popup.
+What if the externel API is not workingl:
+- We will hardcode some places to eat with their contact information.
+- It will be up to the user discretion to call the establishments.
