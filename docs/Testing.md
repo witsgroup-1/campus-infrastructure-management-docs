@@ -67,7 +67,14 @@ Reset State: Before each test, the mock for fetch is cleared, and any necessary 
 These tests ensure that the utility functions in editBookings.js perform their intended tasks accurately, contributing to the overall robustness of the application.
 
 
-### User Acceptance Tests
+## User Acceptance Tests
+
+The application and the designs of this application was given to family members and friends to try and view. Here are some of their responses:
+- The colour scheme is much better then the original initial desing.
+- The structure is good - feels progessional.
+- Clean and logical.
+
+
 ### Onboarding UATs
 
 #### As a Student
