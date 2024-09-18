@@ -464,3 +464,42 @@ How to proceed:
 - properly mock APIs
 - spend time on getting testing to work accurately.
 - study the rubric so we can have everything we need and more.
+
+### Sprint 6 Meeting 15 (Sprint Planning)
+Date: 17 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes:
+-	The Google form has been completed for user feedback.
+-	How will non-wits students access website for user feedback:
+ - either show them through our emails or add them to the whitelist.
+- chloe will fix whitelist and booking, remove other images on login.
+- Menzi/Dineo will fix GoogleAuth.
+- Mayuri will change the hardcoded security info proper mocked api and fix scheduling.
+- dineo will change back arrow and fix onboarding, timeslots.
+- api key logging in middleware: proof that we gave other groups our apis and editing maintenance: Claire
+- Busi will have to mock a dining api.
+- look into Playwright(?) for testing.
+- if staff but not lecturer, then user is an admin- redirecting by dineo
+
+Things to do moving forward:
+-	Admin dashboard and website- Menzi
+-	View all bookings and manage bookings.
+-	Notifications - Busi
+-	Integrate map api
+-	Testing!!
+-	Maintenance notifications – Claire
+-	Implement deadlines for good progression of work
+
+By the next meeting:
+-	Core functionality done.
+-	Basic unit testing done.
+
+Next meeting: Saturday, 20:00
