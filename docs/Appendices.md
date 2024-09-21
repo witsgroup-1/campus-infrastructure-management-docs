@@ -503,3 +503,34 @@ By the next meeting:
 -	Basic unit testing done.
 
 Next meeting: Saturday, 20:00
+
+### Sprint 6 Meeting 16 
+Date: 17 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+-	Whitelist in production.
+-	Schedules make recurring bookings.
+-	Onboarding, GoogleAuth works.
+-	Testing is in progress
+-	Admin dashboard was created.
+- created a way to log API keys.
+
+To do:
+-	More testing.
+-	Notifications.
+-	Refine website, ui etc
+-	Mock apis, add map to user dashboard.
+-	Give out user feedback forms.
+
+Note:
+-	No progress on other groups apis.
+
+Next Meeting: Thursday, 26 September
