@@ -534,3 +534,36 @@ Note:
 -	No progress on other groups apis.
 
 Next Meeting: Thursday, 26 September
+
+### Sprint 6 Meeting 17 
+Date: 17 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+- more progress on testing
+- done with notifications
+- whitelist done
+
+To do:
+-	Mock dining API
+-	Redirection to admin account
+-	Finish tests, begin integration tests
+-	Give out user feedback survey
+-	Update documentation: api docs, testing docs
+-	Refine website, make sure its mobile first
+
+Note:
+- The progress that the other groups have given about their apis that we need: 
+  - menu : Friday
+  - security – no news
+  - map – “before the milestone”
+
+Next meeting: Sunday, 29 September, 20:00
+
