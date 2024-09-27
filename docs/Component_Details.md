@@ -56,6 +56,15 @@
 
 ## User Guides
 
+### Landing page User Guide
+
+##### Step 1: Welcome
+1. **Access the Landing Page**:
+   - The landing page is the main point of arrival.
+2. **Introduction**:
+   - You will see an information card with rules on how to login or request email approval.
+
+
 ### Onboarding User Guide
 
 #### Overview
@@ -67,7 +76,7 @@ The onboarding process is designed to collect essential information about you be
 
 #### Step-by-Step Instructions
 
-##### Step 1: Welcome
+##### Step 1: Onboarding
 1. **Access the Onboarding Page**:
    - Open the onboarding page from the provided link.
 2. **Introduction**:
@@ -123,33 +132,45 @@ The onboarding process is designed to collect essential information about you be
 ### User Guide: Dashboard
 
 #### Overview
-Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including managing bookings, viewing past and upcoming bookings, and accessing account details.
+Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including viewing upcoming bookings, viewing available venues and making maintenance reports.
 
 #### Dashboard Layout
 
 ##### Header
-- **Back Button**: Located at the top left of the header, this button allows users to navigate back to the previous page.
-- **Title**: Displays the page title (e.g., "Your Bookings") in the center of the header.
+- **Logo**: Located at the top left of the header.
+- **Title**: Displays the name of the application 'Infrustructure Management'.
+- **Accesses**: Located at the top right of the header, there is a notification bell and navigation menu icon.
 
 ##### Main Content
 
 ###### Desktop View
+
+- **Available venues**:
+  - **Description**: This shows the venues available to book in the next available slot, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+  -**Available venues page**:
+  - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
+
 - **Upcoming Bookings**:
-  - **Description**: Shows all bookings scheduled for the future. You can view details and manage these bookings.
-  - **Pagination**: If there are more bookings than can fit on one page, you can use pagination controls to navigate through multiple pages.
-- **Past Bookings**:
-  - **Description**: Lists all bookings that have already occurred. This section helps you keep track of completed events.
-  - **Pagination**: Provides controls for navigating through pages of past bookings if there are many.
+  - **Description**: Shows the first 3 bookings scheduled for the future, when there are more than 3 bookings, users navigate to the 'Your bookings' page via the 'see more' link what will appear beneath the bookings. 
+  -**Your bookings page**:
+  - This page can be accessed via 'see more' under the bookings on the main page or via the navigation bar under the 'Bookings' tab,
+  -This page allows you to see upcoming bookings which you can choose to cancel and past bookings which you can choose to book again.
+
+  - **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
 
 ###### Mobile View
-- **Upcoming Bookings**:
-  - **Description**: Provides a summarized view of upcoming bookings, optimized for mobile devices.
-- **Past Bookings**:
-  - **Description**: Shows a summarized view of past bookings, designed for mobile users.
+- **Available venues**:
+  - **Description**: This shows the venues available to book in the next available slot, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+  -**Available venues page**:
+  - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
 
-##### Back to Top Button
-- **Functionality**: A button that appears when the user scrolls down the page, allowing them to quickly return to the top.
-- **Location**: Positioned at the bottom right corner of the page.
+- **Upcoming Bookings**:
+  - **Description**: Shows the first 3 bookings scheduled for the future, when there are more than 1 booking, users navigate to the 'Your bookings' page via the 'see more' link what will appear beneath the bookings. 
+  -**Your bookings page**:
+  - This page can be accessed via 'see more' under the bookings on the main page or via the navigation bar under the 'Bookings' tab,
+  -This page allows you to see upcoming bookings which you can choose to cancel and past bookings which you can choose to book again.
+
+  - **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
 
 #### Features
 
