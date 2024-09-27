@@ -156,7 +156,7 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
   - This page can be accessed via 'see more' under the bookings on the main page or via the navigation bar under the 'Bookings' tab,
   -This page allows you to see upcoming bookings which you can choose to cancel and past bookings which you can choose to book again.
 
-  - **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
+- **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
 
 ###### Mobile View
 - **Available venues**:
@@ -170,7 +170,7 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
   - This page can be accessed via 'see more' under the bookings on the main page or via the navigation bar under the 'Bookings' tab,
   -This page allows you to see upcoming bookings which you can choose to cancel and past bookings which you can choose to book again.
 
-  - **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
+- **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
 
 #### Features
 
