@@ -201,7 +201,7 @@ The specifications for their respective databases and API endpoints are shown fu
 ### Login
 
 - authentication:
-- whitelist: certain emails that are not The University of Witwatersrand affiliated will be whitelisted if they have valid reason to use the university's services e.g. guest lecturers
+- whitelist: Individuals such as external lecturers who need access to the application but do not have "@wits.ac.za" affiliated emails are required to request access into a whitelist, this request is managed by the Admins and upon acceptance this email can create an account and have access to the application.
 - required information:
 
 ### Users
@@ -210,6 +210,8 @@ The specifications for their respective databases and API endpoints are shown fu
 - Student (tutor): Permisions ->
 - Staff (Lecturer): Permisions ->
 - Staff: Permisions ->
+- User dashboard: On this dashboard all user types except admins can view it, this page has a multitude of abilites, including the ability to quick book/report on the floating button, viewing venues available to book in the form of images and their upcoming bookings if applicable. 
+Further this dashboard includes a notification bell which should notify the user of the bookings they made and a navigation bar with multiple options.
 
 ### Book Venues
 
@@ -217,10 +219,7 @@ The specifications for their respective databases and API endpoints are shown fu
 
 - Lecture Halls
 - Tutorial Rooms
-- Labratories
-- Computer Labratories
-- Confrence rooms
-- ...
+- Study Rooms
 
 ### Schedule Integration
 
