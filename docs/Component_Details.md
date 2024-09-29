@@ -41,7 +41,8 @@
 #### How It Was Implemented
 
 - **Maintenance Report**:
-  - The frontend sends a POST request to the API with the input values from the HTML form.
+  - The frontend sends a POST request to the maintenance API with the input values from the HTML form.
+  - You can only enter in a valid venue name which is aided by a search dropdown that does a get request via the venue API based on the name of the venue.
   - The form input clears upon submission.
 
 - **Maintenance Logs**:
@@ -254,11 +255,12 @@ The "Booking Details" page provides detailed information about a selected venue 
 
 1. Click the plus on your user dashboard and select "Report."
 2. Fill in your name.
-3. Fill in the venue where the issue took place (e.g., lecture hall, tutorial room, conference hall, laboratory).
+3. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
 4. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
 5. Write a short description of the issue.
 6. Click "Submit." The input should clear.
 7. Press the back arrow in the top left corner to return to the user dashboard.
+8. If you do not fill in every field then you can not submit the form.
 
 #### How to Work with Maintenance Logs
 
@@ -267,5 +269,42 @@ The "Booking Details" page provides detailed information about a selected venue 
 3. Click on a block that displays Venue: name, with a date.
 4. View the popup with detailed information.
 5. Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
-6. Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
-7. Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
+6. You can search for staff users to assign tasks to.
+7. You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
+9. Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
+10. Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
+
+
+
+
+
+
+## Maintenance Guides for all features.
+
+API Key:
+- The API key (apiKey) is a sensitive piece of information used to authenticate requests to the API.
+- Ensure that the API key is rotated on a regular basis for security.
+
+  
+Maintenance Reports:
+
+
+
+Maintenance Logs:
+- Fetching Data from the API:
+    - The code fetches maintenance requests from an API endpoint and processes them based on their status (Scheduled, In Progress, Completed).
+    - Tasks:
+        - Always check the status of the API response to ensure it's successful before processing the data.
+        - Ensure robust error handling with try-catch blocks.
+        - Log errors meaningfully with console.error();
+- Handling and Displaying Maintenance Requests:
+    - Maintenance requests are filtered into different categories: "Scheduled", "In Progress", and "Completed".
+    - Date Handling: Ensure the timestamps are correctly converted into a human-readable format using: new Date(request.timestamp.seconds * 1000).toLocaleString();
+    - Ensure the function 'displayInitialRequestsForMobile' works so as to ensure consistently responsive displays accross devices.
+- Updating Maintenance Requests:
+    - Maintenance requests can be updated through the saveChanges function, which sends a PUT request to the API.
+    - Tasks:
+        - Ensure Correct Status is Reflected: Check that the status changes (like Scheduled, In Progress, or Completed) are saved properly.
+
+
+
