@@ -134,6 +134,48 @@ The application and the designs of this application was given to family members 
 - Given that I am a user, when I see security contact information, then i am able to contact security.
 - Given that I am a user, when i make a dining reservation, then i am sure that my place in the dining hall is booked.
 
+## User Acceptance Tests for Venue Booking
+
+**1. Book Study Room as a Student**
+- **Given** that I am a student user who is neither a lecturer nor a tutor,
+- **When** I attempt to book a study room,
+- **Then** I can book the study room for the specified time.
+
+**2. Book Study Room and Tutorial Room as a Student Tutor**
+- **Given** that I am a student user who is a tutor but not a lecturer,
+- **When** I attempt to book a study room or tutorial room,
+- **Then** I can successfully book either a study room or tutorial room for the specified time.
+
+**3. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Student Lecturer**
+- **Given** that I am a student user who is a lecturer but not a tutor,
+- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**4. Book Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Lecturer**
+- **Given** that I am a staff member who is a lecturer,
+- **When** I attempt to book a tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**5. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Member**
+- **Given** that I am a staff member who is neither a tutor nor a lecturer,
+- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**6. Book All Allowed Venues as a Staff Member who is Both a Lecturer and a Tutor**
+- **Given** that I am a staff member who is both a tutor and a lecturer,
+- **When** I attempt to book any venue,
+- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
+
+**7. Book All Allowed Venues as a Student who is Both a Lecturer and a Tutor**
+- **Given** that I am a student user who is both a lecturer and a tutor,
+- **When** I attempt to book any venue,
+- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
+
+**8. Book No Venues if User Role is Unspecified**
+- **Given** that my user role is unspecified or missing,
+- **When** I attempt to book any venue,
+- **Then** I will be unable to book any venues.
+
 
 ## Why is our code coverage ___%
 ### For Milestone 2 
