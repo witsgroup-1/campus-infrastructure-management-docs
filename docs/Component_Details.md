@@ -146,8 +146,8 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
 
 ###### Desktop View
 
-- **Available venues**:
-  - **Description**: This shows the venues available to book in the next available slot, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+- **Venues**:
+  - **Description**:This shows the venues available to book, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
   -**Available venues page**:
   - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
 
@@ -160,8 +160,8 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
 - **Footer**: Contains campus security information, a map to find your way around campus and naturally, Group -1's copy right.
 
 ###### Mobile View
-- **Available venues**:
-  - **Description**: This shows the venues available to book in the next available slot, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+- **Venues**:
+  - **Description**: This shows the venues available to book, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
   -**Available venues page**:
   - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
 
