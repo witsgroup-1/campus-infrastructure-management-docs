@@ -21,7 +21,7 @@ We were testing the Maintenance Request Form where we mocked the structure of th
 - Unit test 1: checks if the form submits the form and resets it -> So spies on the console logs and errors afer submitting the required mock values using a fireEvent. It expects a successful log.
 - Unit test 2: checks if the form logs an error on failed request -> So it spies on the console logs and errors after submitting required mock values using a fireEven. It expects an error to be logged.
 - Integration test: Testing both of these on similar inputs to check if both work as intended on similar inputs.
-Overall 100% coverage of this file.
+Overall 50% coverage of this file.
 #### Testing Maintenance Logs
 We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
 - Unit test 1: Fetches maintenance requests and displays them -> it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
@@ -31,7 +31,11 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Unit test 5: Opens popup with correct content -> tests that when opening the popup, the resulting html contains the correct input text.
 - Unit test 6: Saves changes and updates request -> tests that the mocked fetch request for the post method is successful and that the popup becomes hidded after saving the changes that we posted.
 - Unit test 7: Closes popup -> tests that the popup closes when we click close.
-- Integration test: Testing that all these functions work on the same mock input.
+We are testing the staff users function works
+- Unit test 1: Fetches staff members and populates dropdown when input is provided -> Fetches the staff members (those who arent lecturers, tutors and students) via a search of 'Jo' (our mock data). It poulates the dropdown and we verify this.
+- Unit test 2: Clears and hides dropdown when no query is provided. So provide a empty query in the input field, start the event and expect a clear dropdown that is hidden.
+- Unit test 3: Check if the code handles an API error gracefully for the staff search. -> Mock the failed API response, then check if the dropdown is hidded and cleared.
+- Unit test 4: Handles staff selection from dropdown. -> So we call the setupStaffSearch(apiKey) function to set up the search. Then we populate the dropdown. We simulate the click of an option and then verify the input value is updated.
 Overall 89% coverage of this file- the left our lines of coverage were not integral for testing.
 ### Integration Testing for Maintenance
 Using playwright we did ingtegration testing as it would go into the browser and test the code from there.
