@@ -14,6 +14,7 @@
 ## Tests
 
 ### Maintenance Tests
+### Unit tests for Maintenance
 Two copies of the maintenance frontend where made so we could standerdise the urls to the local url and not work with the production url.
 #### Testing Maintenance Reports
 We were testing the Maintenance Request Form where we mocked the structure of the html and the fetch request. The test mimics the DOMContentLoaded and the general structure of the form. 
@@ -32,6 +33,16 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Unit test 7: Closes popup -> tests that the popup closes when we click close.
 - Integration test: Testing that all these functions work on the same mock input.
 Overall 89% coverage of this file- the left our lines of coverage were not integral for testing.
+### Integration Testing for Maintenance
+Using playwright we did ingtegration testing as it would go into the browser and test the code from there.
+#### Testing Maintenance Reports
+Testing the dropdown integration:
+- Get some mock data and test that the dropdown should populate the dropdown when the venue data loads. We expect to see the mock room names ro appear
+- Check if a venue is selected, it updates the input field. So we populate the dropdown, mock the click and then we expect the input field to update with our choice.
+- Clear the dropdown when  the clearVenueDropdown function is called. We populate the dropdown and see if it clears once we call the function.
+Testing maintenance logs dropdown:
+-
+
 
 ### Testing for editBookings.js
 
