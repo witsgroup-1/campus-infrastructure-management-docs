@@ -189,6 +189,7 @@ The specifications for their respective databases and API endpoints are shown fu
 - ticket system for maintenace logs.
 - Onboarding process
 - Do not need sign up page.
+- Mock API's instead of hardcoding it.
 
 
 ---

@@ -252,10 +252,13 @@ The "Booking Details" page provides detailed information about a selected venue 
 - Open the sidebar on the main dashboard and click on "Schedules".
 - Here, you will be able to view all created schedules.
 - On each row, there is a button with a bin. Click on this button in order to delete a schedule. You will be asked to confirm your deletion: click yes (or cancel if you do not want to).
+- Beside that button, is a another button to edit your schedule details. If you click on this button, you will find a popup. Edit the information that you would like to and click "Update". ELse you can click "Close".
 - Beneath the table is a button which says "Add a Schedule". Clicking this button will take you to a new page with a form.
 - Type in your name, the course of the schedule and the venue where it will be held. Select a day from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
 - Then if your schedule is one that recurs weekly, click "yes" on the Recurring dropdown. This will casue another Date picker to appear. Here you must choose the date that your last schedule will be held on. Otherwise, if your schedule is only for one day, choose "no".
 - Once the form is fully filled out, you can click the "Submit" button to add your new schedule.
+
+
 
 ### Maintenance
 
@@ -396,5 +399,50 @@ Maintenance Logs:
         - Ensure Correct Status is Reflected: Check that the status changes (like Scheduled, In Progress, or Completed) are saved properly.
 
 
+### Schedule Integration
+#### Timetables
 
+A. Displaying schedules: all created schedules are displayed in a table.
 
+- Maintenance:
+ - Ensure that the schedule API is fetching data from the backend correctly. 
+ - Ensure that changes to the schedules are displayed appropraitely. 
+ - Ensure that deleted schedules are removed from the table.
+
+- Common issues:
+ - Incorrect syntax when displaying schedules: edit the html to display schedules as expected.
+ - Schedules not updating: check API is being handled correctly.
+
+B. Delete button: button to delete a specific schedule by ID.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that confirmation popup appears when button is clicked. 
+ - Ensure schedule is appropriately deleted.
+
+- Common issues:
+ - Alert does not appear: check that the button functionality is working.
+ - Schedule is not deleted: check API is being handled correctly.
+
+C. Edit button: button to edit a specific schedule by ID.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that popup appears when button is clicked. 
+ - Ensure schedule is appropriately updated when "Update" is clicked.
+ - Ensure popup is closed when "Close" button is clicked.
+
+- Common issues:
+ - Popup does not appear: check that the button functionality is working.
+ - Schedule is not updated: check API is being handled correctly.
+ - Popup does not close: check that "Close" button works as expected.
+
+D. Add Schedule button: button that takes you to a new page so you can create a new schedule.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that the button takes you to the new, correct page.
+
+- Common issues:
+ - Button does not take you to a new page: check that the button has a corresponding link.
+ - Button takes you to the wrong page: check that the correct link is being used.
