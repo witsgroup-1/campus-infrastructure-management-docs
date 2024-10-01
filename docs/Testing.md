@@ -14,13 +14,14 @@
 ## Tests
 
 ### Maintenance Tests
+### Unit tests for Maintenance
 Two copies of the maintenance frontend where made so we could standerdise the urls to the local url and not work with the production url.
 #### Testing Maintenance Reports
 We were testing the Maintenance Request Form where we mocked the structure of the html and the fetch request. The test mimics the DOMContentLoaded and the general structure of the form. 
-- Unit test 1: checks if the form submits the form and resets it -> So spies on the console logs and errors afer submitting the required mock values using a fireEvent. It expects a successful log.
-- Unit test 2: checks if the form logs an error on failed request -> So it spies on the console logs and errors after submitting required mock values using a fireEven. It expects an error to be logged.
-- Integration test: Testing both of these on similar inputs to check if both work as intended on similar inputs.
-Overall 100% coverage of this file.
+- Unit test 1: Submits the form correctly. -> Mocks the data and checks if the form has been posted via fetch request when the form is submitted.
+- Unit test 2: Displays an alert if venue is not selected correctly. -> The test mocks the html data and creates a DOM content loaded event. We simulate an empty input for venues and we spy on an alert to see if it tells us to "Please select a valid venue from the dropdown". We expect the venue input field to be reset.
+
+Overall 50% coverage of this file. It is not full coverage as the authentication is tested with other files and some of the integration tests actiually cover these smaller aspects of the code to do with the venue dropdown.
 #### Testing Maintenance Logs
 We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
 - Unit test 1: Fetches maintenance requests and displays them -> it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
@@ -30,8 +31,25 @@ We were testing the different functions of the maintenance logs where we mocked 
 - Unit test 5: Opens popup with correct content -> tests that when opening the popup, the resulting html contains the correct input text.
 - Unit test 6: Saves changes and updates request -> tests that the mocked fetch request for the post method is successful and that the popup becomes hidded after saving the changes that we posted.
 - Unit test 7: Closes popup -> tests that the popup closes when we click close.
-- Integration test: Testing that all these functions work on the same mock input.
+We are testing the staff users function works
+- Unit test 1: Fetches staff members and populates dropdown when input is provided -> Fetches the staff members (those who arent lecturers, tutors and students) via a search of 'Jo' (our mock data). It poulates the dropdown and we verify this.
+- Unit test 2: Clears and hides dropdown when no query is provided. So provide a empty query in the input field, start the event and expect a clear dropdown that is hidden.
+- Unit test 3: Check if the code handles an API error gracefully for the staff search. -> Mock the failed API response, then check if the dropdown is hidded and cleared.
+- Unit test 4: Handles staff selection from dropdown. -> So we call the setupStaffSearch(apiKey) function to set up the search. Then we populate the dropdown. We simulate the click of an option and then verify the input value is updated.
+
 Overall 89% coverage of this file- the left our lines of coverage were not integral for testing.
+
+### Integration Testing for Maintenance
+Using playwright we did ingtegration testing as it would go into the browser and test the code from there.
+
+#### Testing Maintenance Reports
+Testing the dropdown integration:
+- Get some mock data and test that the dropdown should populate the dropdown when the venue data loads. We expect to see the mock room names ro appear
+- Check if a venue is selected, it updates the input field. So we populate the dropdown, mock the click and then we expect the input field to update with our choice.
+- Clear the dropdown when  the clearVenueDropdown function is called. We populate the dropdown and see if it clears once we call the function.
+Testing maintenance logs dropdown:
+- 
+
 
 ### Testing for editBookings.js
 
