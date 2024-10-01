@@ -10,10 +10,10 @@
 - **Whitelisting**: Certain emails not affiliated with The University of Witwatersrand may be whitelisted if they have valid reasons (e.g., guest lecturers).
 
 #### Users
-- **Student**: Access to study resources, booking venues, and academic activities.
+- **Student**: Access to reporting, booking venues, viewing information about venues and making reservations.
 - **Student (Tutor)**: Additional permissions for tutoring activities and resources.
 - **Staff (Lecturer)**: Permissions include booking venues, managing academic schedules, and accessing staff resources.
-- **Staff**: Permissions include managing staff activities and accessing staff resources.
+- **Staff (Admin)**: Permissions include everything in the generic dashboard and managing reports, bookings, whitelisting and managing schedules.
 
 ### Schedule Integration
 
@@ -64,6 +64,14 @@
    - The landing page is the main point of arrival.
 2. **Introduction**:
    - You will see an information card with rules on how to login or request email approval.
+
+### Request access User Guide
+
+##### Step 1: Welcome
+1. **Access the Request Page**:
+   -This process is a 2 step process in which the requester inputs their name, surname and email address.
+2. **Submission**:
+   - You will submit your request which follows with a redirection to a status check page, which must be visited regularly to check the status of your request.
 
 
 ### Onboarding User Guide
@@ -281,6 +289,87 @@ The "Booking Details" page provides detailed information about a selected venue 
 
 ## Maintenance Guides for all features.
 
+### User Dashboard Maintenance Guide: 
+
+Dashboard Components:
+
+A. Venue Section
+Functionality: Displays images of venues and contains a link to an 'Available Venues' page to show venues available to book in the next slot.
+
+  - Maintenance:
+    - Ensure the backend API fetching venue data is functional.
+    - Check that venue data is correctly updated in the database and reflected on the dashboard.
+    - Test the venue section UI after changes to the database or API.
+
+  - Common Issues:
+    - Venue data not showing: Check API response and connectivity.
+    - Data mismatch: Ensure synchronization between the venue database and UI.
+
+B. Upcoming Bookings Section
+Functionality: Shows upcoming bookings for the logged-in user.
+
+  - Maintenance:
+    - Ensure correct fetching of user-specific booking data from the database with the use of the users API.
+    - Check data synchronization, especially when new bookings are added or cancelled.
+    - Verify that upcoming bookings are displayed in the correct time format.
+  - Common Issues:
+    - No upcoming bookings displayed: Confirm the API query is filtering by the correct user ID.
+    - Booking details incorrect: Ensure the database and booking system are up to date.
+
+C. Floating Button (Quick Access to Report and Book Pages)
+Functionality: Provides quick navigation to the report and booking pages.
+
+
+  - Maintenance:
+    - Test that the button links correctly to the respective pages.
+    - Ensure UI elements remain responsive across different devices.
+    - Check the floating button’s positioning and appearance after any UI updates.
+  - Common Issues:
+    - Button not clickable: Check if the link or route in the frontend is broken.
+    - Incorrect redirection: Confirm that the button routes match the intended destination URLs.
+
+D. Notification Bell
+Functionality: Displays notifications to users.
+
+  - Maintenance:
+    - Verify notification fetching from the database using the notifications API.
+    - Ensure that unread notifications are marked properly and disappear when viewed.
+
+  - Common Issues:
+    - Notifications not showing: Check the API responsible for fetching notifications.
+    - Notifications not clearing: Ensure state management is handled properly after viewing notifications.
+
+E. Menu Button (Navigation Bar)
+Functionality: Opens a navigation bar with links to various pages.
+
+  - Maintenance:
+    - Ensure that the menu opens and closes properly across different screen sizes.
+    - Verify the links in the navigation bar are correctly routed to the desired pages.
+    - Test the interaction of the menu button with other UI elements, such as the floating button or notification bell.
+
+  - Common Issues:
+    - Menu not opening/closing: Debug potential JavaScript issues or CSS conflicts.
+    - Incorrect navigation: Ensure each link’s route is configured correctly in the app.
+
+#### Testing
+
+- Regularly test each component of the dashboard after updates or deployments.
+- Use browser developer tools to inspect elements, monitor API requests, and debug issues.
+- Ensure that after any UI or backend changes, a full suite of tests (unit, integration, and end-to-end) is run.
+
+- Updates and Future Maintenance
+    - When adding new venues, the backend API is updated to reflect changes.
+    - Ensure compatibility with new browsers and devices by testing on different platforms.
+
+#### Troubleshooting Guide
+Venue not displaying: Check API response, database connection, and inspect browser console for errors.
+Bookings not updating: Ensure real-time syncing is functioning, and validate backend database changes.
+Notification bell not working: Inspect API responses and front-end JavaScript.
+Navigation bar links broken: Verify route configurations in the front-end codebase.
+
+*** End of userdashboard maintenance guide. ***
+
+
 API Key:
 - The API key (apiKey) is a sensitive piece of information used to authenticate requests to the API.
 - Ensure that the API key is rotated on a regular basis for security.
@@ -305,6 +394,5 @@ Maintenance Logs:
     - Maintenance requests can be updated through the saveChanges function, which sends a PUT request to the API.
     - Tasks:
         - Ensure Correct Status is Reflected: Check that the status changes (like Scheduled, In Progress, or Completed) are saved properly.
-
 
 
