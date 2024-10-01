@@ -84,6 +84,55 @@ Global Mock: fetch is mocked globally to prevent actual network requests during 
 Reset State: Before each test, the mock for fetch is cleared, and any necessary global or DOM state is reset.
 These tests ensure that the utility functions in editBookings.js perform their intended tasks accurately, contributing to the overall robustness of the application.
 
+### Book Venue Testing
+
+#### Unit Tests for `book-venue.js`
+
+In this section, I created unit tests to verify the functionality of key functions in the `book-venue.js` file. The main goal is to ensure that the user data is fetched correctly, venues are rendered as expected, and the allowed categories for bookings are properly determined based on user roles. I used Jest for testing and mocked several dependencies, including Firebase and the global `fetch` function.
+
+**Mocking Firebase and Global Dependencies**
+
+Before diving into the individual tests, Firebase services and global functions like `fetch` and `alert` are mocked to isolate the code being tested:
+
+- **Firebase Mocks:** Firebase is mocked to avoid actual API calls to Firebase's authentication and Firestore services during testing. This ensures that the tests focus on how the application handles Firebase-related data and functions.
+  
+- **Global Fetch Mock:** The `fetch` function is mocked to simulate API responses. This allows us to control whether the fetch request succeeds or fails, which is particularly useful for testing error handling.
+
+- **Global Alert Mock:** `window.alert` is mocked to prevent actual alerts from popping up during tests, while still allowing us to verify that it was called.
+
+**Test 1: `fetchUserData` Function**
+
+The `fetchUserData` function is responsible for fetching user data from the API. The function should return user information if the API call is successful, or `null` if the user is not found (404 error).
+
+- **First Test:** Verifies that `fetchUserData` correctly fetches and returns user data. The test mocks a successful API response with a sample user object and checks that `fetch` is called with the expected URL.
+  
+- **Second Test:** Simulates a 404 response from the API and verifies that `fetchUserData` returns `null` in this case.
+
+**Test 2: `fetchAndRenderBookings` Function**
+
+This function fetches available venues based on the user’s role and renders them in the DOM. The test mocks the DOM elements necessary for rendering the venues and verifies that the function correctly fetches the appropriate venues based on the user's role.
+
+- **Test:** The test checks that the function fetches venues with the correct category filter and renders them in the DOM. It ensures that the `fetch` function is called with the correct API URL.
+
+**Test 3: `getAllowedCategories` Function**
+
+The `getAllowedCategories` function determines which categories of venues the user is allowed to book, based on their role (e.g., Student, Tutor, Lecturer).
+
+- **First Test:** Verifies that students who are not tutors or lecturers can only book study rooms. The test provides user data with the role of "Student" and checks that the function returns the correct allowed categories.
+
+- **Second Test:** Verifies that staff members who are lecturers can book multiple categories of venues, including tutorial rooms, exam venues, boardrooms, and lecture halls.
+
+**Test 4: `renderVenues` Function**
+
+This function renders venue data into the DOM. The test ensures that venues are displayed correctly in the bookings container based on the user's role and privileges.
+
+- **Test:** The test checks that the function correctly renders the venue names and details into the DOM. It mocks two venue objects (Lecture Hall and Tutorial Room) and verifies that both venues are displayed in the `bookingsContainer` element.
+
+**Conclusion**
+
+These unit tests ensure that key functions in `book-venue.js` are working correctly by simulating various scenarios, such as successful and failed API calls, different user roles, and venue rendering in the DOM. Mocking Firebase and global functions allows us to isolate the functionality of the code and focus on testing its logic without interacting with external services.
+
+
 
 ## User Acceptance Tests
 
