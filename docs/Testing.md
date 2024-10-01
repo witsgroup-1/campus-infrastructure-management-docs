@@ -20,6 +20,7 @@ Two copies of the maintenance frontend where made so we could standerdise the ur
 We were testing the Maintenance Request Form where we mocked the structure of the html and the fetch request. The test mimics the DOMContentLoaded and the general structure of the form. 
 - Unit test 1: Submits the form correctly. -> Mocks the data and checks if the form has been posted via fetch request when the form is submitted.
 - Unit test 2: Displays an alert if venue is not selected correctly. -> The test mocks the html data and creates a DOM content loaded event. We simulate an empty input for venues and we spy on an alert to see if it tells us to "Please select a valid venue from the dropdown". We expect the venue input field to be reset.
+
 Overall 50% coverage of this file. It is not full coverage as the authentication is tested with other files and some of the integration tests actiually cover these smaller aspects of the code to do with the venue dropdown.
 #### Testing Maintenance Logs
 We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
@@ -35,9 +36,12 @@ We are testing the staff users function works
 - Unit test 2: Clears and hides dropdown when no query is provided. So provide a empty query in the input field, start the event and expect a clear dropdown that is hidden.
 - Unit test 3: Check if the code handles an API error gracefully for the staff search. -> Mock the failed API response, then check if the dropdown is hidded and cleared.
 - Unit test 4: Handles staff selection from dropdown. -> So we call the setupStaffSearch(apiKey) function to set up the search. Then we populate the dropdown. We simulate the click of an option and then verify the input value is updated.
+
 Overall 89% coverage of this file- the left our lines of coverage were not integral for testing.
+
 ### Integration Testing for Maintenance
 Using playwright we did ingtegration testing as it would go into the browser and test the code from there.
+
 #### Testing Maintenance Reports
 Testing the dropdown integration:
 - Get some mock data and test that the dropdown should populate the dropdown when the venue data loads. We expect to see the mock room names ro appear
