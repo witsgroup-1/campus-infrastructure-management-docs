@@ -18,10 +18,9 @@
 Two copies of the maintenance frontend where made so we could standerdise the urls to the local url and not work with the production url.
 #### Testing Maintenance Reports
 We were testing the Maintenance Request Form where we mocked the structure of the html and the fetch request. The test mimics the DOMContentLoaded and the general structure of the form. 
-- Unit test 1: checks if the form submits the form and resets it -> So spies on the console logs and errors afer submitting the required mock values using a fireEvent. It expects a successful log.
-- Unit test 2: checks if the form logs an error on failed request -> So it spies on the console logs and errors after submitting required mock values using a fireEven. It expects an error to be logged.
-- Integration test: Testing both of these on similar inputs to check if both work as intended on similar inputs.
-Overall 50% coverage of this file.
+- Unit test 1: Submits the form correctly. -> Mocks the data and checks if the form has been posted via fetch request when the form is submitted.
+- Unit test 2: Displays an alert if venue is not selected correctly. -> The test mocks the html data and creates a DOM content loaded event. We simulate an empty input for venues and we spy on an alert to see if it tells us to "Please select a valid venue from the dropdown". We expect the venue input field to be reset.
+Overall 50% coverage of this file. It is not full coverage as the authentication is tested with other files and some of the integration tests actiually cover these smaller aspects of the code to do with the venue dropdown.
 #### Testing Maintenance Logs
 We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
 - Unit test 1: Fetches maintenance requests and displays them -> it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
@@ -45,7 +44,7 @@ Testing the dropdown integration:
 - Check if a venue is selected, it updates the input field. So we populate the dropdown, mock the click and then we expect the input field to update with our choice.
 - Clear the dropdown when  the clearVenueDropdown function is called. We populate the dropdown and see if it clears once we call the function.
 Testing maintenance logs dropdown:
--
+- 
 
 
 ### Testing for editBookings.js
