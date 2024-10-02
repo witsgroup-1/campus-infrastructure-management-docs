@@ -174,13 +174,15 @@ The specifications for their respective databases and API endpoints are shown fu
 - 20th August - 1st Marking
 - 20th -27th August - Sprint 2 - begin programming the key features - DB, API, Frontend.
 - 27th August -3rd September - Sprint 3 - finalise APIs, finalise integration plans, Create frontend pages(user dashboard, other pages).
-- 4th - 10th September - Sprint 4 - Begin implementing core features, finalise frontend pages, secure API, integrate with other systems.
+- 4th - 10th September - Sprint 4 - Begin implementing core features, finalise frontend pages, secure API, integrate with other systems and Incorporate user feedback.
 - 11th - 16th September - Sprint 5 - Begin Unit and Integration Testing of the core features, Stub integrations if have not recieved their API access.
 - 17th September - 2nd Marking
-- 01st October - 3rd Marking
-- 07th October - Group Report and Documentation
+- 18th - 24th Sepetember - Sprint 6 - begin implementing system wide coverage of testing, Work on integrations with other groups (stubbing or the use of their API's). Refine core features. Refine design and incorporate any user feedback.
+- 25th Sepetember - 3rd October - Sprint 7 - Finalise All testing and the websites features and functionality.
+- 04th October - 3rd Marking
+- 07th October - Individual Reports
 - 08-17th October - Demo
-- 20th October - Individual Reports
+- 17th October - Group Report
 
 ## Important Client Feedback:
 - Different colour scheme from initial design
