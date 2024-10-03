@@ -255,3 +255,102 @@ Some functions have not been unit tested yet and some tests have not been integr
 Patch Coverage is sometimes higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
 (ref: https://about.codecov.io/blog/why-patch-coverage-is-more-important-than-project-coverage/)
 
+# Add Venues Page Unit Testing 
+
+## Overview
+
+The test suite for the addVenues page uses Jest to perform unit tests on the main functions in `addVenueCopy.js`. The tests cover the core functionality of fetching venues, displaying venues, creating venue blocks, adding new venues, and handling form submissions.
+
+## Test Coverage
+
+The current test coverage for this suite is 82.6%.
+
+## Key Areas Tested
+
+1. **API Interactions**: 
+   - `fetchVenues()`: Tests successful API calls and error handling.
+   - `addVenue()`: Verifies correct API calls for adding new venues.
+
+2. **DOM Manipulations**:
+   - `displayVenues()`: Ensures correct rendering of venue information.
+   - `createVenueBlock()`: Checks the structure of individual venue blocks.
+
+3. **Form Handling**:
+   - `handleFormSubmit()`: Tests the form submission process, including successful submissions and error scenarios.
+
+## Testing Approach
+
+- **Mocking**: The global `fetch` function is mocked to simulate API calls without actually making network requests.
+- **DOM Simulation**: A minimal HTML structure is set up before each test to simulate the necessary DOM elements.
+- **Event Simulation**: Form submission events are simulated to test the `handleFormSubmit` function.
+
+## Why Not 100% Coverage?
+
+While 82.6% coverage is good, it's not 100% for several reasons:
+
+1. **Error Scenarios**: Some error paths might not be fully covered, especially for network or unexpected errors.
+
+2. **DOM Event Listeners**: The `initVenueManagement` function, which sets up event listeners, is likely not fully tested due to the complexity of simulating DOM content loading.
+
+3. **Browser-Specific Functions**: Functions like `alert()` are mocked but their full behavior in a browser environment isn't tested.
+
+4. **Asynchronous Operations**: Some edge cases in asynchronous operations might be missed.
+
+5. **Environment Variables**: The `apiKey` constant isn't tested, as it's typically an environment variable.
+
+# Integration Testing for addVenue Page
+
+## Overview
+
+This document outlines the integration tests for the addVenues Page using Playwright. These tests verify the end-to-end functionality of adding new venues and fetching existing venues.
+
+## Test Suite
+
+### 1. Add Venue and Verify List
+
+This test case verifies the process of adding a new venue and confirms its presence in the venues list.
+
+#### Steps:
+
+1. Navigate to the Add Venue page.
+2. Fill out the venue form with test data.
+3. Submit the form.
+4. Verify the success alert.
+5. Check if the new venue appears in the updated venues list.
+
+#### Assertions:
+
+- Confirm the success alert message.
+- Verify the presence of the newly added venue in the list.
+- Check if all venue details (name, capacity, category, features, building) match the input data.
+
+### 2. Fetch and Display Existing Venues
+
+This test case ensures that existing venues are properly fetched and displayed on the page load.
+
+#### Steps:
+
+1. Navigate to the Add Venue page.
+2. Wait for the venues list to load.
+3. Extract the list of displayed venues.
+
+#### Assertions:
+
+- Verify that the venues list is not empty.
+- Check the structure of each venue block, ensuring all required information is present.
+
+## Test Environment
+
+- **Framework**: Playwright
+- **Browser**: Default browser provided by Playwright
+- **Base URL**: `http://localhost:3000/adminDashboard/addVenue.html`
+
+## Running the Tests
+
+To run these tests:
+
+1. Ensure the application is running on `localhost:3000`.
+2. Execute the Playwright test command (e.g., `npx playwright test`).
+
+## Notes
+- The tests include a 1-second wait time after adding a venue to allow for list updates. This might need adjustment based on actual application performance.
