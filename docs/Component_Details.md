@@ -446,3 +446,116 @@ D. Add Schedule button: button that takes you to a new page so you can create a 
 - Common issues:
  - Button does not take you to a new page: check that the button has a corresponding link.
  - Button takes you to the wrong page: check that the correct link is being used.
+
+# Add Venues Page
+
+## User Manual
+
+### Overview
+
+The Venue Management System is a web-based application that allows users to add new venues and view existing ones. It features a campus map and a form for adding venues.
+
+### Features
+
+1. **Campus Map**: Displays the Wits Braamfontein Campus Map.
+2. **Add Venue Form**: Allows users to add new venues with details.
+3. **Existing Venues List**: Shows all venues currently in the system.
+
+### How to Use
+
+#### Adding a New Venue
+
+1. Scroll to the "Add Venue" section.
+2. Fill out the form with the following details:
+   - Name
+   - Capacity
+   - Category
+   - Features
+   - Building
+3. Click the "Add Venue" button.
+4. If successful, you'll see an alert saying "Venue added successfully".
+
+#### Viewing Existing Venues
+
+1. Scroll down to the "Existing Venues" section.
+2. All current venues will be displayed here.
+3. Each venue block shows:
+   - Name
+   - Capacity
+   - Category
+   - Features
+   - Building
+
+## Maintenance Guide
+
+### Updating the Campus Map
+
+To update the campus map:
+
+1. Locate the `<iframe>` tag in the HTML.
+2. Replace the `src` attribute with the new Google Maps embed URL.
+
+### Modifying the API Endpoint
+
+If the API endpoint changes:
+
+1. Find the `fetchVenues` and form submission functions in the `<script>` tag.
+2. Update the URL in the `fetch` calls to the new endpoint.
+
+### Changing the API Key
+
+To update the API key:
+
+1. Locate the `apiKey` variable at the beginning of the script.
+2. Replace its value with the new API key.
+
+### Styling Changes
+
+The page uses Tailwind CSS. To modify styles:
+
+1. Adjust the class names in the HTML elements.
+2. For custom styles, add them to a separate CSS file or use Tailwind's configuration file.
+
+## How It Works
+
+### HTML Structure
+
+- The page is divided into three main sections:
+  1. Campus Map
+  2. Add Venue Form
+  3. Existing Venues List
+
+### JavaScript Functionality
+
+1. **DOMContentLoaded Event Listener**:
+   - Sets up the form submission handler and calls `fetchVenues()`.
+
+2. **Form Submission**:
+   - Prevents default form submission.
+   - Collects form data and creates a venue object.
+   - Sends a POST request to the API to add the new venue.
+   - On success, resets the form and refreshes the venues list.
+
+3. **fetchVenues Function**:
+   - Sends a GET request to the API to retrieve all venues.
+   - Calls `displayVenues()` with the retrieved data.
+
+4. **displayVenues Function**:
+   - Clears the existing venues list.
+   - Creates a venue block for each venue and appends it to the list.
+
+5. **createVenueBlock Function**:
+   - Creates a DOM element for each venue with its details.
+
+### API Integration
+
+- The system uses a REST API for venue management.
+- Endpoints:
+  - POST: `https://campus-infrastructure-management.azurewebsites.net/api/venues`
+  - GET: `https://campus-infrastructure-management.azurewebsites.net/api/venues`
+- Authentication is done using an API key in the `x-api-key` header.
+
+### Styling
+
+- The page uses Tailwind CSS for styling, loaded via CDN.
+- Custom color classes are used for branding (e.g., `text-[#003B5C]`).
