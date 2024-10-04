@@ -410,19 +410,22 @@ The "Booking Details" page provides detailed information about a selected venue 
 1. Click the plus on your user dashboard and select "Report."
 2. Or click on 'Report' in the navigation bar
 <div style="text-align: center;">
-  <img src="media/ReportsMaintenanceNav.png" alt="Finding Reports in the navigation" style="width: 700px; height: 500px;">
+  <img src="media/ReportsMaintenanceNav.png" alt="Finding Reports in the navigation" style="width: 400px; height: 500px;">
 </div>
 <div style="text-align: center;">
-  <img src="media/ReportsMaintenancePlus.png" alt="Finding Reports with the plus" style="width: 700px; height: 500px;">
+  <img src="media/ReportsMaintenancePlus.png" alt="Finding Reports with the plus" style="width: 400px; height: 300px;">
 </div>
 <div style="text-align: center;">
   <img src="media/MaintenanceReportPage.png" alt="The Maintenance Report Page" style="width: 700px; height: 500px;">
 </div>
 3. Fill in your name.
+
 4. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
+
 <div style="text-align: center;">
-  <img src="media/MaintenanceReportPageVenueDropDown.png" alt="The Maintenance Report Venue Dropdown" style="width: 700px; height: 500px;">
+  <img src="media/MaintenanceReportPageVenueDropDown.png" alt="The Maintenance Report Venue Dropdown" style="width: 400px; height: 300px;">
 </div>
+
 5. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
 6. Write a short description of the issue.
 7. Click "Submit." The input should clear.
