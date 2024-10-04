@@ -54,6 +54,12 @@
   - **Close Popup**: Hides the popup and returns to the maintenance logs screen.
 
 ### Notifications
+- **Maintenance Notifications**:
+- Login as an admin.
+- Click the bell icon on the Admin dashboard.
+- See the last 48 hours of maintenance requests
+- Click 'Show All Requests'
+- Takes you to all maintenance logs
 
 ## User Guides
 
@@ -220,7 +226,8 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 
 
 ##### Manage Reports
-
+- View all the maintenanc logs in a ticket format.
+- Click on a request to edit who it is assigned to, its status and the timestamp for when it will be done.
 
 ##### Manage Schedules
 
@@ -228,7 +235,8 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - Click on "Add schedule" and fill in all needed details to create a new schedule. 
 
 ##### Notifications
-
+- View maintenance requests from the last 48 hours
+- Click 'Show All Requests' to be taken to the maintenance logs page.
 
 
 ##### Inbox
@@ -254,6 +262,15 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 
 
 ##### Manage Reports: 
+- Select 'Manage Reports' to view all maintenance logs
+- Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
+- Click on a block that displays Venue: name, with a date.
+- View the popup with detailed information.
+- Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
+- You can see all staff users to assign tasks to.
+- You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
+- Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
+- Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
 
 
 ##### Manage Schedules: 
@@ -265,6 +282,11 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - Edit: click the pen icon to edit the information of a schedule. Then click "Update" to save your changes.
 
 ##### Notifications: 
+- Login as an admin.
+- Click the bell icon on the Admin dashboard.
+- See the last 48 hours of maintenance requests
+- Click 'Show All Requests'
+- Takes you to all maintenance logs
 
 ##### Inbox: 
 - Open the inbox to see all requests.
@@ -374,29 +396,15 @@ The "Booking Details" page provides detailed information about a selected venue 
 ### Maintenance
 
 #### How to Make a Maintenance Report
-
 1. Click the plus on your user dashboard and select "Report."
-2. Fill in your name.
-3. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
-4. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
-5. Write a short description of the issue.
-6. Click "Submit." The input should clear.
-7. Press the back arrow in the top left corner to return to the user dashboard.
-8. If you do not fill in every field then you can not submit the form.
-
-#### How to Work with Maintenance Logs
-
-1. Click "Maintenance" on your user dashboard.
-2. Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
-3. Click on a block that displays Venue: name, with a date.
-4. View the popup with detailed information.
-5. Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
-6. You can search for staff users to assign tasks to.
-7. You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
-9. Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
-10. Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
-
-
+2. Or click on 'Report' in the navigation bar
+3. Fill in your name.
+4. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
+5. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
+6. Write a short description of the issue.
+7. Click "Submit." The input should clear.
+8. Press the back arrow in the top left corner to return to the user dashboard.
+9. If you do not fill in every field then you can not submit the form.
 
 ### User Guide for Manage Bookings Page
 
@@ -455,7 +463,6 @@ Each booking box will display relevant information, including:
 
 ### Returning to the Dashboard
 Use the back button on the left side of the header to return to the previous page or the user dashboard.
-
 
 
 
