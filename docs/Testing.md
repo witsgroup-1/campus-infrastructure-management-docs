@@ -313,222 +313,6 @@ Tests the main booking handler function that orchestrates the booking process.
 
 **Note**: All tests use mocking to simulate API responses and DOM interactions, ensuring that tests are isolated and do not depend on external systems.
 
-
-## User Acceptance Tests
-
-The application and the designs of this application was given to family members and friends to try and view. Here are some of their responses:
-- The colour scheme is much better then the original initial desing.
-- The structure is good - feels progessional.
-- Clean and logical.
-
-
-### Onboarding UATs
-
-#### As a Student
-
-1. **Onboarding Process**: 
-   - As a student, I can go through the onboarding process the first time I access the site. This process will collect my basic information and set up my account, allowing me to use the site's features.
-
-#### As a Lecturer
-
-1. **Onboarding Process**:
-   - As a lecturer, I can complete the onboarding process when I first access the site. This will include specifying my faculty and role, and optionally indicating if I am a tutor or lecturer. This setup will allow me to access and use all relevant site features.
-
-#### As a Staff Member
-
-1. **Onboarding Process**:
-   - As a staff member, I can complete the onboarding process upon first accessing the site. I will need to provide necessary information and complete any optional sections to fully access the site's features.
-
-### Maintenance UATs
-- Given that I am a user, when I submit a filled in maintenance report then it must be submitted successfully: Expected  console log "Maintenance request created successfully!" and a cleared input form. Test outcome: Pass - recieved the log and a cleared  input form.
-- Given that I am a user, when I submit an unfilled in maintenance report then it must tell me to enter data into the required fields: Expected  a field to appear under one of the inputs saying to fill in the required fields. Test outcome: Pass - recieved the message.
-- Given that I am a user, when I view the maintenance logs then I should see maintenance request blocks appearing in all three columns: Expected maintenance request blocks appearing under columns "Scheduled","In progress","Completed". Test outcome: Pass - Saw the popups.
-- Given that I am a user, when I click a maintenance log request then I should see a popup containing its details: Expected   Popup appeared. Test outcome: Pass - Saw the popup.
-- Given that I am a user, when I edit a maintenance log popup field and click save changes it should then update the information on the screen: Expected   Input entered and once changes saved see the popup in a new column. Input (status: Completed, assignedTo: staff123, timestamp: 17th September 2024 09:00 ). Test outcome: Pass - The maintenance request was updated and in the new column.
--  Given that I am a user, when I click close on a maintenance log popup then I should see the popup closing and go back to the main screen: Expected   Popup closed. Test outcome: Pass - Saw the popup close.
-
-### Manage Bookings UATs
-
-- Given the page is loaded, when `fetchVenues` is called, then the venue dropdown should be populated with data from the API and the correct venue should be selected based on the booking ID.
-- Given the page is loaded, when `fetchBookings` is called, then bookings should be fetched from the API and stored in the `bookings` array.
-- Given `populateVenues` is called with venue data, when the dropdown with ID `venueSelector` is updated, then it should contain options for each venue with the venue ID as the value and the venue name as the text.
-- Given a venue ID is provided, when `isValidVenue` is called, then it should return `true` for a valid venue ID and `false` for an invalid one.
-- Given a date string is provided, when `isValidDate` is called, then it should return `true` for a valid date and `false` for an invalid date.
-- Given a time slot string is provided, when `isValidTimeSlot` is called, then it should return `true` for a correctly formatted time slot and `false` otherwise.
-- Given valid venue, date, and time slot data are provided, when `saveChanges` is called, then the booking should be successfully updated via the API and an alert should notify "Booking edited successfully."
-- Given an invalid venue is selected, when `saveChanges` is called, then an alert should notify "Please select a valid venue."
-- Given an invalid date is entered, when `saveChanges` is called, then an alert should notify "Please enter a valid date."
-- Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
-- Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
-- Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
-
-### User acceptance tests for Schedules
-
-- Given that I am a user, when I log into the app, then I am able to make a booking.
-- Given that I am a user, when i log in using GoogleAuth, then the process is simpler.
-- Given that I am a user, when I specify my role, then i am able to access the right functionality.
-- Given that I am a user, when I view all venues, then i can choose one to book.
-- Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
-- Given that I am a user, when I view all past bookings, then i can keep a record of them.
-- Given that I am a user, when I view all my schedules, then i can prepare for them.
-- Given that I am a user, when I add a new schedule, then i can keep my life organized.
-- Given that I am a user, when I view all scheduled maintenance requests, then i can delegate them.
-- Given that I am a user, when I view all in progress maintenance requests, then i can make sure they finish.
-- Given that I am a user, when I view all completed maintenance requests, then i can keep a reord of them.
-- Given that I am a user, when I report a maintenance issue, then i can prevent sny accidents.
-- Given that I am a user, when I log out, then i am able to keep my information safe.
-- Given that I am a user, when I receive notification, then i can stay up to date.
-- Given that I am a user, when I see security contact information, then i am able to contact security.
-- Given that I am a user, when i make a dining reservation, then i am sure that my place in the dining hall is booked.
-
-## User Acceptance Tests for Venue Booking
-
-**1. Book Study Room as a Student**
-- **Given** that I am a student user who is neither a lecturer nor a tutor,
-- **When** I attempt to book a study room,
-- **Then** I can book the study room for the specified time.
-
-**2. Book Study Room and Tutorial Room as a Student Tutor**
-- **Given** that I am a student user who is a tutor but not a lecturer,
-- **When** I attempt to book a study room or tutorial room,
-- **Then** I can successfully book either a study room or tutorial room for the specified time.
-
-**3. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Student Lecturer**
-- **Given** that I am a student user who is a lecturer but not a tutor,
-- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
-- **Then** I can successfully book any of these venues for the specified time.
-
-**4. Book Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Lecturer**
-- **Given** that I am a staff member who is a lecturer,
-- **When** I attempt to book a tutorial room, exam venue, boardroom, or lecture hall,
-- **Then** I can successfully book any of these venues for the specified time.
-
-**5. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Member**
-- **Given** that I am a staff member who is neither a tutor nor a lecturer,
-- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
-- **Then** I can successfully book any of these venues for the specified time.
-
-**6. Book All Allowed Venues as a Staff Member who is Both a Lecturer and a Tutor**
-- **Given** that I am a staff member who is both a tutor and a lecturer,
-- **When** I attempt to book any venue,
-- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
-
-**7. Book All Allowed Venues as a Student who is Both a Lecturer and a Tutor**
-- **Given** that I am a student user who is both a lecturer and a tutor,
-- **When** I attempt to book any venue,
-- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
-
-**8. Book No Venues if User Role is Unspecified**
-- **Given** that my user role is unspecified or missing,
-- **When** I attempt to book any venue,
-- **Then** I will be unable to book any venues.
-
-## User Acceptance Tests for General Dashboard
-
-**1. View Venues Section**
-- **Given** the user is on the dashboard page,
-- **When** the user views the "Venues" section,
-- **Then** the section should display a list of venues with relevant details.
-
-**2. View Upcoming Bookings Section**
-- **Given** the user is on the dashboard page,
-- **When** the user views the "Upcoming Bookings" section,
-- **Then** the section should display a list of their upcoming bookings with correct dates and times.
-
-**3. Floating Action Button: Navigate to Report Page**
-- **Given** the user is on the dashboard page,
-- **When** the user clicks on the floating action button,
-- **Then** a menu should appear with quick access options, including "Report",
-- **And** clicking on "Report" should navigate the user to the report page.
-
-**4. Floating Action Button: Navigate to Book Page**
-- **Given** the user is on the dashboard page,
-- **When** the user clicks on the floating action button,
-- **Then** a menu should appear with quick access options, including "Book",
-- **And** clicking on "Book" should navigate the user to the booking page.
-
-**5. Notification Bell: View Notifications**
-- **Given** the user is on the dashboard page,
-- **When** the user clicks on the notification bell icon,
-- **Then** a dropdown should appear showing a list of notifications,
-- **And** each notification should be clickable to view details.
-
-**6. Menu Button: Open Navigation Bar**
-- **Given** the user is on the dashboard page,
-- **When** the user clicks on the menu button,
-- **Then** a navigation bar should open from the side of the screen,
-- **And** the navigation bar should display links to various pages, such as "My Bookings", "Make a Report", "Make a Reservation", etc.
-
-**7. Navigation Bar: Navigate to a Page**
-- **Given** the user is on the dashboard page with the navigation bar open,
-- **When** the user clicks a link in the navigation bar,
-- **Then** the user should be navigated to the corresponding page,
-- **And** the navigation bar should close automatically after navigation.
-
-
-## User Acceptance Tests for Admin Dashboard
-
-**1. Manage Bookings**
-- **Given** the user is on the admin dashboard page,
-- **When** the user selects the "Manage Bookings" option,
-- **Then** the user should be navigated to the bookings management page,
-- **And** the user should be able to view, edit, or delete bookings.
-
-**2. Manage Venues**
-- **Given** the user is on the admin dashboard page,
-- **When** the user selects the "Manage Venues" option,
-- **Then** the user should be navigated to the venues management page,
-- **And** the user should be able to view, edit, or delete venue details.
-
-**3. Add Venue Button**
-- **Given** the user is on the "Manage Venues" page,
-- **When** the user clicks the "Add Venue" button,
-- **Then** a form should appear allowing the user to input details for a new venue,
-- **And** the venue should be added to the list upon successful submission.
-
-**4. Manage Reports**
-- **Given** the user is on the admin dashboard page,
-- **When** the user selects the "Manage Reports" option,
-- **Then** the user should be navigated to the maintenance reports logs page,
-
-**5. Manage Schedules**
-- **Given** the user is on the admin dashboard page,
-- **When** the user selects the "Manage Schedules" option,
-- **Then** the user should be navigated to the schedules management page,
-- **And** the user should be able to view, add, or update schedules.
-
-**6. Notification Bell: View Maintenance Reports**
-- **Given** the user is on the admin dashboard page,
-- **When** the user clicks the notification bell icon,
-- **Then** a dropdown should appear showing the latest maintenance reports submitted,
-
-**7. Inbox: View Whitelist Requests**
-- **Given** the user is on the admin dashboard page,
-- **When** the user clicks on the inbox icon,
-- **Then** a dropdown should appear showing people requesting to be added to the whitelist
-
-**8. Menu Button: Open Navigation Page**
-- **Given** the user is on the admin dashboard page,
-- **When** the user clicks on the menu button,
-- **Then** a navigation page should open from the side of the screen,
-- **And** the navigation page should display links such as "Manage Whitelist", "Manage Requests", "Admin Dashboard" and "Log out".
-
-**9. Navigate to View All Whitelist Members**
-- **Given** the user is on the navigation page,
-- **When** the user clicks the "Manage Whitelist" link,
-- **Then** the user should be navigated to the page displaying all whitelist members.
-
-**10. Navigate to Whitelist Requests**
-- **Given** the user is on the navigation page,
-- **When** the user clicks the "Manage Requests" link,
-- **Then** the user should be navigated to the page displaying all pending whitelist requests.
-
-**11. Navigate to Admin Dashboard in General User Dashboard**
-- **Given** the user is on the navigation page,
-- **When** the user clicks the "Admin Dashboard" link,
-- **Then** the user should be navigated back to the admin dashboard.
-
-
 ## Why is our code coverage ___%
 ### For Milestone 2 
 We focused our attention on unit tests for the core features. 
@@ -845,5 +629,229 @@ Asynchronous Testing: The tests utilize async/await to handle asynchronous funct
 
 - Static or Mocked Dependencies
    - Mocking external dependencies, while useful for isolating tests, can lead to missing real-world scenarios that might not be covered by mocks.
+ 
+
+
+
+
+
+## User Acceptance Tests and User Feedback
+So we had user acceptance tests and we got family and friends to review our website and submit a survey
+### User Feedback
+[User Feedback Survey](https://forms.gle/j9ij78bmt21CAvqx6)
+
+
+
+### User Acceptance Tests
+
+### Onboarding UATs
+
+#### As a Student
+
+1. **Onboarding Process**: 
+   - As a student, I can go through the onboarding process the first time I access the site. This process will collect my basic information and set up my account, allowing me to use the site's features.
+
+#### As a Lecturer
+
+1. **Onboarding Process**:
+   - As a lecturer, I can complete the onboarding process when I first access the site. This will include specifying my faculty and role, and optionally indicating if I am a tutor or lecturer. This setup will allow me to access and use all relevant site features.
+
+#### As a Staff Member
+
+1. **Onboarding Process**:
+   - As a staff member, I can complete the onboarding process upon first accessing the site. I will need to provide necessary information and complete any optional sections to fully access the site's features.
+
+### Maintenance UATs
+- Given that I am a user, when I submit a filled in maintenance report then it must be submitted successfully: Expected  console log "Maintenance request created successfully!" and a cleared input form. Test outcome: Pass - recieved the log and a cleared  input form.
+- Given that I am a user, when I submit an unfilled in maintenance report then it must tell me to enter data into the required fields: Expected  a field to appear under one of the inputs saying to fill in the required fields. Test outcome: Pass - recieved the message.
+- Given that I am a user, when I view the maintenance logs then I should see maintenance request blocks appearing in all three columns: Expected maintenance request blocks appearing under columns "Scheduled","In progress","Completed". Test outcome: Pass - Saw the popups.
+- Given that I am a user, when I click a maintenance log request then I should see a popup containing its details: Expected   Popup appeared. Test outcome: Pass - Saw the popup.
+- Given that I am a user, when I edit a maintenance log popup field and click save changes it should then update the information on the screen: Expected   Input entered and once changes saved see the popup in a new column. Input (status: Completed, assignedTo: staff123, timestamp: 17th September 2024 09:00 ). Test outcome: Pass - The maintenance request was updated and in the new column.
+-  Given that I am a user, when I click close on a maintenance log popup then I should see the popup closing and go back to the main screen: Expected   Popup closed. Test outcome: Pass - Saw the popup close.
+
+### Manage Bookings UATs
+
+- Given the page is loaded, when `fetchVenues` is called, then the venue dropdown should be populated with data from the API and the correct venue should be selected based on the booking ID.
+- Given the page is loaded, when `fetchBookings` is called, then bookings should be fetched from the API and stored in the `bookings` array.
+- Given `populateVenues` is called with venue data, when the dropdown with ID `venueSelector` is updated, then it should contain options for each venue with the venue ID as the value and the venue name as the text.
+- Given a venue ID is provided, when `isValidVenue` is called, then it should return `true` for a valid venue ID and `false` for an invalid one.
+- Given a date string is provided, when `isValidDate` is called, then it should return `true` for a valid date and `false` for an invalid date.
+- Given a time slot string is provided, when `isValidTimeSlot` is called, then it should return `true` for a correctly formatted time slot and `false` otherwise.
+- Given valid venue, date, and time slot data are provided, when `saveChanges` is called, then the booking should be successfully updated via the API and an alert should notify "Booking edited successfully."
+- Given an invalid venue is selected, when `saveChanges` is called, then an alert should notify "Please select a valid venue."
+- Given an invalid date is entered, when `saveChanges` is called, then an alert should notify "Please enter a valid date."
+- Given an invalid time slot is entered, when `saveChanges` is called, then an alert should notify "Please select a valid time slot."
+- Given a date string is provided, when `formatDateDMY` is called, then it should return the date formatted as "Day Month Year."
+- Given a time slot string is provided, when `extractStartEndTime` is called, then it should return an object with the start and end times extracted from the string.
+
+### User acceptance tests for Schedules
+
+- Given that I am a user, when I log into the app, then I am able to make a booking.
+- Given that I am a user, when i log in using GoogleAuth, then the process is simpler.
+- Given that I am a user, when I specify my role, then i am able to access the right functionality.
+- Given that I am a user, when I view all venues, then i can choose one to book.
+- Given that I am a user, when I view all my upcoming bookings, then I will not forget them.
+- Given that I am a user, when I view all past bookings, then i can keep a record of them.
+- Given that I am a user, when I view all my schedules, then i can prepare for them.
+- Given that I am a user, when I add a new schedule, then i can keep my life organized.
+- Given that I am a user, when I view all scheduled maintenance requests, then i can delegate them.
+- Given that I am a user, when I view all in progress maintenance requests, then i can make sure they finish.
+- Given that I am a user, when I view all completed maintenance requests, then i can keep a reord of them.
+- Given that I am a user, when I report a maintenance issue, then i can prevent sny accidents.
+- Given that I am a user, when I log out, then i am able to keep my information safe.
+- Given that I am a user, when I receive notification, then i can stay up to date.
+- Given that I am a user, when I see security contact information, then i am able to contact security.
+- Given that I am a user, when i make a dining reservation, then i am sure that my place in the dining hall is booked.
+
+## User Acceptance Tests for Venue Booking
+
+**1. Book Study Room as a Student**
+- **Given** that I am a student user who is neither a lecturer nor a tutor,
+- **When** I attempt to book a study room,
+- **Then** I can book the study room for the specified time.
+
+**2. Book Study Room and Tutorial Room as a Student Tutor**
+- **Given** that I am a student user who is a tutor but not a lecturer,
+- **When** I attempt to book a study room or tutorial room,
+- **Then** I can successfully book either a study room or tutorial room for the specified time.
+
+**3. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Student Lecturer**
+- **Given** that I am a student user who is a lecturer but not a tutor,
+- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**4. Book Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Lecturer**
+- **Given** that I am a staff member who is a lecturer,
+- **When** I attempt to book a tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**5. Book Study Room, Tutorial Room, Exam Venue, Boardroom, and Lecture Hall as a Staff Member**
+- **Given** that I am a staff member who is neither a tutor nor a lecturer,
+- **When** I attempt to book a study room, tutorial room, exam venue, boardroom, or lecture hall,
+- **Then** I can successfully book any of these venues for the specified time.
+
+**6. Book All Allowed Venues as a Staff Member who is Both a Lecturer and a Tutor**
+- **Given** that I am a staff member who is both a tutor and a lecturer,
+- **When** I attempt to book any venue,
+- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
+
+**7. Book All Allowed Venues as a Student who is Both a Lecturer and a Tutor**
+- **Given** that I am a student user who is both a lecturer and a tutor,
+- **When** I attempt to book any venue,
+- **Then** I can successfully book a study room, tutorial room, exam venue, boardroom, or lecture hall for the specified time.
+
+**8. Book No Venues if User Role is Unspecified**
+- **Given** that my user role is unspecified or missing,
+- **When** I attempt to book any venue,
+- **Then** I will be unable to book any venues.
+
+## User Acceptance Tests for General Dashboard
+
+**1. View Venues Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Venues" section,
+- **Then** the section should display a list of venues with relevant details.
+
+**2. View Upcoming Bookings Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Upcoming Bookings" section,
+- **Then** the section should display a list of their upcoming bookings with correct dates and times.
+
+**3. Floating Action Button: Navigate to Report Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Report",
+- **And** clicking on "Report" should navigate the user to the report page.
+
+**4. Floating Action Button: Navigate to Book Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Book",
+- **And** clicking on "Book" should navigate the user to the booking page.
+
+**5. Notification Bell: View Notifications**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the notification bell icon,
+- **Then** a dropdown should appear showing a list of notifications,
+- **And** each notification should be clickable to view details.
+
+**6. Menu Button: Open Navigation Bar**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation bar should open from the side of the screen,
+- **And** the navigation bar should display links to various pages, such as "My Bookings", "Make a Report", "Make a Reservation", etc.
+
+**7. Navigation Bar: Navigate to a Page**
+- **Given** the user is on the dashboard page with the navigation bar open,
+- **When** the user clicks a link in the navigation bar,
+- **Then** the user should be navigated to the corresponding page,
+- **And** the navigation bar should close automatically after navigation.
+
+
+## User Acceptance Tests for Admin Dashboard
+
+**1. Manage Bookings**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Bookings" option,
+- **Then** the user should be navigated to the bookings management page,
+- **And** the user should be able to view, edit, or delete bookings.
+
+**2. Manage Venues**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Venues" option,
+- **Then** the user should be navigated to the venues management page,
+- **And** the user should be able to view, edit, or delete venue details.
+
+**3. Add Venue Button**
+- **Given** the user is on the "Manage Venues" page,
+- **When** the user clicks the "Add Venue" button,
+- **Then** a form should appear allowing the user to input details for a new venue,
+- **And** the venue should be added to the list upon successful submission.
+
+**4. Manage Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Reports" option,
+- **Then** the user should be navigated to the maintenance reports logs page,
+
+**5. Manage Schedules**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Schedules" option,
+- **Then** the user should be navigated to the schedules management page,
+- **And** the user should be able to view, add, or update schedules.
+
+**6. Notification Bell: View Maintenance Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks the notification bell icon,
+- **Then** a dropdown should appear showing the latest maintenance reports submitted,
+
+**7. Inbox: View Whitelist Requests**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the inbox icon,
+- **Then** a dropdown should appear showing people requesting to be added to the whitelist
+
+**8. Menu Button: Open Navigation Page**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation page should open from the side of the screen,
+- **And** the navigation page should display links such as "Manage Whitelist", "Manage Requests", "Admin Dashboard" and "Log out".
+
+**9. Navigate to View All Whitelist Members**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Whitelist" link,
+- **Then** the user should be navigated to the page displaying all whitelist members.
+
+**10. Navigate to Whitelist Requests**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Requests" link,
+- **Then** the user should be navigated to the page displaying all pending whitelist requests.
+
+**11. Navigate to Admin Dashboard in General User Dashboard**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Admin Dashboard" link,
+- **Then** the user should be navigated back to the admin dashboard.
+
+
+
+
 
 
