@@ -243,6 +243,111 @@ The application and the designs of this application was given to family members 
 - **When** I attempt to book any venue,
 - **Then** I will be unable to book any venues.
 
+## User Acceptance Tests for General Dashboard
+
+**1. View Venues Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Venues" section,
+- **Then** the section should display a list of venues with relevant details.
+
+**2. View Upcoming Bookings Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Upcoming Bookings" section,
+- **Then** the section should display a list of their upcoming bookings with correct dates and times.
+
+**3. Floating Action Button: Navigate to Report Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Report",
+- **And** clicking on "Report" should navigate the user to the report page.
+
+**4. Floating Action Button: Navigate to Book Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Book",
+- **And** clicking on "Book" should navigate the user to the booking page.
+
+**5. Notification Bell: View Notifications**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the notification bell icon,
+- **Then** a dropdown should appear showing a list of notifications,
+- **And** each notification should be clickable to view details.
+
+**6. Menu Button: Open Navigation Bar**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation bar should open from the side of the screen,
+- **And** the navigation bar should display links to various pages, such as "My Bookings", "Make a Report", "Make a Reservation", etc.
+
+**7. Navigation Bar: Navigate to a Page**
+- **Given** the user is on the dashboard page with the navigation bar open,
+- **When** the user clicks a link in the navigation bar,
+- **Then** the user should be navigated to the corresponding page,
+- **And** the navigation bar should close automatically after navigation.
+
+
+## User Acceptance Tests for Admin Dashboard
+
+**1. Manage Bookings**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Bookings" option,
+- **Then** the user should be navigated to the bookings management page,
+- **And** the user should be able to view, edit, or delete bookings.
+
+**2. Manage Venues**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Venues" option,
+- **Then** the user should be navigated to the venues management page,
+- **And** the user should be able to view, edit, or delete venue details.
+
+**3. Add Venue Button**
+- **Given** the user is on the "Manage Venues" page,
+- **When** the user clicks the "Add Venue" button,
+- **Then** a form should appear allowing the user to input details for a new venue,
+- **And** the venue should be added to the list upon successful submission.
+
+**4. Manage Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Reports" option,
+- **Then** the user should be navigated to the maintenance reports logs page,
+
+**5. Manage Schedules**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Schedules" option,
+- **Then** the user should be navigated to the schedules management page,
+- **And** the user should be able to view, add, or update schedules.
+
+**6. Notification Bell: View Maintenance Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks the notification bell icon,
+- **Then** a dropdown should appear showing the latest maintenance reports submitted,
+
+**7. Inbox: View Whitelist Requests**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the inbox icon,
+- **Then** a dropdown should appear showing people requesting to be added to the whitelist
+
+**8. Menu Button: Open Navigation Page**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation page should open from the side of the screen,
+- **And** the navigation page should display links such as "Manage Whitelist", "Manage Requests", "Admin Dashboard" and "Log out".
+
+**9. Navigate to View All Whitelist Members**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Whitelist" link,
+- **Then** the user should be navigated to the page displaying all whitelist members.
+
+**10. Navigate to Whitelist Requests**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Requests" link,
+- **Then** the user should be navigated to the page displaying all pending whitelist requests.
+
+**11. Navigate to Admin Dashboard in General User Dashboard**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Admin Dashboard" link,
+- **Then** the user should be navigated back to the admin dashboard.
+
 
 ## Why is our code coverage ___%
 ### For Milestone 2 
