@@ -224,7 +224,8 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 
 ##### Manage Schedules
 
-
+- view all schedules.
+- Click on "Add schedule" and fill in all needed details to create a new schedule. 
 
 ##### Notifications
 
@@ -257,6 +258,11 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 
 ##### Manage Schedules: 
 
+- Viewing: click on "Schedules" in order to be able to view all schedules.
+- Creating: Click on "Add schedule" to be redirected to a new page where you can create a new schedule.
+- Submitting: after filling out all the information, click "Submit" in order to submit your information.
+- Delete: click the bin icon to delete a specific schedule.
+- Edit: click the pen icon to edit the information of a schedule. Then click "Update" to save your changes.
 
 ##### Notifications: 
 
@@ -319,14 +325,31 @@ The "Booking Details" page provides detailed information about a selected venue 
 ### Schedules
 
 ### Schedule
-- Open the sidebar on the main dashboard and click on "Schedules".
-- Here, you will be able to view all created schedules.
+- Click on "Manage Schedules" on the admin dashboard.
+![Manage Schedule](media/ManageSchedule.png)
+
+- This will take you to a new page where you will be able to view all created schedules.
+![All Schedules](media/AllSchedules.png)
+
 - On each row, there is a button with a bin. Click on this button in order to delete a schedule. You will be asked to confirm your deletion: click yes (or cancel if you do not want to).
+![Delete Schedule](media/DeleteSchedules.png)
+![Delete Schedule](media/DeleteScheduleConfirmation.png)
+
 - Beside that button, is a another button to edit your schedule details. If you click on this button, you will find a popup. Edit the information that you would like to and click "Update". ELse you can click "Close".
+![Edit Schedule](media/EditSchedules.png)
+![Edit Schedule](media/EditModal.png)
+
 - Beneath the table is a button which says "Add a Schedule". Clicking this button will take you to a new page with a form.
-- Type in your name, the course of the schedule and the venue where it will be held. Select a day from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
+![Add Schedule](media/AddScheduleButton.png)
+
+- Type in your name, the course of the schedule and the venue where it will be held. Select a day and venue from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
+![Schedule Form](media/AddScheduleForm.png)
+
 - Then if your schedule is one that recurs weekly, click "yes" on the Recurring dropdown. This will casue another Date picker to appear. Here you must choose the date that your last schedule will be held on. Otherwise, if your schedule is only for one day, choose "no".
+![Recurring](media/RecurringTrue.png)
+
 - Once the form is fully filled out, you can click the "Submit" button to add your new schedule.
+![Schedule Form Submit](media/SubmitScheduleForm.png)
 
 
 
