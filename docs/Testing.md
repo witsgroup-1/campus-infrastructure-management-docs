@@ -133,6 +133,186 @@ This function renders venue data into the DOM. The test ensures that venues are 
 These unit tests ensure that key functions in `book-venue.js` are working correctly by simulating various scenarios, such as successful and failed API calls, different user roles, and venue rendering in the DOM. Mocking Firebase and global functions allows us to isolate the functionality of the code and focus on testing its logic without interacting with external services.
 
 
+### Booking-Details Unit Tests
+
+
+#### Functions tested
+
+- [Introduction](#introduction)
+- [Test Setup](#test-setup)
+- [Function Tests](#function-tests)
+  - [toggleLoading Function](#toggleloading-function)
+  - [getVenueById Function](#getvenuebyid-function)
+  - [fetchBookingsForDate Function](#fetchbookingsfordate-function)
+  - [convertToDate Function](#converttodate-function)
+  - [hasTimeConflict Function](#hastimeconflict-function)
+  - [isFutureDateTime Function](#isfuturedatetime-function)
+  - [clearForm Function](#clearform-function)
+  - [isFormValid Function](#isformvalid-function)
+  - [submitBooking Function](#submitbooking-function)
+  - [handleBooking Function](#handlebooking-function)
+
+#### Introduction
+
+The tests are written using Jest and focus on the core functions responsible for booking operations. They cover success cases, failure cases, and edge cases to ensure robust functionality.
+
+### Test Setup
+
+- **Mocking Firebase Modules**: The Firebase modules (`firebase/app`, `firebase/auth`, `firebase/firestore`) are mocked to prevent actual initialization and network calls.
+- **Mocking `fetch`**: The global `fetch` function is mocked to simulate API responses.
+- **Mocking `window.alert`**: The `alert` function is mocked to capture alert messages without displaying them.
+- **Mocking DOM Elements**: The necessary DOM elements are mocked using `document.body.innerHTML` for functions that interact with the DOM.
+
+#### Function Tests
+
+#### toggleLoading Function
+
+Tests the loading indicator and button state during asynchronous operations.
+
+- **Test Case 1**: When `toggleLoading(true)` is called:
+  - The loading indicator should be visible.
+  - The "Book Now" button should be disabled.
+- **Test Case 2**: When `toggleLoading(false)` is called:
+  - The loading indicator should be hidden.
+  - The "Book Now" button should be enabled.
+
+#### getVenueById Function
+
+Tests fetching venue data by ID from the API.
+
+- **Test Case 1**: Successful fetch:
+  - Should return the venue data as a JSON object.
+  - Ensures the correct API endpoint and headers are used.
+- **Test Case 2**: Fetch fails (API returns an error status):
+  - Should return `null`.
+  - Ensures error handling for non-OK responses.
+- **Test Case 3**: Fetch throws an error (e.g., network error):
+  - Should return `null`.
+  - Logs an error message to the console.
+
+#### fetchBookingsForDate Function
+
+Tests fetching bookings for a specific venue on a specific date.
+
+- **Test Case 1**: Successful fetch:
+  - Should return an array of booking data.
+  - Ensures the correct API endpoint and headers are used.
+- **Test Case 2**: Fetch fails (API returns an error status):
+  - Should return an empty array.
+  - Ensures error handling for non-OK responses.
+- **Test Case 3**: Fetch throws an error:
+  - Should return an empty array.
+  - Logs an error message to the console.
+
+#### convertToDate Function
+
+Tests converting various input formats to a JavaScript `Date` object.
+
+- **Test Case 1**: Firestore Timestamp object:
+  - Converts a Firestore timestamp to a `Date` object.
+- **Test Case 2**: Date object input:
+  - Returns the same `Date` object.
+- **Test Case 3**: ISO string input:
+  - Converts an ISO date string to a `Date` object.
+
+#### hasTimeConflict Function
+
+Tests detecting time conflicts between new booking times and existing bookings.
+
+- **Test Case 1**: Time conflict with existing booking:
+  - Returns `true` when the new booking overlaps with an existing booking.
+- **Test Case 2**: No time conflict with existing bookings:
+  - Returns `false` when there is no overlap.
+- **Test Case 3**: New booking covers an entire existing booking:
+  - Returns `true` when the new booking fully encompasses an existing booking.
+- **Test Case 4**: New booking starts before and ends after an existing booking:
+  - Returns `true` due to full overlap.
+
+#### isFutureDateTime Function
+
+Tests whether a given booking date and time are in the future.
+
+- **Setup**: The current date is mocked to a fixed point in time using `jest.useFakeTimers()`.
+
+- **Test Case 1**: Future date and time:
+  - Returns `true`.
+- **Test Case 2**: Past date:
+  - Returns `false`.
+- **Test Case 3**: Past time on the same day:
+  - Returns `false`.
+- **Test Case 4**: Future time on the same day:
+  - Returns `true`.
+- **Test Case 5**: Current time:
+  - Returns `false`.
+- **Test Case 6**: Invalid date format:
+  - Returns `false` and handles gracefully.
+- **Test Case 7**: Invalid time format:
+  - Returns `false` and handles gracefully.
+- **Test Case 8**: Empty inputs:
+  - Returns `false`.
+
+#### clearForm Function
+
+Tests clearing the booking form fields.
+
+- **Test Case 1**: Clears the `bookingDate` field.
+- **Test Case 2**: Clears the `timeSlot` field.
+- **Test Case 3**: Clears the `bookingPurpose` field.
+
+#### isFormValid Function
+
+Tests the validation of the booking form.
+
+- **Test Case 1**: `bookingDate` is empty:
+  - Returns `false`.
+  - Triggers an alert with the message "Please fill in all fields."
+- **Test Case 2**: `timeSlot` is empty:
+  - Returns `false`.
+  - Triggers the same alert.
+- **Test Case 3**: `bookingPurpose` is empty:
+  - Returns `false`.
+  - Triggers the same alert.
+
+#### submitBooking Function
+
+Tests the booking submission process, including API calls and error handling.
+
+- **Setup**: Mocks dependencies such as `toggleLoading`, `fetchBookingsForDate`, `hasTimeConflict`, `alert`, and `clearForm`.
+
+- **Test Case 1**: Time conflict detected:
+  - Alerts the user about the time conflict.
+  - Does not proceed with booking.
+- **Test Case 2**: No time conflict:
+  - Proceeds with booking.
+  - Makes API calls to add booking data.
+  - Alerts the user of successful booking.
+  - Clears the form.
+- **Test Case 3**: User booking API call fails:
+  - Alerts the user about the failure.
+  - Stops the booking process.
+- **Test Case 4**: Venue booking API call fails:
+  - Alerts the user about the failure.
+  - Stops the booking process.
+- **Test Case 5**: Data collection API call fails:
+  - Alerts the user but continues since this is non-critical.
+- **Test Case 6**: Exception occurs:
+  - Alerts the user about the unexpected error.
+  - Ensures loading indicator is toggled off.
+
+#### handleBooking Function
+
+Tests the main booking handler function that orchestrates the booking process.
+
+- **Setup**: Mocks DOM elements and dependencies such as `getElementById`, `submitBooking`, and `getTimestamp`.
+
+- **Test Case**: Correct parameters are passed to `submitBooking`:
+  - Extracts booking details from DOM elements.
+  - Calls `submitBooking` with the correct arguments.
+
+---
+
+**Note**: All tests use mocking to simulate API responses and DOM interactions, ensuring that tests are isolated and do not depend on external systems.
+
 
 ## User Acceptance Tests
 

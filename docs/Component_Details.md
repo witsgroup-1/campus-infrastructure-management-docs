@@ -213,6 +213,9 @@ This guide provides instructions on how to use the venue booking system. It cove
 
 ##### Page Overview
 The "Book a Venue" page allows you to search and filter available venues. You can select a venue to view its details and make a booking.
+<p style="text-align: center;">
+    <img src="./media/book-venue-ss.png" alt="Users Table" width="500" height="auto"/>
+</p>
 
 ##### Features
 - **Search Bar**:
@@ -232,6 +235,10 @@ The "Book a Venue" page allows you to search and filter available venues. You ca
 
 ##### Page Overview
 The "Booking Details" page provides detailed information about a selected venue and allows you to book the venue.
+<p style="text-align: center;">
+    <img src="./media/book-dets.png" alt="Users Table" width="500" height="auto"/>
+</p>
+
 
 ##### Features
 - **Venue Information**:
@@ -245,6 +252,10 @@ The "Booking Details" page provides detailed information about a selected venue 
   - **Submit Button**: Completes the booking process and adds the venue booking to the system.
 - **Booking Confirmation**:
   - After submission, you will receive a confirmation message and be redirected to your bookings page.
+  <p style="text-align: center;">
+    <img src="./media/confirmation.png" alt="Users Table" width="500" height="auto"/>
+</p>
+
 
 ### Schedules
 
@@ -288,6 +299,127 @@ The "Booking Details" page provides detailed information about a selected venue 
 
 
 ## Maintenance Guides for all features.
+
+### How to deploy the site locally
+
+This guide will walk you through the steps required to set up and run the Campus Infrastructure Management site on your local machine.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- **Git**: For cloning the repository.
+- **Node.js and npm**: For running the application and managing dependencies.
+- **A `.env` File**: Contains environment variables needed for the application. Obtain this file from the project maintainers.
+
+### Step-by-Step Guide
+
+#### 1. Clone the Repository
+
+Open your terminal or command prompt and execute the following command to clone the repository:
+
+```bash
+git clone https://github.com/witsgroup-1/campus-infrastructure-management.git
+```
+
+This will create a local copy of the project in a folder named `campus-infrastructure-management`.
+
+---
+
+#### 2. Navigate to the Project Directory
+
+Move into the project directory:
+
+```bash
+cd campus-infrastructure-management
+```
+
+---
+
+#### 3. Install Project Dependencies
+
+Install the required npm packages:
+
+```bash
+npm install
+```
+
+This command reads the `package.json` file and installs all the dependencies listed under `dependencies` and `devDependencies`.
+
+---
+
+
+#### 5. Obtain and Place the `.env` File
+
+The `.env` file contains sensitive configuration data like API keys and database credentials. **Do not commit this file to version control.**
+
+- **We will include this file in our submission on moodle.
+- **Place the `.env` File**: Put the `.env` file in the root directory of the project (`campus-infrastructure-management/`).
+
+---
+
+#### 6. Run the Application
+
+Start the application using Node.js:
+
+
+
+```bash
+node app.js
+```
+
+
+
+---
+
+#### 7. Access the Application in Your Browser
+
+Open your preferred web browser and navigate to:
+
+```
+http://localhost:3000
+```
+
+Replace `3000` with the port number specified in your application's configuration if it's different.
+
+---
+
+
+
+#### Important Notes
+
+- **Do Not Commit Sensitive Information**
+- **Node.js Version**: Verify that you are using a compatible Node.js version as specified in the project's documentation or `package.json` (if specified under `engines`).
+
+- **Update Dependencies**: If necessary, update the project's dependencies:
+
+  ```bash
+  npm update
+  ```
+
+
+- **Troubleshooting**:
+
+  - **Missing Modules**: If you encounter errors about missing modules, try removing `node_modules` and reinstalling:
+
+    ```bash
+    rm -rf node_modules
+    npm install
+    ```
+
+
+  - **Environment Variable Issues**: Ensure that all required environment variables are correctly defined in the `.env` file.
+
+---
+
+### Conclusion
+
+You should now have the Campus Infrastructure Management site running locally on your machine. If you encounter any issues, consult the project's documentation or reach out to the development team for assistance.
+
+---
+
+**Note**: Always follow best practices for security and configuration management when handling environment variables and sensitive data.
+
 
 ### User Dashboard Maintenance Guide: 
 
