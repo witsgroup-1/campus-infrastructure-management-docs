@@ -459,3 +459,211 @@ To run these tests:
 
 ## Notes
 - The tests include a 1-second wait time after adding a venue to allow for list updates. This might need adjustment based on actual application performance.
+
+
+# Admin Dashboard Unit Testing
+## Overview
+
+This test suite performs unit tests on the core functions in adminDashboard.js using Jest. The tests focus on error handling, DOM manipulation, authentication state management, and sidebar functionality in the admin dashboard.
+
+## Test Coverage
+The current test coverage is 82.92%.
+
+## Key Areas Tested
+- API Interactions:
+   - `fetchData()`: Verifies API error handling by simulating failed fetch requests.
+
+- DOM Manipulations:
+   - `displayBookings()`: Tests how the DOM updates based on the presence or absence of booking data.
+
+- Authentication Handling:
+
+   - `checkAuthState()`: Mocks Firebase’s onAuthStateChanged to test user authentication handling.
+
+- Sidebar Functionality:
+   - `toggleSidebar()`: Tests the opening, closing, and resizing behavior of the sidebar in response to user interactions.
+
+## Testing Approach
+
+- Mocking:
+   - The fetch function is mocked to simulate API errors.
+   - Firebase's getAuth and onAuthStateChanged are mocked to simulate different authentication states.
+
+- DOM Simulation:
+   - Mock DOM elements like containers, buttons, and sidebars are created to test interactions and rendering logic.
+
+- Event Simulation:
+   - Simulated button clicks and window resize events are used to test sidebar toggle functionality.
+
+## Why Not 100% Coverage?
+
+- Edge Cases:
+   - Some edge cases in API error handling and user interactions may not be fully covered.
+
+- DOM Event Complexity:
+   - Certain event listeners and interactions, especially those involving asynchronous operations or complex DOM states.
+
+
+# View Your Bookings Page Unit Testing
+
+## Overview
+The test suite is designed to validate the functionality of various functions and components within the yourBookings.js file. It primarily focuses on date formatting, time slot formatting, fetching user bookings, pagination of bookings, and rendering bookings for different devices. The tests are structured using Jest.
+
+## Test Coverage
+Current Coverage: 77.38%
+
+
+## Key Areas Tested
+
+- Date and Time Formatting:
+
+   - `formatDate`: Tests the correct formatting of a given date string.
+   - `formatTimeSlot`: Tests the correct formatting of time slots from start and end times.
+
+- Fetching User Bookings:
+
+   - `fetchUserBookings`: Tests successful API responses and error handling when fetching user bookings.
+
+- Pagination Logic:
+
+   - `paginateBookings`: Tests the correct pagination of a list of bookings, ensuring that the correct subsets of data are returned based on the page number and size.
+
+- Loading State:
+
+   - `showLoading`: Tests the display of a loading message while bookings are being fetched.
+
+- Rendering Bookings:
+
+   - `renderDesktopBookings and renderMobileBookings`: Tests rendering of bookings for both desktop and mobile views, including handling of empty bookings.
+
+- Pagination Controls:
+
+   - `renderPaginationControls`: Tests rendering of pagination controls, including checking the state of the previous and next buttons.
+
+## Testing Approach
+
+- Unit Testing: The tests focus on individual functions to ensure they perform as expected in isolation. This helps in identifying issues at the function level.
+
+- Mocking Dependencies: Using Jest’s mocking capabilities, external dependencies (like Firebase and fetch) are simulated to isolate the component being tested. This allows for testing without making actual network calls.
+
+- Asynchronous Testing: Tests for functions that return promises (e.g., fetchUserBookings) use async/await syntax to handle asynchronous operations properly.
+
+## Why Not 100% Coverage ?
+
+- Edge Cases Not Covered: Some edge cases, such as unexpected input formats or certain error conditions in the functions, may not be tested, leading to gaps in coverage.
+
+- Unreachable Code: Certain conditions or branches in the code may be unreachable based on the current tests. For instance, if there's conditional logic based on specific states of the application that are not exercised in the tests, it may lead to incomplete coverage.
+
+- Mock Limitations: The mocking of functions and data may lead to scenarios not being accurately reflected in the tests, especially if the real implementations have more complexity.
+
+- Complexity of External Dependencies: Interactions with complex external services or libraries may not be fully covered due to their reliance on specific configurations or states that are difficult to replicate in tests.
+
+# Request Whitelist Unit Testing
+
+## Overview
+The test suite is designed to validate the functionality of the functions related to whitelist requests in requestWhitelist.js. It primarily focuses on submitting whitelist requests, handling user authentication, and managing the visibility of a loading spinner. The tests utilize Jest.
+
+## Test Coverage
+Current Coverage: 100%
+
+Coverage Details: Every function and branch in the code has been tested, including all error handling and edge cases.
+
+
+## Key Areas Tested
+- Whitelist Request Submission:
+
+   - `submitWhitelistRequest`:
+      - Field Validation: Tests for the correct error when required fields are missing.
+      - Email Uniqueness: Validates that the function throws an error if the email has already been requested.
+      - Successful Submission: Ensures that a valid request is successfully submitted when all fields are valid and the email is unique.
+      - Error Handling: Tests the function’s response to a failed submission due to a Firestore error.
+
+- User Authentication:
+
+   - `ensureAuthenticatedUser`:
+      - Authenticated User: Verifies that the function resolves with the user object when the user is authenticated.
+      - Unauthenticated User: Tests that the function rejects when no user is authenticated.
+
+- Loading Spinner Management:
+
+   - `showLoadingSpinner`: Tests that the loading spinner is displayed correctly by checking its visibility.
+   - `hideLoadingSpinner`: Verifies that the loading spinner is hidden as expected.
+
+
+## Testing Approach
+
+- Unit Testing: The tests focus on individual functions, verifying their correctness and expected behavior in isolation.
+
+- Mocking Dependencies: Jest’s mocking capabilities are used to simulate Firebase functions (getDocs, addDoc, etc.) and the authentication state (onAuthStateChanged). This isolates the tests from actual database calls and external dependencies.
+
+- Asynchronous Testing: The tests use async/await syntax to handle asynchronous functions, ensuring that promises are properly resolved or rejected.
+
+- DOM Manipulation: For testing the loading spinner, the tests manipulate the DOM directly to verify the visibility of the spinner.
+
+## Reasons for Achieving 100% Coverage
+- Comprehensive Test Cases: All possible paths through the code are tested, including success and error conditions for every function. Each test case is designed to cover specific scenarios and edge cases.
+
+- Error Handling: Each function includes tests for error handling, ensuring that exceptions are properly thrown and caught, which is critical for robust applications.
+
+- Direct Testing of DOM Manipulation: The tests directly assess changes to the DOM, ensuring that functions that manipulate the UI are verified for correctness.
+
+
+# View Your Upcoming Bookings Unit Testing
+
+## Overview
+The test suite is designed to validate the functions related to viewing user bookings in `viewBookings.js`. It covers loading messages, date and time formatting, fetching user bookings, displaying bookings, and loading user bookings. The tests utilize Jest along with jest-fetch-mock to mock network requests.
+
+## Test Coverage
+Current Coverage: 65.62%
+Coverage Details: The tests cover a subset of functionalities within the module, but there are areas that lack sufficient tests, particularly in how bookings are displayed and edge cases are handled.
+
+
+## Key Areas Tested
+
+- Loading Message:
+
+      - `showLoading`: Validates that the loading message is displayed correctly in the bookings container.
+
+- Date Formatting:
+
+      - `formatDate`: Confirms that dates are formatted correctly into the expected string format.
+
+- Time Slot Formatting:
+
+      - `formatTimeSlot`: Ensures the correct formatting of time slots from start and end times.
+
+- Fetching User Bookings:
+
+      - `fetchUserBookings`: Tests the function for correctly fetching user bookings from an API and validates the response structure.
+
+- Displaying Bookings:
+
+      - `displayBookings `: Checks whether the bookings are displayed correctly and verifies the visibility of the "no upcoming bookings" message when no bookings are present.
+
+- Loading User Bookings:
+
+      - `loadUserBookings`: Tests if the function fetches and attempts to display user bookings, though some aspects of the display logic may not be fully tested.
+
+
+## Testing Approach
+Unit Testing: Each function is tested independently to verify its correctness in isolation.
+
+Mocking Dependencies: jest-fetch-mock is used to simulate network requests, allowing tests to run without actual API calls.
+
+DOM Manipulation: The tests manipulate the DOM directly to verify changes in the UI, such as the presence of loading messages and booking displays.
+
+Asynchronous Testing: The tests utilize async/await to handle asynchronous functions and ensure that promises are resolved correctly.
+
+## Why Not 100% Coverage ?
+
+- Uncovered Branches and Conditions
+
+      - Not all branches of the code are exercised by the tests. For example, conditional statements or error handling paths may not have corresponding tests.
+
+- Missing Edge Case Tests
+      - Tests may focus primarily on typical use cases and overlook edge cases that could lead to different code paths being executed.
+
+- Static or Mocked Dependencies
+      - Mocking external dependencies, while useful for isolating tests, can lead to missing real-world scenarios that might not be covered by mocks.
+
+
