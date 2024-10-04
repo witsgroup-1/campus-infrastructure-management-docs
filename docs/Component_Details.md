@@ -138,7 +138,7 @@ The onboarding process is designed to collect essential information about you be
 - **Submission Issues**:
   - If you encounter any issues, check your network connection and try again. If the problem persists, contact support.
 
-### User Guide: Dashboard
+### General User Dashboard Guide
 
 #### Overview
 Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including viewing upcoming bookings, viewing available venues and making maintenance reports.
@@ -201,6 +201,78 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
 - **Date and Time Formatting**:
   - **Date**: `DD/MM/YY`
   - **Time Slot**: `HH:MM-HH:MM`
+
+
+### Admin User Dashboard Guide
+
+#### Overview
+The Admin Dashboard provides an interface for managing bookings, venues, reports, and schedules. It also facilitates communication and tracking of user requests related to whitelisting and maintenance reports.
+
+#### Features
+##### Manage Bookings
+
+
+
+##### Manage Venues
+
+- View the list of all available venues.
+- Add Venues: Click the "Add Venue" button to add new venues. Fill in the necessary details (name, location, capacity, etc.) and save.
+
+
+##### Manage Reports
+
+
+##### Manage Schedules
+
+
+
+##### Notifications
+
+
+
+##### Inbox
+
+- Whitelisting Requests: Access the inbox to view requests from users wanting to be added to the whitelist. You can review these requests and take appropriate actions (accept/reject).
+
+##### Navigation Menu
+
+- Menu Button: Click the menu button to access additional navigation options:
+- View All Whitelist Members: View a list of all users currently on the whitelist.
+- Whitelist Requests: Quickly navigate to the section showing pending whitelist requests.
+- User Dashboard: Go to the general user dashboard view.
+
+
+#### How to Use the Dashboard
+- Login: Access the dashboard by logging in with your admin credentials.
+
+##### Managing Bookings:
+
+
+##### Manage Venues: 
+- Select “Manage Venues” to view all venues.
+- Click on the “Add Venue” button to enter details for a new venue.
+- Ensure all necessary fields are filled out before saving.
+
+
+##### Manage Reports: 
+
+
+##### Manage Schedules: 
+
+
+##### Notifications: 
+
+##### Inbox: 
+- Open the inbox to see all requests.
+- Approve or deny requests as necessary based on your criteria.
+
+##### Navigation menu: 
+
+
+- Click the menu button to explore additional options.
+- Select links to view whitelist members or navigate back to the admin dashboard.
+
+
 
 ### Venue Booking System
 
