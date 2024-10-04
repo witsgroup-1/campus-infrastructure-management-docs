@@ -505,7 +505,7 @@ By the next meeting:
 Next meeting: Saturday, 20:00
 
 ### Sprint 6 Meeting 16 
-Date: 17 September 2024
+Date: 22 September 2024
 
 Attendees:
 - Mayuri Balakistan(2543986)
@@ -536,7 +536,7 @@ Note:
 Next Meeting: Thursday, 26 September
 
 ### Sprint 6 Meeting 17 
-Date: 17 September 2024
+Date: 26 September 2024
 
 Attendees:
 - Mayuri Balakistan(2543986)
@@ -566,4 +566,34 @@ Note:
   - map – “before the milestone”
 
 Next meeting: Sunday, 29 September, 20:00
+
+### Sprint 6 Meeting 17 
+Date: 29 September 2024
+
+Attendees:
+- Mayuri Balakistan(2543986)
+- Chloe Dube (2602515)
+- Claire Newman (2549861)
+- Dineo Chiloane (2563191)
+- Busisiwe Vemba(2561620)
+- Menzi Shazi(2453308)
+
+Minutes
+-	Still working on testing.
+-	Members are struggling with testing
+-	Issues with deployment: deployment is taking very long
+-	We have retrieved the security api from the other group.
+-	Issues with venues, probably linked to deployment.
+-	Integration testing is an issue
+-	Update documentation.
+-	Give user feedback forms to users.
+
+To work on:
+-	Fixing deployment
+-	Testing
+-	Working with other groups apis.
+
+Note:
+-	Venue issue resolved
+
 

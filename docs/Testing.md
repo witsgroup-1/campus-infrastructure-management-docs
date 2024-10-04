@@ -423,6 +423,111 @@ The application and the designs of this application was given to family members 
 - **When** I attempt to book any venue,
 - **Then** I will be unable to book any venues.
 
+## User Acceptance Tests for General Dashboard
+
+**1. View Venues Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Venues" section,
+- **Then** the section should display a list of venues with relevant details.
+
+**2. View Upcoming Bookings Section**
+- **Given** the user is on the dashboard page,
+- **When** the user views the "Upcoming Bookings" section,
+- **Then** the section should display a list of their upcoming bookings with correct dates and times.
+
+**3. Floating Action Button: Navigate to Report Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Report",
+- **And** clicking on "Report" should navigate the user to the report page.
+
+**4. Floating Action Button: Navigate to Book Page**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the floating action button,
+- **Then** a menu should appear with quick access options, including "Book",
+- **And** clicking on "Book" should navigate the user to the booking page.
+
+**5. Notification Bell: View Notifications**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the notification bell icon,
+- **Then** a dropdown should appear showing a list of notifications,
+- **And** each notification should be clickable to view details.
+
+**6. Menu Button: Open Navigation Bar**
+- **Given** the user is on the dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation bar should open from the side of the screen,
+- **And** the navigation bar should display links to various pages, such as "My Bookings", "Make a Report", "Make a Reservation", etc.
+
+**7. Navigation Bar: Navigate to a Page**
+- **Given** the user is on the dashboard page with the navigation bar open,
+- **When** the user clicks a link in the navigation bar,
+- **Then** the user should be navigated to the corresponding page,
+- **And** the navigation bar should close automatically after navigation.
+
+
+## User Acceptance Tests for Admin Dashboard
+
+**1. Manage Bookings**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Bookings" option,
+- **Then** the user should be navigated to the bookings management page,
+- **And** the user should be able to view, edit, or delete bookings.
+
+**2. Manage Venues**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Venues" option,
+- **Then** the user should be navigated to the venues management page,
+- **And** the user should be able to view, edit, or delete venue details.
+
+**3. Add Venue Button**
+- **Given** the user is on the "Manage Venues" page,
+- **When** the user clicks the "Add Venue" button,
+- **Then** a form should appear allowing the user to input details for a new venue,
+- **And** the venue should be added to the list upon successful submission.
+
+**4. Manage Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Reports" option,
+- **Then** the user should be navigated to the maintenance reports logs page,
+
+**5. Manage Schedules**
+- **Given** the user is on the admin dashboard page,
+- **When** the user selects the "Manage Schedules" option,
+- **Then** the user should be navigated to the schedules management page,
+- **And** the user should be able to view, add, or update schedules.
+
+**6. Notification Bell: View Maintenance Reports**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks the notification bell icon,
+- **Then** a dropdown should appear showing the latest maintenance reports submitted,
+
+**7. Inbox: View Whitelist Requests**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the inbox icon,
+- **Then** a dropdown should appear showing people requesting to be added to the whitelist
+
+**8. Menu Button: Open Navigation Page**
+- **Given** the user is on the admin dashboard page,
+- **When** the user clicks on the menu button,
+- **Then** a navigation page should open from the side of the screen,
+- **And** the navigation page should display links such as "Manage Whitelist", "Manage Requests", "Admin Dashboard" and "Log out".
+
+**9. Navigate to View All Whitelist Members**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Whitelist" link,
+- **Then** the user should be navigated to the page displaying all whitelist members.
+
+**10. Navigate to Whitelist Requests**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Manage Requests" link,
+- **Then** the user should be navigated to the page displaying all pending whitelist requests.
+
+**11. Navigate to Admin Dashboard in General User Dashboard**
+- **Given** the user is on the navigation page,
+- **When** the user clicks the "Admin Dashboard" link,
+- **Then** the user should be navigated back to the admin dashboard.
+
 
 ## Why is our code coverage ___%
 ### For Milestone 2 
@@ -434,4 +539,311 @@ Some functions have not been unit tested yet and some tests have not been integr
 
 Patch Coverage is sometimes higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
 (ref: https://about.codecov.io/blog/why-patch-coverage-is-more-important-than-project-coverage/)
+
+# Add Venues Page Unit Testing 
+
+## Overview
+
+The test suite for the addVenues page uses Jest to perform unit tests on the main functions in `addVenueCopy.js`. The tests cover the core functionality of fetching venues, displaying venues, creating venue blocks, adding new venues, and handling form submissions.
+
+## Test Coverage
+
+The current test coverage for this suite is 82.6%.
+
+## Key Areas Tested
+
+1. **API Interactions**: 
+   - `fetchVenues()`: Tests successful API calls and error handling.
+   - `addVenue()`: Verifies correct API calls for adding new venues.
+
+2. **DOM Manipulations**:
+   - `displayVenues()`: Ensures correct rendering of venue information.
+   - `createVenueBlock()`: Checks the structure of individual venue blocks.
+
+3. **Form Handling**:
+   - `handleFormSubmit()`: Tests the form submission process, including successful submissions and error scenarios.
+
+## Testing Approach
+
+- **Mocking**: The global `fetch` function is mocked to simulate API calls without actually making network requests.
+- **DOM Simulation**: A minimal HTML structure is set up before each test to simulate the necessary DOM elements.
+- **Event Simulation**: Form submission events are simulated to test the `handleFormSubmit` function.
+
+## Why Not 100% Coverage?
+
+While 82.6% coverage is good, it's not 100% for several reasons:
+
+1. **Error Scenarios**: Some error paths might not be fully covered, especially for network or unexpected errors.
+
+2. **DOM Event Listeners**: The `initVenueManagement` function, which sets up event listeners, is likely not fully tested due to the complexity of simulating DOM content loading.
+
+3. **Browser-Specific Functions**: Functions like `alert()` are mocked but their full behavior in a browser environment isn't tested.
+
+4. **Asynchronous Operations**: Some edge cases in asynchronous operations might be missed.
+
+5. **Environment Variables**: The `apiKey` constant isn't tested, as it's typically an environment variable.
+
+# Integration Testing for addVenue Page
+
+## Overview
+
+This document outlines the integration tests for the addVenues Page using Playwright. These tests verify the end-to-end functionality of adding new venues and fetching existing venues.
+
+## Test Suite
+
+### 1. Add Venue and Verify List
+
+This test case verifies the process of adding a new venue and confirms its presence in the venues list.
+
+#### Steps:
+
+1. Navigate to the Add Venue page.
+2. Fill out the venue form with test data.
+3. Submit the form.
+4. Verify the success alert.
+5. Check if the new venue appears in the updated venues list.
+
+#### Assertions:
+
+- Confirm the success alert message.
+- Verify the presence of the newly added venue in the list.
+- Check if all venue details (name, capacity, category, features, building) match the input data.
+
+### 2. Fetch and Display Existing Venues
+
+This test case ensures that existing venues are properly fetched and displayed on the page load.
+
+#### Steps:
+
+1. Navigate to the Add Venue page.
+2. Wait for the venues list to load.
+3. Extract the list of displayed venues.
+
+#### Assertions:
+
+- Verify that the venues list is not empty.
+- Check the structure of each venue block, ensuring all required information is present.
+
+## Test Environment
+
+- **Framework**: Playwright
+- **Browser**: Default browser provided by Playwright
+- **Base URL**: `http://localhost:3000/adminDashboard/addVenue.html`
+
+## Running the Tests
+
+To run these tests:
+
+1. Ensure the application is running on `localhost:3000`.
+2. Execute the Playwright test command (e.g., `npx playwright test`).
+
+## Notes
+- The tests include a 1-second wait time after adding a venue to allow for list updates. This might need adjustment based on actual application performance.
+
+
+# Admin Dashboard Unit Testing
+## Overview
+
+This test suite performs unit tests on the core functions in adminDashboard.js using Jest. The tests focus on error handling, DOM manipulation, authentication state management, and sidebar functionality in the admin dashboard.
+
+## Test Coverage
+The current test coverage is 82.92%.
+
+## Key Areas Tested
+- API Interactions:
+   - `fetchData()`: Verifies API error handling by simulating failed fetch requests.
+
+- DOM Manipulations:
+   - `displayBookings()`: Tests how the DOM updates based on the presence or absence of booking data.
+
+- Authentication Handling:
+
+   - `checkAuthState()`: Mocks Firebase’s onAuthStateChanged to test user authentication handling.
+
+- Sidebar Functionality:
+   - `toggleSidebar()`: Tests the opening, closing, and resizing behavior of the sidebar in response to user interactions.
+
+## Testing Approach
+
+- Mocking:
+   - The fetch function is mocked to simulate API errors.
+   - Firebase's getAuth and onAuthStateChanged are mocked to simulate different authentication states.
+
+- DOM Simulation:
+   - Mock DOM elements like containers, buttons, and sidebars are created to test interactions and rendering logic.
+
+- Event Simulation:
+   - Simulated button clicks and window resize events are used to test sidebar toggle functionality.
+
+## Why Not 100% Coverage?
+
+- Edge Cases:
+   - Some edge cases in API error handling and user interactions may not be fully covered.
+
+- DOM Event Complexity:
+   - Certain event listeners and interactions, especially those involving asynchronous operations or complex DOM states.
+
+
+# View Your Bookings Page Unit Testing
+
+## Overview
+The test suite is designed to validate the functionality of various functions and components within the yourBookings.js file. It primarily focuses on date formatting, time slot formatting, fetching user bookings, pagination of bookings, and rendering bookings for different devices. The tests are structured using Jest.
+
+## Test Coverage
+Current Coverage: 77.38%
+
+
+## Key Areas Tested
+
+- Date and Time Formatting:
+
+   - `formatDate`: Tests the correct formatting of a given date string.
+   - `formatTimeSlot`: Tests the correct formatting of time slots from start and end times.
+
+- Fetching User Bookings:
+
+   - `fetchUserBookings`: Tests successful API responses and error handling when fetching user bookings.
+
+- Pagination Logic:
+
+   - `paginateBookings`: Tests the correct pagination of a list of bookings, ensuring that the correct subsets of data are returned based on the page number and size.
+
+- Loading State:
+
+   - `showLoading`: Tests the display of a loading message while bookings are being fetched.
+
+- Rendering Bookings:
+
+   - `renderDesktopBookings and renderMobileBookings`: Tests rendering of bookings for both desktop and mobile views, including handling of empty bookings.
+
+- Pagination Controls:
+
+   - `renderPaginationControls`: Tests rendering of pagination controls, including checking the state of the previous and next buttons.
+
+## Testing Approach
+
+- Unit Testing: The tests focus on individual functions to ensure they perform as expected in isolation. This helps in identifying issues at the function level.
+
+- Mocking Dependencies: Using Jest’s mocking capabilities, external dependencies (like Firebase and fetch) are simulated to isolate the component being tested. This allows for testing without making actual network calls.
+
+- Asynchronous Testing: Tests for functions that return promises (e.g., fetchUserBookings) use async/await syntax to handle asynchronous operations properly.
+
+## Why Not 100% Coverage ?
+
+- Edge Cases Not Covered: Some edge cases, such as unexpected input formats or certain error conditions in the functions, may not be tested, leading to gaps in coverage.
+
+- Unreachable Code: Certain conditions or branches in the code may be unreachable based on the current tests. For instance, if there's conditional logic based on specific states of the application that are not exercised in the tests, it may lead to incomplete coverage.
+
+- Mock Limitations: The mocking of functions and data may lead to scenarios not being accurately reflected in the tests, especially if the real implementations have more complexity.
+
+- Complexity of External Dependencies: Interactions with complex external services or libraries may not be fully covered due to their reliance on specific configurations or states that are difficult to replicate in tests.
+
+# Request Whitelist Unit Testing
+
+## Overview
+The test suite is designed to validate the functionality of the functions related to whitelist requests in requestWhitelist.js. It primarily focuses on submitting whitelist requests, handling user authentication, and managing the visibility of a loading spinner. The tests utilize Jest.
+
+## Test Coverage
+Current Coverage: 100%
+
+Coverage Details: Every function and branch in the code has been tested, including all error handling and edge cases.
+
+
+## Key Areas Tested
+- Whitelist Request Submission:
+
+   - `submitWhitelistRequest`:
+      - Field Validation: Tests for the correct error when required fields are missing.
+      - Email Uniqueness: Validates that the function throws an error if the email has already been requested.
+      - Successful Submission: Ensures that a valid request is successfully submitted when all fields are valid and the email is unique.
+      - Error Handling: Tests the function’s response to a failed submission due to a Firestore error.
+
+- User Authentication:
+
+   - `ensureAuthenticatedUser`:
+      - Authenticated User: Verifies that the function resolves with the user object when the user is authenticated.
+      - Unauthenticated User: Tests that the function rejects when no user is authenticated.
+
+- Loading Spinner Management:
+
+   - `showLoadingSpinner`: Tests that the loading spinner is displayed correctly by checking its visibility.
+   - `hideLoadingSpinner`: Verifies that the loading spinner is hidden as expected.
+
+
+## Testing Approach
+
+- Unit Testing: The tests focus on individual functions, verifying their correctness and expected behavior in isolation.
+
+- Mocking Dependencies: Jest’s mocking capabilities are used to simulate Firebase functions (getDocs, addDoc, etc.) and the authentication state (onAuthStateChanged). This isolates the tests from actual database calls and external dependencies.
+
+- Asynchronous Testing: The tests use async/await syntax to handle asynchronous functions, ensuring that promises are properly resolved or rejected.
+
+- DOM Manipulation: For testing the loading spinner, the tests manipulate the DOM directly to verify the visibility of the spinner.
+
+## Reasons for Achieving 100% Coverage
+- Comprehensive Test Cases: All possible paths through the code are tested, including success and error conditions for every function. Each test case is designed to cover specific scenarios and edge cases.
+
+- Error Handling: Each function includes tests for error handling, ensuring that exceptions are properly thrown and caught, which is critical for robust applications.
+
+- Direct Testing of DOM Manipulation: The tests directly assess changes to the DOM, ensuring that functions that manipulate the UI are verified for correctness.
+
+
+# View Your Upcoming Bookings Unit Testing
+
+## Overview
+The test suite is designed to validate the functions related to viewing user bookings in `viewBookings.js`. It covers loading messages, date and time formatting, fetching user bookings, displaying bookings, and loading user bookings. The tests utilize Jest along with jest-fetch-mock to mock network requests.
+
+## Test Coverage
+Current Coverage: 65.62%
+Coverage Details: The tests cover a subset of functionalities within the module, but there are areas that lack sufficient tests, particularly in how bookings are displayed and edge cases are handled.
+
+
+## Key Areas Tested
+
+- Loading Message:
+
+   - `showLoading`: Validates that the loading message is displayed correctly in the bookings container.
+
+- Date Formatting:
+
+   - `formatDate`: Confirms that dates are formatted correctly into the expected string format.
+
+- Time Slot Formatting:
+
+   - `formatTimeSlot`: Ensures the correct formatting of time slots from start and end times.
+
+- Fetching User Bookings:
+
+   - `fetchUserBookings`: Tests the function for correctly fetching user bookings from an API and validates the response structure.
+
+- Displaying Bookings:
+
+   - `displayBookings `: Checks whether the bookings are displayed correctly and verifies the visibility of the "no upcoming bookings" message when no bookings are present.
+
+- Loading User Bookings:
+
+   - `loadUserBookings`: Tests if the function fetches and attempts to display user bookings, though some aspects of the display logic may not be fully tested.
+
+
+## Testing Approach
+Unit Testing: Each function is tested independently to verify its correctness in isolation.
+
+Mocking Dependencies: jest-fetch-mock is used to simulate network requests, allowing tests to run without actual API calls.
+
+DOM Manipulation: The tests manipulate the DOM directly to verify changes in the UI, such as the presence of loading messages and booking displays.
+
+Asynchronous Testing: The tests utilize async/await to handle asynchronous functions and ensure that promises are resolved correctly.
+
+## Why Not 100% Coverage ?
+
+- Uncovered Branches and Conditions
+
+   - Not all branches of the code are exercised by the tests. For example, conditional statements or error handling paths may not have corresponding tests.
+
+- Missing Edge Case Tests
+   - Tests may focus primarily on typical use cases and overlook edge cases that could lead to different code paths being executed.
+
+- Static or Mocked Dependencies
+   - Mocking external dependencies, while useful for isolating tests, can lead to missing real-world scenarios that might not be covered by mocks.
+
 

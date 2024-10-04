@@ -54,6 +54,12 @@
   - **Close Popup**: Hides the popup and returns to the maintenance logs screen.
 
 ### Notifications
+- **Maintenance Notifications**:
+- Login as an admin.
+- Click the bell icon on the Admin dashboard.
+- See the last 48 hours of maintenance requests
+- Click 'Show All Requests'
+- Takes you to all maintenance logs
 
 ## User Guides
 
@@ -138,7 +144,7 @@ The onboarding process is designed to collect essential information about you be
 - **Submission Issues**:
   - If you encounter any issues, check your network connection and try again. If the problem persists, contact support.
 
-### User Guide: Dashboard
+### General User Dashboard Guide
 
 #### Overview
 Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including viewing upcoming bookings, viewing available venues and making maintenance reports.
@@ -202,6 +208,98 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
   - **Date**: `DD/MM/YY`
   - **Time Slot**: `HH:MM-HH:MM`
 
+
+### Admin User Dashboard Guide
+
+#### Overview
+The Admin Dashboard provides an interface for managing bookings, venues, reports, and schedules. It also facilitates communication and tracking of user requests related to whitelisting and maintenance reports.
+
+#### Features
+##### Manage Bookings
+
+
+
+##### Manage Venues
+
+- View the list of all available venues.
+- Add Venues: Click the "Add Venue" button to add new venues. Fill in the necessary details (name, location, capacity, etc.) and save.
+
+
+##### Manage Reports
+- View all the maintenanc logs in a ticket format.
+- Click on a request to edit who it is assigned to, its status and the timestamp for when it will be done.
+
+##### Manage Schedules
+
+- view all schedules.
+- Click on "Add schedule" and fill in all needed details to create a new schedule. 
+
+##### Notifications
+- View maintenance requests from the last 48 hours
+- Click 'Show All Requests' to be taken to the maintenance logs page.
+
+
+##### Inbox
+
+- Whitelisting Requests: Access the inbox to view requests from users wanting to be added to the whitelist. You can review these requests and take appropriate actions (accept/reject).
+
+##### Navigation Menu
+
+- Menu Button: Click the menu button to access additional navigation options:
+- View All Whitelist Members: View a list of all users currently on the whitelist.
+- Whitelist Requests: Quickly navigate to the section showing pending whitelist requests.
+- User Dashboard: Go to the general user dashboard view.
+
+
+#### How to Use the Dashboard
+- Login: Access the dashboard by logging in with your admin credentials.
+
+
+##### Manage Venues: 
+- Select “Manage Venues” to view all venues.
+- Click on the “Add Venue” button to enter details for a new venue.
+- Ensure all necessary fields are filled out before saving.
+
+
+##### Manage Reports: 
+- Select 'Manage Reports' to view all maintenance logs
+- Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
+- Click on a block that displays Venue: name, with a date.
+- View the popup with detailed information.
+- Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
+- You can see all staff users to assign tasks to.
+- You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
+- Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
+- Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
+
+
+##### Manage Schedules: 
+
+- Viewing: click on "Schedules" in order to be able to view all schedules.
+- Creating: Click on "Add schedule" to be redirected to a new page where you can create a new schedule.
+- Submitting: after filling out all the information, click "Submit" in order to submit your information.
+- Delete: click the bin icon to delete a specific schedule.
+- Edit: click the pen icon to edit the information of a schedule. Then click "Update" to save your changes.
+
+##### Notifications: 
+- Login as an admin.
+- Click the bell icon on the Admin dashboard.
+- See the last 48 hours of maintenance requests
+- Click 'Show All Requests'
+- Takes you to all maintenance logs
+
+##### Inbox: 
+- Open the inbox to see all requests.
+- Approve or deny requests as necessary based on your criteria.
+
+##### Navigation menu: 
+
+
+- Click the menu button to explore additional options.
+- Select links to view whitelist members or navigate back to the admin dashboard.
+
+
+
 ### Venue Booking System
 
 #### Overview
@@ -260,41 +358,122 @@ The "Booking Details" page provides detailed information about a selected venue 
 ### Schedules
 
 ### Schedule
-- Open the sidebar on the main dashboard and click on "Schedules".
-- Here, you will be able to view all created schedules.
+- Click on "Manage Schedules" on the admin dashboard.
+<div style="text-align: center;">
+  <img src="media/ManageSchedule.png" alt="Manage Schedule" style="width: 200px; height: 400px;">
+</div>
+
+
+- This will take you to a new page where you will be able to view all created schedules.
+<div style="text-align: center;">
+  <img src="media/AllSchedules.png" alt="All Schedule" style="width: 200px; height: 400px;">
+</div>
+
+
 - On each row, there is a button with a bin. Click on this button in order to delete a schedule. You will be asked to confirm your deletion: click yes (or cancel if you do not want to).
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="media/DeleteSchedules.png" alt="Delete Schedule" style="width: 200px; height: 400px; padding:10px;">
+  <img src="media/DeleteScheduleConfirmation.png" alt="Delete Schedule Confirmation" style="width: 200px; height: 150px;">
+</div>
+
+- Beside that button, is a another button to edit your schedule details. If you click on this button, you will find a popup. Edit the information that you would like to and click "Update". ELse you can click "Close".
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="media/EditSchedules.png" alt="Edit Schedule" style="width: 200px; height: 400px; padding: 10px;">
+  <img src="media/EditModal.png" alt="Edit Modal" style="width: 180px; height: 380px;">
+</div>
+
 - Beneath the table is a button which says "Add a Schedule". Clicking this button will take you to a new page with a form.
-- Type in your name, the course of the schedule and the venue where it will be held. Select a day from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
+<div style="text-align: center;">
+  <img src="media/AddScheduleButton.png" alt="Add Schedule" style="width: 200px; height: 400px;">
+</div>
+
+- Type in your name, the course of the schedule and the venue where it will be held. Select a day and venue from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
+<div style="text-align: center;">
+  <img src="media/AddScheduleForm.png" alt="Schedule Form" style="width: 200px; height: 400px;">
+</div>
+
 - Then if your schedule is one that recurs weekly, click "yes" on the Recurring dropdown. This will casue another Date picker to appear. Here you must choose the date that your last schedule will be held on. Otherwise, if your schedule is only for one day, choose "no".
+<div style="text-align: center;">
+  <img src="media/RecurringTrue.png" alt="Recurring Schedule" style="width: 200px; height: 400px;">
+</div>
+
 - Once the form is fully filled out, you can click the "Submit" button to add your new schedule.
+<div style="text-align: center;">
+  <img src="media/SubmitScheduleForm.png" alt="Submit Schedule" style="width: 200px; height: 400px;">
+</div>
+
+
 
 ### Maintenance
 
 #### How to Make a Maintenance Report
-
 1. Click the plus on your user dashboard and select "Report."
-2. Fill in your name.
-3. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
-4. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
-5. Write a short description of the issue.
-6. Click "Submit." The input should clear.
-7. Press the back arrow in the top left corner to return to the user dashboard.
-8. If you do not fill in every field then you can not submit the form.
+2. Or click on 'Report' in the navigation bar
+3. Fill in your name.
+4. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
+5. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
+6. Write a short description of the issue.
+7. Click "Submit." The input should clear.
+8. Press the back arrow in the top left corner to return to the user dashboard.
+9. If you do not fill in every field then you can not submit the form.
 
-#### How to Work with Maintenance Logs
+### User Guide for Manage Bookings Page
 
-1. Click "Maintenance" on your user dashboard.
-2. Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
-3. Click on a block that displays Venue: name, with a date.
-4. View the popup with detailed information.
-5. Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
-6. You can search for staff users to assign tasks to.
-7. You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
-9. Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
-10. Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
+### Overview
+The **Manage Bookings** page allows users to efficiently view, search, and filter room bookings within an organization. This page provides an intuitive interface to manage bookings, ensuring users can quickly find the information they need and take necessary actions on their bookings.
 
+### Key Features
 
+### Header
+- **Page Title**: Displays "Manage Bookings" at the center of the header.
+- **Back Button**: Located on the left side of the header, this button allows users to navigate back to the previous page or to the user dashboard if there's no previous page in history.
 
+### Search Bar
+- A search bar located below the header allows users to search for specific rooms. Users can type in keywords related to the room they are looking for.
+- An icon of a magnifying glass is provided to indicate the search functionality.
+
+### Filter Options
+- Users can filter bookings based on their status (e.g., Pending, Confirmed, Cancelled) using a dropdown menu.
+- Additionally, users can filter bookings by room type (e.g., Lecture Hall, Tutorial Room, Boardroom, Other).
+
+### Bookings Display
+- The main section of the page dynamically updates to display booking information based on user input in the search bar and filters.
+- Each booking entry includes the room name, room type, date, time, purpose, and status of the booking.
+
+### Action Buttons
+- Depending on the status of the booking, users may see options to **Edit**, **Cancel**, **Accept**, or **Reject** a booking.
+
+### Footer
+- The footer contains copyright information for the organization, reaffirming the date and group responsible for the page.
+
+## How to Use the Manage Bookings Page
+
+### Navigating the Page
+Upon loading, the page displays the header and footer, along with the central content area for managing bookings.
+
+### Searching for a Room
+In the search bar, type the name or keywords related to the room you want to find. The search results will be updated dynamically based on the input.
+
+### Filtering Bookings
+- Use the **Status** dropdown to filter bookings based on their current status.
+- Use the **Filter** dropdown to select the type of room you are interested in (e.g., Lecture Hall, Boardroom). The bookings displayed will adjust accordingly.
+
+### Viewing Booking Details
+Each booking box will display relevant information, including:
+- Room Name
+- Room Type
+- Booking Date
+- Booking Time (Start and End)
+- Purpose of the booking
+- Current Status of the booking
+
+### Taking Action on Bookings
+- If the booking status is not pending, you will see an **Edit** button to modify the booking details.
+- If the status is confirmed or accepted, a **Cancel** button will be available to cancel the booking.
+- For pending bookings, options to **Accept** or **Reject** the booking will be visible.
+
+### Returning to the Dashboard
+Use the back button on the left side of the header to return to the previous page or the user dashboard.
 
 
 
@@ -528,3 +707,163 @@ Maintenance Logs:
         - Ensure Correct Status is Reflected: Check that the status changes (like Scheduled, In Progress, or Completed) are saved properly.
 
 
+### Schedule Integration
+#### Timetables
+
+A. Displaying schedules: all created schedules are displayed in a table.
+
+- Maintenance:
+ - Ensure that the schedule API is fetching data from the backend correctly. 
+ - Ensure that changes to the schedules are displayed appropraitely. 
+ - Ensure that deleted schedules are removed from the table.
+
+- Common issues:
+ - Incorrect syntax when displaying schedules: edit the html to display schedules as expected.
+ - Schedules not updating: check API is being handled correctly.
+
+B. Delete button: button to delete a specific schedule by ID.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that confirmation popup appears when button is clicked. 
+ - Ensure schedule is appropriately deleted.
+
+- Common issues:
+ - Alert does not appear: check that the button functionality is working.
+ - Schedule is not deleted: check API is being handled correctly.
+
+C. Edit button: button to edit a specific schedule by ID.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that popup appears when button is clicked. 
+ - Ensure schedule is appropriately updated when "Update" is clicked.
+ - Ensure popup is closed when "Close" button is clicked.
+
+- Common issues:
+ - Popup does not appear: check that the button functionality is working.
+ - Schedule is not updated: check API is being handled correctly.
+ - Popup does not close: check that "Close" button works as expected.
+
+D. Add Schedule button: button that takes you to a new page so you can create a new schedule.
+
+- Maintenance: 
+ - Ensure button is clickable.
+ - Ensure that the button takes you to the new, correct page.
+
+- Common issues:
+ - Button does not take you to a new page: check that the button has a corresponding link.
+ - Button takes you to the wrong page: check that the correct link is being used.
+
+# Add Venues Page
+
+## User Manual
+
+### Overview
+
+The Venue Management System is a web-based application that allows users to add new venues and view existing ones. It features a campus map and a form for adding venues.
+
+### Features
+
+1. **Campus Map**: Displays the Wits Braamfontein Campus Map.
+2. **Add Venue Form**: Allows users to add new venues with details.
+3. **Existing Venues List**: Shows all venues currently in the system.
+
+### How to Use
+
+#### Adding a New Venue
+
+1. Scroll to the "Add Venue" section.
+2. Fill out the form with the following details:
+   - Name
+   - Capacity
+   - Category
+   - Features
+   - Building
+3. Click the "Add Venue" button.
+4. If successful, you'll see an alert saying "Venue added successfully".
+
+#### Viewing Existing Venues
+
+1. Scroll down to the "Existing Venues" section.
+2. All current venues will be displayed here.
+3. Each venue block shows:
+   - Name
+   - Capacity
+   - Category
+   - Features
+   - Building
+
+## Maintenance Guide
+
+### Updating the Campus Map
+
+To update the campus map:
+
+1. Locate the `<iframe>` tag in the HTML.
+2. Replace the `src` attribute with the new Google Maps embed URL.
+
+### Modifying the API Endpoint
+
+If the API endpoint changes:
+
+1. Find the `fetchVenues` and form submission functions in the `<script>` tag.
+2. Update the URL in the `fetch` calls to the new endpoint.
+
+### Changing the API Key
+
+To update the API key:
+
+1. Locate the `apiKey` variable at the beginning of the script.
+2. Replace its value with the new API key.
+
+### Styling Changes
+
+The page uses Tailwind CSS. To modify styles:
+
+1. Adjust the class names in the HTML elements.
+2. For custom styles, add them to a separate CSS file or use Tailwind's configuration file.
+
+## How It Works
+
+### HTML Structure
+
+- The page is divided into three main sections:
+  1. Campus Map
+  2. Add Venue Form
+  3. Existing Venues List
+
+### JavaScript Functionality
+
+1. **DOMContentLoaded Event Listener**:
+   - Sets up the form submission handler and calls `fetchVenues()`.
+
+2. **Form Submission**:
+   - Prevents default form submission.
+   - Collects form data and creates a venue object.
+   - Sends a POST request to the API to add the new venue.
+   - On success, resets the form and refreshes the venues list.
+
+3. **fetchVenues Function**:
+   - Sends a GET request to the API to retrieve all venues.
+   - Calls `displayVenues()` with the retrieved data.
+
+4. **displayVenues Function**:
+   - Clears the existing venues list.
+   - Creates a venue block for each venue and appends it to the list.
+
+5. **createVenueBlock Function**:
+   - Creates a DOM element for each venue with its details.
+
+### API Integration
+
+- The system uses a REST API for venue management.
+- Endpoints:
+  - POST: `https://campus-infrastructure-management.azurewebsites.net/api/venues`
+  - GET: `https://campus-infrastructure-management.azurewebsites.net/api/venues`
+- Authentication is done using an API key in the `x-api-key` header.
+
+### Styling
+
+- The page uses Tailwind CSS for styling, loaded via CDN.
+- Custom color classes are used for branding (e.g., `text-[#003B5C]`).
