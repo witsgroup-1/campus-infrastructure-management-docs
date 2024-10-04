@@ -93,6 +93,15 @@ This function renders venue data into the DOM. The test ensures that venues are 
 
 These unit tests ensure that key functions in `book-venue.js` are working correctly by simulating various scenarios, such as successful and failed API calls, different user roles, and venue rendering in the DOM. Mocking Firebase and global functions allows us to isolate the functionality of the code and focus on testing its logic without interacting with external services.
 
+### Schedule tests
+#### Testing Timetable.js
+
+- Unit test 1: tests that the edit modal is populated with the correct informatopn -> mocks the data and checks that the expected values are in the correct places in the modal.
+- Unit test 2: tests that the modal closes when "Close" is clicked. 
+- Unit test 3: tests that the updated information is submitted correctly -> it mocks a schedule and checks that an alert showing that the schedule has been updated is called when the fetch request to the api is successful.
+- Unit test 4: checks that a schedule is removed from the DOM when deleted -> it mocks the delete button and checks that the id of that schedule is null after the fetch request is called to the api.
+Unit test 5: check that the table displays the correct schedules and information -> it mocks the table and a schedule and checks that that all the information is displayed as it should be.
+- Unit test 6: tests that it can handle null data -> it mocks a schedule with null values, and checks that it still displays the correct information.
 
 
 ### Maintenance Tests
