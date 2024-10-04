@@ -38,28 +38,14 @@ The branch names are set as:
 - Menzi
 
 ## Integration
-
-- Transport: Why integrate. The Map API can give us the most up to date locations of venues within our Application.
-- Events Management: Why integrate. To keep our booking system up to date so that we do not face clashes.
 - Saftey: Why integrate. For security details we can get the most up to date security information.
 - Dining: Why integrate. We can allow our users to book a reservation for a meeting etc.
 
 ### Details on Integration Implementation:
 ### How will we stub their data
-
-- Transport: Hardcode some locations for major venues.
-- Events Management: hardcode some events to make sure our system is aware of them and up to date.
-- Saftey: Hardcode some known security information (contact details for security of every campus).
-- Dining: We will have some hardcoded resturants to make reservations too in our venue data collection. The reservations will be noted down in a list and acted upon in a timely manner.
+- Saftey: Use a mock API for some known security information (contact details for security of every campus).
+- Dining: We will create a fake API for reservstions to resturants to make reservations.
   
-#### Transport
-We plan to show users the venue location of venues in our application by displaying the map location.
-- We will fetch their MAP API and display the locations of venues
-How to stub:
-- Implement a google maps of wits.
-
-#### Events Managment (requires there API):
-
 #### Safety
 On the footer of the user dashboard we will call the Security applications API of most relevent security contact information incase someone needs an emergency number. 
 - so preform a fetch request on the externel API and disply the information on the user dashboard footer.
