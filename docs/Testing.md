@@ -639,12 +639,39 @@ Asynchronous Testing: The tests utilize async/await to handle asynchronous funct
 So we had user acceptance tests and we got family and friends to review our website and submit a survey
 ### User Feedback
 [User Feedback Survey](https://forms.gle/j9ij78bmt21CAvqx6)
-#### Actual feedback that we had recieved
+#### Actual feedback that we had recieved:
 
-![User experience rating Image](media/UserExperience.png)
 ![Devices used for the survey image](media/WhatDeviceDidUse.png)
+![User experience rating Image](media/UserExperience.png)
 ![Why did you choose your rating image](media/WhyDidYouChooseRatingUser.png)
 
+Peoples responses to experiencing bugs:
+- Not sure if it’s a bug, but I made a booking and it did not pop up in my upcoming events 
+- Most back buttons dont work
+- The back button didnt work and I was trapped to make bookings
+- I could not find the back button on the make a reservation page.
+
+Worst part of our website:
+- The layout of the webpages	
+- general improvements	Centering for the add button is off and after the confirmation prompt comes up, it should redirect you 
+- Booking venues, Making a reservation	I got confused between making a reservation and booking a venue, I thought it was the same thing and did not expect to be taken to a menu after clicking the “reservation” link 
+- Create a maintenance report	Drop down does not work
+- The report function	The venue question did not allow for a drop down
+- The layout of the webpages and some of the webpages need more optimisation. The whole experience felt very jittery.
+
+Anything we should add:
+- Yes, clean, does the job	Animations, but this will come later probably
+- Maybe just specify the difference that the “reservation” link is specific for dining.
+- more fine grain improvements
+- In Scedules you should add a drop down of all the available venues that can be use to make it easier for new users to be able to understand easily
+- There is too much white space, you need to figure out how to better utilise your webpage space.
+
+How we incorporated these changes:
+- We fixed the back buttons.
+- Reservations got a back button and a little icon to distinguish it from booking a venue.
+- Refined bookings
+- Fixed the maintenance report venue dropdown
+- Added some loading animations
 
 
 ### User Acceptance Tests
