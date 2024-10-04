@@ -639,6 +639,16 @@ Asynchronous Testing: The tests utilize async/await to handle asynchronous funct
 So we had user acceptance tests and we got family and friends to review our website and submit a survey
 ### User Feedback
 [User Feedback Survey](https://forms.gle/j9ij78bmt21CAvqx6)
+#### Actual feedback that we had recieved
+<div style="text-align: center;">
+  <img src="media/UserExperience.png" alt="User experience rating" style="width: 200px; height: 400px;">
+</div>
+<div style="text-align: center;">
+  <img src="media/WhatDeviceDidUse.png" alt="Devices used for the survey" style="width: 200px; height: 400px;">
+</div>
+<div style="text-align: center;">
+  <img src="media/WhyDidYouChooseRatingUser.png" alt="Why did you choose your rating" style="width: 200px; height: 400px;">
+</div>
 
 
 
