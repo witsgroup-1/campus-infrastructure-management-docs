@@ -622,27 +622,27 @@ Coverage Details: The tests cover a subset of functionalities within the module,
 
 - Loading Message:
 
-      - `showLoading`: Validates that the loading message is displayed correctly in the bookings container.
+   - `showLoading`: Validates that the loading message is displayed correctly in the bookings container.
 
 - Date Formatting:
 
-      - `formatDate`: Confirms that dates are formatted correctly into the expected string format.
+   - `formatDate`: Confirms that dates are formatted correctly into the expected string format.
 
 - Time Slot Formatting:
 
-      - `formatTimeSlot`: Ensures the correct formatting of time slots from start and end times.
+   - `formatTimeSlot`: Ensures the correct formatting of time slots from start and end times.
 
 - Fetching User Bookings:
 
-      - `fetchUserBookings`: Tests the function for correctly fetching user bookings from an API and validates the response structure.
+   - `fetchUserBookings`: Tests the function for correctly fetching user bookings from an API and validates the response structure.
 
 - Displaying Bookings:
 
-      - `displayBookings `: Checks whether the bookings are displayed correctly and verifies the visibility of the "no upcoming bookings" message when no bookings are present.
+   - `displayBookings `: Checks whether the bookings are displayed correctly and verifies the visibility of the "no upcoming bookings" message when no bookings are present.
 
 - Loading User Bookings:
 
-      - `loadUserBookings`: Tests if the function fetches and attempts to display user bookings, though some aspects of the display logic may not be fully tested.
+   - `loadUserBookings`: Tests if the function fetches and attempts to display user bookings, though some aspects of the display logic may not be fully tested.
 
 
 ## Testing Approach
@@ -658,12 +658,12 @@ Asynchronous Testing: The tests utilize async/await to handle asynchronous funct
 
 - Uncovered Branches and Conditions
 
-      - Not all branches of the code are exercised by the tests. For example, conditional statements or error handling paths may not have corresponding tests.
+   - Not all branches of the code are exercised by the tests. For example, conditional statements or error handling paths may not have corresponding tests.
 
 - Missing Edge Case Tests
-      - Tests may focus primarily on typical use cases and overlook edge cases that could lead to different code paths being executed.
+   - Tests may focus primarily on typical use cases and overlook edge cases that could lead to different code paths being executed.
 
 - Static or Mocked Dependencies
-      - Mocking external dependencies, while useful for isolating tests, can lead to missing real-world scenarios that might not be covered by mocks.
+   - Mocking external dependencies, while useful for isolating tests, can lead to missing real-world scenarios that might not be covered by mocks.
 
 
