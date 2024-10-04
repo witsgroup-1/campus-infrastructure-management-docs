@@ -245,8 +245,6 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 #### How to Use the Dashboard
 - Login: Access the dashboard by logging in with your admin credentials.
 
-##### Managing Bookings:
-
 
 ##### Manage Venues: 
 - Select “Manage Venues” to view all venues.
@@ -358,6 +356,64 @@ The "Booking Details" page provides detailed information about a selected venue 
 10. Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
 
 
+
+### User Guide for Manage Bookings Page
+
+### Overview
+The **Manage Bookings** page allows users to efficiently view, search, and filter room bookings within an organization. This page provides an intuitive interface to manage bookings, ensuring users can quickly find the information they need and take necessary actions on their bookings.
+
+### Key Features
+
+### Header
+- **Page Title**: Displays "Manage Bookings" at the center of the header.
+- **Back Button**: Located on the left side of the header, this button allows users to navigate back to the previous page or to the user dashboard if there's no previous page in history.
+
+### Search Bar
+- A search bar located below the header allows users to search for specific rooms. Users can type in keywords related to the room they are looking for.
+- An icon of a magnifying glass is provided to indicate the search functionality.
+
+### Filter Options
+- Users can filter bookings based on their status (e.g., Pending, Confirmed, Cancelled) using a dropdown menu.
+- Additionally, users can filter bookings by room type (e.g., Lecture Hall, Tutorial Room, Boardroom, Other).
+
+### Bookings Display
+- The main section of the page dynamically updates to display booking information based on user input in the search bar and filters.
+- Each booking entry includes the room name, room type, date, time, purpose, and status of the booking.
+
+### Action Buttons
+- Depending on the status of the booking, users may see options to **Edit**, **Cancel**, **Accept**, or **Reject** a booking.
+
+### Footer
+- The footer contains copyright information for the organization, reaffirming the date and group responsible for the page.
+
+## How to Use the Manage Bookings Page
+
+### Navigating the Page
+Upon loading, the page displays the header and footer, along with the central content area for managing bookings.
+
+### Searching for a Room
+In the search bar, type the name or keywords related to the room you want to find. The search results will be updated dynamically based on the input.
+
+### Filtering Bookings
+- Use the **Status** dropdown to filter bookings based on their current status.
+- Use the **Filter** dropdown to select the type of room you are interested in (e.g., Lecture Hall, Boardroom). The bookings displayed will adjust accordingly.
+
+### Viewing Booking Details
+Each booking box will display relevant information, including:
+- Room Name
+- Room Type
+- Booking Date
+- Booking Time (Start and End)
+- Purpose of the booking
+- Current Status of the booking
+
+### Taking Action on Bookings
+- If the booking status is not pending, you will see an **Edit** button to modify the booking details.
+- If the status is confirmed or accepted, a **Cancel** button will be available to cancel the booking.
+- For pending bookings, options to **Accept** or **Reject** the booking will be visible.
+
+### Returning to the Dashboard
+Use the back button on the left side of the header to return to the previous page or the user dashboard.
 
 
 
