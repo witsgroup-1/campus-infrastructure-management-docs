@@ -264,10 +264,22 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 ##### Manage Reports: 
 - Select 'Manage Reports' to view all maintenance logs
 - Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
+<div style="text-align: center;">
+  <img src="media/MaintenanceLogPage.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
+</div>
 - Click on a block that displays Venue: name, with a date.
 - View the popup with detailed information.
+<div style="text-align: center;">
+  <img src="media/ScheduledLog.png" alt="Sheduled log" style="width: 500px; height: 300px;">
+</div>
+<div style="text-align: center;">
+  <img src="media/InProgressLog.png" alt="In progress log" style="width: 500px; height: 300px;">
+</div>
 - Edit fields such as Assigned to, date picker, and Status bar dropdown if necessary.
 - You can see all staff users to assign tasks to.
+<div style="text-align: center;">
+  <img src="media/StaffDropdownLog.png" alt="Staff dropdown in logs for maintenance" style="width: 400px; height: 300px;">
+</div>
 - You can only assign a timestamp field in the "In Progress," and "Completed" statuses.
 - Click "Save Changes" to save changes and reload the page or "Close" the popup to return without saving.
 - Press the maintenance log page back arrow on the top left corner to return to the user dashboard.
