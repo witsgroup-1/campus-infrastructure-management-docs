@@ -326,30 +326,48 @@ The "Booking Details" page provides detailed information about a selected venue 
 
 ### Schedule
 - Click on "Manage Schedules" on the admin dashboard.
-![Manage Schedule](media/ManageSchedule.png)
+<div style="text-align: center;">
+  <img src="media/ManageSchedule.png" alt="Manage Schedule" style="width: 200px; height: 400px;">
+</div>
+
 
 - This will take you to a new page where you will be able to view all created schedules.
-![All Schedules](media/AllSchedules.png)
+<div style="text-align: center;">
+  <img src="media/AllSchedules.png" alt="All Schedule" style="width: 200px; height: 400px;">
+</div>
+
 
 - On each row, there is a button with a bin. Click on this button in order to delete a schedule. You will be asked to confirm your deletion: click yes (or cancel if you do not want to).
-![Delete Schedule](media/DeleteSchedules.png)
-![Delete Schedule](media/DeleteScheduleConfirmation.png)
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="media/DeleteSchedules.png" alt="Delete Schedule" style="width: 200px; height: 400px; padding:10px;">
+  <img src="media/DeleteScheduleConfirmation.png" alt="Delete Schedule Confirmation" style="width: 200px; height: 150px;">
+</div>
 
 - Beside that button, is a another button to edit your schedule details. If you click on this button, you will find a popup. Edit the information that you would like to and click "Update". ELse you can click "Close".
-![Edit Schedule](media/EditSchedules.png)
-![Edit Schedule](media/EditModal.png)
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="media/EditSchedules.png" alt="Edit Schedule" style="width: 200px; height: 400px; padding: 10px;">
+  <img src="media/EditModal.png" alt="Edit Modal" style="width: 180px; height: 380px;">
+</div>
 
 - Beneath the table is a button which says "Add a Schedule". Clicking this button will take you to a new page with a form.
-![Add Schedule](media/AddScheduleButton.png)
+<div style="text-align: center;">
+  <img src="media/AddScheduleButton.png" alt="Add Schedule" style="width: 200px; height: 400px;">
+</div>
 
 - Type in your name, the course of the schedule and the venue where it will be held. Select a day and venue from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
-![Schedule Form](media/AddScheduleForm.png)
+<div style="text-align: center;">
+  <img src="media/AddScheduleForm.png" alt="Schedule Form" style="width: 200px; height: 400px;">
+</div>
 
 - Then if your schedule is one that recurs weekly, click "yes" on the Recurring dropdown. This will casue another Date picker to appear. Here you must choose the date that your last schedule will be held on. Otherwise, if your schedule is only for one day, choose "no".
-![Recurring](media/RecurringTrue.png)
+<div style="text-align: center;">
+  <img src="media/RecurringTrue.png" alt="Recurring Schedule" style="width: 200px; height: 400px;">
+</div>
 
 - Once the form is fully filled out, you can click the "Submit" button to add your new schedule.
-![Schedule Form Submit](media/SubmitScheduleForm.png)
+<div style="text-align: center;">
+  <img src="media/SubmitScheduleForm.png" alt="Submit Schedule" style="width: 200px; height: 400px;">
+</div>
 
 
 
