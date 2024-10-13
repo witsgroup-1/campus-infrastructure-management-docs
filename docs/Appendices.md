@@ -412,6 +412,7 @@ Meeting:
 - we have decided that core functionality will be completed by Sunday evening
 - api stubs will be completed by monday evening.
 - documenatation must be ready to go by tuesday morning.
+- use a Google form with graphs and charts to record user feedback.
 
 ### Sprint 5 Meeting 14 (Sprint Review)
 
@@ -432,7 +433,6 @@ Observations made by the client plus improvements that could be made:
 - admin must be able to edit, delete venues
 - admins must be able to manage whitelist.
 - record access to API keys: increment count every time x===API_KEY to use as proof if nobody uses our keys.
-- use a Google form with graphs and charts to record user feedback.
 - mock APIs instead of hardcoding it.
 - clean up and rectify testing.
 - remove apple and facebook logos from login.
