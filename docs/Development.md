@@ -4,28 +4,27 @@
 
 ## Planning of Architecture
 
-At the begining of the process we focused on the technology choices, the high-level view of the system and the database and API specifications. Then we added more detail to the planning of the key features.
+Initial Architecture  
 
-The project architecture is: Multi-tier architecture
+At the initial stage of the project we decided that we would employ a multi-tier architecture. This architecture was well suited to our project as we would need a front-end, a web hosting server, an Application Programming Interface (API) and a backend NO-SQL database.    
 
-We chose this architecture as we have a front-end, a web hosting server, api and backend NO-SQL database.
+The reason we employed a NO-SQL database is due to the fact that they are offer high availability, performance and scalability. These features allow for our website to handle high levels of user traffic so that we can remain always online with our products services [1]. 
 
-The technology stack is:
+Furthermore, we had to decide on the NO-SQL database that we would employ.  As a group we went with the Firebase Firestore database as it is good for mobile development (which we had to account for due to responsive design principles) and scalability [2]. Firestore has real time data synchronisation [2] which would allow for our website to update its content quickly when new database entries and deletions occur. 
 
+We decided to use an API with the Firestore database as we had to integrate with other subsystems and could not expect them to initialise our database infrastructure on their web applications. By using an API other teams could simply access our venue management data without fuss over the inner workings of the database. 
+
+The website was hosted on Microsoft Azure as a web application as it was a service we as a team were most familiar with. Furthermore, the service offers services such as support for multiple languages such as Node.js, GitHub CI/CD pipeline integration and we would not have to worry about the finer details of hosting a web application as that would be managed by Azure [3].  Additionally, an important consideration was that our website needed to be hosted in our home country. This was to promote a good latency for University of Witwatersrand staff and students when using our website. Thankfully Azure has support for hosting the website from South Africa. 
+
+The technology stack we used is:
 - Frontend: HTML, CSS , Tailwind - (This is good for mobile-first development)
 - Authentication: OAuth, and Firebase authentication
 - Backend: Node Js, Express Js
 - Databases: Firebase Firestore
 
-Some frequently asked questions:
-- Why use Firestore NOSQL database: It is good for mobile development due to its flexibility and scalability. It has real time data sychronisation and is very customisable in its security rules.
-    (ref: https://cloud.google.com/blog/topics/developers-practitioners/all-you-need-know-about-firestore-cheatsheet)
-- Why use an API with a firestore NOSQL database: So that other sub-systems do not have to get involved with our database, they can just call our API and acess our data with the correct authentication.
-
-It was important that we hosted our website in our home country: Since our application was designed for use by our university it is important that everything is hosted as close to our country as possible. So we hosted our database and our web server in our country.
 
 ## Diagrams
-
+To help us illustrate the flow of our systems and their interactions we created a Component, Use case and a Deployment diagram [Figure].  
 ### Use Case Diagram
 
 The Use case diagram to illustrate basic features.
