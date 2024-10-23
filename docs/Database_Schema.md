@@ -345,7 +345,7 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 - `userId` (String): Unique identifier for the user who reported the issue (e.g., firebase_uid).
 - `issueType` (String): The type of issue reported – e.g., "Electrical," "Plumbing."
 - `description` (Text): Detailed description of the issue.
-- `status` (String): Current status of the request – e.g., "Open," "In Progress," "Resolved."
+- `status` (String): Current status of the request – e.g., "Scheduled," "In Progress," "Completed."
 - `createdAt` (Timestamp): Date and time when the request was created.
 - `timestamp` (Timestamp): Date and time when the request will be dealt with by staff or had been dealt with.
 - `assignedTo` (String): Identifier for the staff member assigned to the request.
@@ -358,7 +358,7 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 >   "userId": "User123",
 >   "issueType": "Electrical",
 >   "description": "Light not working",
->   "status": "Open",
+>   "status": "Scheduled",
 >   "createdAt": "2024-08-12T09:00:00Z",
 >   "timestamp": "2024-09-12T09:00:00Z",
 >   "assignedTo": "Staff456"
@@ -373,9 +373,6 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 
   - Stores general information about each maintenance request.
 
-- **Subcollection: `rooms`**
-
-  - Contains details about the specific room(s) involved in the maintenance request.
 
 **Summary of schema structure:**
 ![Maintenance Table](media/maintenancetable.png)
