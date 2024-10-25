@@ -341,8 +341,9 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 
 **Document fields**:
 
-- `roomId` (String): Identifier for the room or venue where the issue was reported.
-- `userId` (String): Unique identifier for the user who reported the issue (e.g., firebase_uid).
+- `roomId` (String): Unique identifier for the room or venue where the issue was reported (e.g., Firebase venue Id email).
+- `roomName` (String): name for the room or venue where the issue was reported.
+- `userId` (String): Unique identifier for the user who reported the issue (e.g., user email).
 - `issueType` (String): The type of issue reported – e.g., "Electrical," "Plumbing."
 - `description` (Text): Detailed description of the issue.
 - `status` (String): Current status of the request – e.g., "Scheduled," "In Progress," "Completed."
@@ -355,6 +356,7 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
 > ```json
 > {
 >   "roomId": "Room101",
+>   "roomName": "WSL"
 >   "userId": "User123",
 >   "issueType": "Electrical",
 >   "description": "Light not working",
