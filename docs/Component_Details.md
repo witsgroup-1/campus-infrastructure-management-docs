@@ -268,6 +268,7 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 <div style="text-align: center;">
   <img src="media/MaintenanceLogPage.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
 </div>
+- If venues have multiple requests tied to them then you can click 'Show more for this venue button' to see all the requests for that venue.
 - Click on a block that displays Venue: name, with a date.
 - View the popup with detailed information.
 <div style="text-align: center;">
@@ -431,19 +432,18 @@ The "Booking Details" page provides detailed information about a selected venue 
 <div style="text-align: center;">
   <img src="media/MaintenanceReportPage.png" alt="The Maintenance Report Page" style="width: 700px; height: 500px;">
 </div>
-3. Fill in your name.
 
-4. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
+3. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
 
 <div style="text-align: center;">
   <img src="media/MaintenanceReportPageVenueDropDown.png" alt="The Maintenance Report Venue Dropdown" style="width: 400px; height: 300px;">
 </div>
 
-5. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
-6. Write a short description of the issue.
-7. Click "Submit." The input should clear.
-8. Press the back arrow in the top left corner to return to the user dashboard.
-9. If you do not fill in every field then you can not submit the form.
+4. Select an issue type (e.g., Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling, Other).
+5. Write a short description of the issue.
+6. Click "Submit." The input should clear.
+7. Press the back arrow in the top left corner to return to the user dashboard.
+8. If you do not fill in every field then you can not submit the form.
 
 ### User Guide for Manage Bookings Page
 
@@ -729,6 +729,13 @@ Maintenance Logs:
     - Maintenance requests can be updated through the saveChanges function, which sends a PUT request to the API.
     - Tasks:
         - Ensure Correct Status is Reflected: Check that the status changes (like Scheduled, In Progress, or Completed) are saved properly.
+        - Ensure that the timestamp is updated: Check that logs in 'in Progress' have an updated timestamp after updating it.
+        - Check that the timestamp of logs in the 'Sheduled' and 'Completed' columns can not be edited. 
+
+Common issues:
+- The logs do not show up, check that the API request has gone through.
+- The 'Show more' button: check that it shows more requests.
+- 'save changes': check if the POST request is working and that the page relods. 
 
 
 ### Schedule Integration
