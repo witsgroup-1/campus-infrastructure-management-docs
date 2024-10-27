@@ -404,12 +404,12 @@ The "Booking Details" page provides detailed information about a selected venue 
 
 - Type in your name, the course of the schedule and the venue where it will be held. Select a day and venue from the drop-down. You can use the clocks under "Time" to choose a time or input your own time directly. You can click the calendar to choose a date or input your own date.
 <div style="text-align: center;">
-  <img src="media/AddScheduleForm.jpg" alt="Schedule Form" style="width: 200px; height: 400px;">
+  <img src="./media/AddScheduleForm.jpg" alt="Schedule Form" style="width: 200px; height: 400px;">
 </div>
 
 - Then if your schedule is one that recurs weekly, click "yes" on the Recurring dropdown. This will casue another Date picker to appear. Here you must choose the date that your last schedule will be held on. Otherwise, if your schedule is only for one day, choose "no".
 <div style="text-align: center;">
-  <img src="media/Recurring.png" alt="Recurring Schedule" style="width: 200px; height: 400px;">
+  <img src="./media/Recurring.png" alt="Recurring Schedule" style="width: 200px; height: 400px;">
 </div>
 
 - Once the form is fully filled out, you can click the "Submit" button to add your new schedule.
