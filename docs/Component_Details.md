@@ -713,14 +713,29 @@ API Key:
 - The API key (apiKey) is a sensitive piece of information used to authenticate requests to the API.
 - Ensure that the API key is rotated on a regular basis for security.
 
+### Maintenance Reports
+- Posting data to the API
+  - The codes input is posted to the maintennce requests database via the maintenanc API endpoint. 
+  - Tasks:
+		- Check that the correct data is generated and is being parsed to the API.
+    - Always check the status of the API response to ensure it is successful.
+    - Ensure robust error handeling with try-catch blocks.
+    - Log errors meaningfully with console.error(); to diagnose problems.
+- Form Clear:
+  - Tasks:
+    - make sure that the form clears after a submited request.
 
-Maintenance Logs:
+Common issues:
+- The API POST does not send: Check the error message.
+- The Form does not clear: Check how the code interacts with the input fields.
+
+### Maintenance Logs:
 - Fetching Data from the API:
     - The code fetches maintenance requests from an API endpoint and processes them based on their status (Scheduled, In Progress, Completed).
     - Tasks:
         - Always check the status of the API response to ensure it's successful before processing the data.
         - Ensure robust error handling with try-catch blocks.
-        - Log errors meaningfully with console.error();
+        - Log errors meaningfully with console.error(); to diagnose problems.
 - Handling and Displaying Maintenance Requests:
     - Maintenance requests are filtered into different categories: "Scheduled", "In Progress", and "Completed".
     - Date Handling: Ensure the timestamps are correctly converted into a human-readable format using: new Date(request.timestamp.seconds * 1000).toLocaleString();
