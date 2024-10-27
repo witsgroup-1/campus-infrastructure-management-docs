@@ -35,31 +35,32 @@
   - **Generated Data**: `createdAt` timestamp, status, `userId` which is the user email of the user who submitted the issue.
 
 - **Log Page**:
-  - Shows the status of a maintenance request as a sort of ticket logs. the box shows the timestamp/created at date, the venue at which the request is taking place amd each request is under their respective status column.
+  - Shows the status of a maintenance request as a sort of ticket log. the box shows the timestamp/created at date, the venue at which the request is taking place amd each request is under their respective status column.
   - Clicking on the maintenance log reveals a popup with more information like the request descriptiom where you can set the status, assigned staff, and scheduled completion time.
+  - multiple requests for the same venue will be hidden untill the 'show more of this venue' button is clicked. 
+  - in mobile view there is a 'show more' button to reveal all requests.
+
 
 #### How It Was Implemented
 
-- **Maintenance Report**:
+- **Maintenance Report**: 
   - The frontend sends a POST request to the maintenance API with the input values from the HTML form.
-  - You can only enter in a valid venue name which is aided by a search dropdown that does a get request via the venue API based on the name of the venue.
+  - You can search a valid venue name to associate your maintenace request with. This does a get request via the venue API based on the name of the venue.
   - The form input clears upon submission.
 
 - **Maintenance Logs**:
   - A GET request fetches all maintenance requests.
   - Data is displayed in columns ("Scheduled", "In Progress") depending on status.
-  - Desktop and mobile display functions handle dynamic display and creation of request blocks.
+  - Desktop and mobile display functions handle dynamic display and creation of request blocks. 
   - The "Open Popup" function shows detailed information and allows editing of time, assignment, and status.
   - **Save Changes**: Updates the database via a POST request and reloads the page.
   - **Close Popup**: Hides the popup and returns to the maintenance logs screen.
 
 ### Notifications
 - **Maintenance Notifications**:
-- Login as an admin.
-- Click the bell icon on the Admin dashboard.
-- See the last 48 hours of maintenance requests
-- Click 'Show All Requests'
-- Takes you to all maintenance logs
+- A bell button was implemented with a mini popup to house the latest maintenance requests from the last 48 hours.
+- The functionality works by a GET request that filters the returned information by the date that the request was crested at.
+- If you click 'Show All Requests' it redirects the user via html refrence to the maintenace logs page. 
 
 ## User Guides
 
