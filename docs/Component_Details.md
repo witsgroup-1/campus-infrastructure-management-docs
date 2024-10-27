@@ -31,12 +31,12 @@
 ### Maintenance
 
 - **Make a Report**:
-  - **Fields**: Name and Surname, Report Type, Venue, Description.
-  - **Generated Data**: `createdAt` timestamp, status, `userId` of the user who submitted the issue.
+  - **Fields**: Report Type, Venue, Description.
+  - **Generated Data**: `createdAt` timestamp, status, `userId` which is the user email of the user who submitted the issue.
 
 - **Log Page**:
-  - Shows the status of a maintenance request as a log.
-  - Clicking on the maintenance log reveals a popup with more information where you can set the status, assigned staff, and scheduled completion time.
+  - Shows the status of a maintenance request as a sort of ticket logs. the box shows the timestamp/created at date, the venue at which the request is taking place amd each request is under their respective status column.
+  - Clicking on the maintenance log reveals a popup with more information like the request descriptiom where you can set the status, assigned staff, and scheduled completion time.
 
 #### How It Was Implemented
 
