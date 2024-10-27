@@ -840,6 +840,10 @@ The Venue Management System is a web-based application that allows users to add 
    - Category
    - Features
    - Building
+# Mapping Campus Locations with Leaflet and Campus Transport API
+
+We are using [Leaflet](https://leafletjs.com/) for creating an interactive map and the [Campus Transport API](https://api-campus-transport.vercel.app/getLocations) to fetch location data. The API provides location coordinates and related details, which are dynamically marked on the map as markers. This integration allows users to view campus transport locations in real-time, making it easier to navigate through the area.
+
 
 ## Maintenance Guide
 
