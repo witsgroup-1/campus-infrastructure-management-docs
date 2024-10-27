@@ -102,6 +102,17 @@ These unit tests ensure that key functions in `book-venue.js` are working correc
 - Unit test 4: checks that a schedule is removed from the DOM when deleted -> it mocks the delete button and checks that the id of that schedule is null after the fetch request is called to the api.
 Unit test 5: check that the table displays the correct schedules and information -> it mocks the table and a schedule and checks that that all the information is displayed as it should be.
 - Unit test 6: tests that it can handle null data -> it mocks a schedule with null values, and checks that it still displays the correct information.
+Testing the that fetching the schedules, deleting a schedule and updating a schedule through their respective APIs are also tested.
+
+#### Testing add_schedule.js
+- Unit test 1: test that the form does not submit if a value is missing -> it mocks the submit button and expects an error when pressed and fields are empty.
+- Unit test 2: displays last schdule when recurring is 'true' -> mocks recurringSelect and checks that lastDate appears when it it set to true.
+- Unit test 3: test the display of venues -> it mocks the venue dropdown and checks that the correct information is displayed in the dropdown.
+Unit test 4: tests the hiding of the dropdown if no venues are found -> checks that no venues and the dropdown is hidden if no venues are found.
+Unit test 5: tests that an error is shown if the API call fails -> it mocks a failed API call, and checks that an console error is given in response.
+Unit test 6: tests that the input field is updated and the dropdown disappears when a venue is chosen -> it mocks the venue dropdown, and checks that the venue chosen appears in the input field, and that the dropdown disappears.
+Unit test 7: tests that an error is shown when creating a schedule fails -> it awaits a submit event and checks that an error is shown in response.
+Tests are also included to checck that that schedules and bookings are successfuly created.
 
 
 ### Maintenance Tests

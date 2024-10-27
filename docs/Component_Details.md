@@ -26,6 +26,7 @@
 - **Schedule Timetable**:
   - Displays all timetables made by the user, including the day, date, course, venue, and times.
   - Includes a delete button to remove a schedule.
+  - Includes an edit button to update a schedule. 
   - A button at the bottom takes the user to the form to add a schedule.
 
 ### Maintenance
