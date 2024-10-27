@@ -101,6 +101,12 @@ Revised mockup designs based on the clients feedback.
 #### Use case: General maintenance reports and logs
 ![Cla Mockup 1](media/LunarMockup2.png)
 
+#### Use case: Schedule Integration
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="media/AllSchedules.png" alt="All Schedules" style="width: 200px; height: 400px; padding:10px;">
+  <img src="media/AddScheduleForm.jpg" alt="Add Schedule" style="width: 200px; height: 150px;">
+</div>
+
 
 ### Prototypes <!-- {docsify-ignore} -->
 
