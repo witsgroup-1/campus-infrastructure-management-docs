@@ -116,51 +116,81 @@ Tests are also included to checck that that schedules and bookings are successfu
 
 
 ### Maintenance Tests
-### Unit tests for Maintenance
-Two copies of the maintenance frontend where made so we could standerdise the urls to the local url and not work with the production url.
-#### Testing Maintenance Reports
+Testing Maintenance Reports (/_tests_/maintenanceReports.test.js) 
+
 We were testing the Maintenance Request Form where we mocked the structure of the html and the fetch request. The test mimics the DOMContentLoaded and the general structure of the form. 
-- Unit test 1: Submits the form correctly. -> Mocks the data and checks if the form has been posted via fetch request when the form is submitted.
-- Unit test 2: Displays an alert if venue is not selected correctly. -> The test mocks the html data and creates a DOM content loaded event. We simulate an empty input for venues and we spy on an alert to see if it tells us to "Please select a valid venue from the dropdown". We expect the venue input field to be reset.
-- Unit test 3: updateVenueDropdown should populate and show dropdown -> update the given venueDropdown from our html and see if it gets updated with our list of venues.
-- Unit test 4: clearVenueDropdown should clear the dropdown -> Given a full dropDown mock see if we can clear it.
-Overall 63% coverage of this file. It is not full coverage as the authentication is tested with other files.
-1. **Error Scenarios**: Some error paths might not be fully covered, especially for network or unexpected errors.
-2. **Environment Variables**: The `apiKey` constant isn't tested, as it's typically an environment variable.
-3. **Mocking the API response**: We mock the fetch reqeuests.
-4. **Authentication** The authentication is not tested here as it is tested elsewhere.
-#### Testing Maintenance Logs
-We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data.
-- Unit test 1: Fetches maintenance requests and displays them -> it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
-- Unit test 2: Displays requests for desktop -> using mock data and one of the mocked UI elements, it check if it has displayed the data in the correct desktop format.
-- Unit test 3: Displays initial request for mobile and handles Show More button -> using mock data and one of the mocked UI elements, it check if it has displayed the data in the correct mobile format and then checks if the show more click has worked and more data is displayed.
-- Unit test 4: Creates request block -> tests that the function to create the test block with the correct value displayed like "Venue: Room 1" in the resulting html.
-- Unit test 5: Opens popup with correct content -> tests that when opening the popup, the resulting html contains the correct input text.
-- Unit test 6: Saves changes and updates request -> tests that the mocked fetch request for the post method is successful and that the popup becomes hidded after saving the changes that we posted.
-- Unit test 7: Closes popup -> tests that the popup closes when we click close.
-We are testing the staff users function works
-- Unit test 1: Fetches staff members and populates dropdown when input is provided -> Fetches the staff members (those who arent lecturers, tutors and students) via a search of 'Jo' (our mock data). It poulates the dropdown and we verify this.
-- Unit test 2: Clears and hides dropdown when no query is provided. So provide a empty query in the input field, start the event and expect a clear dropdown that is hidden.
-- Unit test 3: Check if the code handles an API error gracefully for the staff search. -> Mock the failed API response, then check if the dropdown is hidded and cleared.
-- Unit test 4: Handles staff selection from dropdown. -> So we call the setupStaffSearch(apiKey) function to set up the search. Then we populate the dropdown. We simulate the click of an option (we set it to the second option as the 1st option is a default) and then verify the input value is updated and the dropdown is hidden.
+  - Unit test 1: Submits the form correctly.
+    - The test mocks the input data and checks if the form has been posted via fetch request when the form is submitted. 
+  - Unit test 2: Displays an alert if venue is not selected correctly.
+    - The test mocks the html data and creates a DOM content loaded event. We simulate an empty input for venues and we spy on an alert to see if it tells us to "Please select a valid venue from the dropdown". We expect the venue input field to be reset. 
+  - Unit test 3: updateVenueDropdown should populate and show dropdown.
+    - Given venueDropdown from our html we test whether it gets updated with our list of venues or not. 
+  - Unit test 4: clearVenueDropdown should clear the dropdown.
+    - Given a full dropdown mock see if we can clear it with the function.  
 
-Overall 89% coverage of this file - the left our lines of coverage were .
-1. **Error Scenarios**: Some error paths might not be fully covered, especially for network or unexpected errors.
-2. **Environment Variables**: The `apiKey` constant isn't tested, as it's typically an environment variable.
-3. **Mocking the API response**: We mock the fetch reqeuests.
+Overall, all these tests pass and there is a 63% coverage of this file. It is not full coverage as: 
+- Error Scenarios: Some error paths might not be fully covered, especially for network or unexpected errors. 
+- Environment Variables: The apiKey constant isn't tested, as it's typically an environment variable. 
+- Mocking the API response: We mock the fetch requests. 
+- Authentication: The authentication is not tested here as it is tested elsewhere. 
 
-### Integration Testing for Maintenance
-Using playwright we did ingtegration testing as it would go into the browser and test the code from there.
+ 
 
-#### Testing Maintenance Reports
-Testing the dropdown integration:
-- Get some mock data and test that the dropdown should populate the dropdown when the venue data loads. We expect to see the mock room names appear
-- Check if a venue is selected, it updates the input field. So we populate the dropdown, mock the click and then we expect the input field to update with our choice.
-- Clear the dropdown when the clearVenueDropdown function is called. We populate the dropdown and see if it clears once we call the function.
-Testing maintenance logs integration:
-- should fetch and display maintenance requests correctly -> so loads the page and checks that each column gets request blocks (checking the count of items).
-- should show more requests when "Show More" button is clicked in mobile view -> Mimics a phone screen size, test that a single block is displaying, wait for the 'show more' button to be selected. Checks if the sections are populated.
-- should search and display staff results -> Open a popup, type a promt in the 'assigned-to' input field, wait for dropdown and checks that it is populated.
+Testing Maintenance Logs (/_tests_/maintenanceLogs.test.js and maintenanceLogsStaff.test.js) 
+
+- We were testing the different functions of the maintenance logs where we mocked the DOM methods, the fetch request and the input data. 
+  - Unit test 1: Fetches maintenance requests and displays them.
+    - it mocks the DOM and the fetch request then checks if the content is appended to our mocked UI.
+  - Unit test 2: Displays requests for desktop with show more functionality.
+    - using mock data and one of the mocked UI elements, it checks if it has displayed the data in the correct desktop format. It makes sure that the “Show More for this Venue” button is also created.
+  - Unit test 3: Displays initial request for mobile and handles Show More button
+    - using mock data and one of the mocked UI elements, it checks if it has displayed the data in the correct mobile format and then checks if the “Show More for this venue” click has worked and more requests are displayed. 
+  - Unit test 4: Creates request block.
+    - tests that the function to create the test block with the correct value displayed. For example, "Venue: Room 1" in the resulting html. 
+  - Unit test 5: Opens popup with correct content.
+    - tests that when opening the popup, the resulting html contains the correct input text.
+  - Unit test 6: Saves changes and updates request
+    - tests that the mocked fetch request for the post method is successful and that the popup becomes hidden after saving the changes that we posted. We have to make sure that the location.reload() function is mocked to ensure the test works.
+  - Unit test 7: Closes popup.
+    - tests that the popup closes when we click close.
+- To test that the staff related functionality, we have to mock staff data for this set of tests. 
+  - Unit test 1: Fetches staff members and populates dropdown when input is provided.
+    - Fetches the staff members (those who aren't lecturers, tutors and students) via a search of 'Jo' (our mock data). It populates the dropdown and we verify this.
+  - Unit test 2: Clears and hides dropdown when no query is provided.
+    - The test provides an empty query in the input field. The event is started and we expect a clear dropdown that is hidden.
+  - Unit test 3: Check if the code handles an API error gracefully for the staff search. 
+    - The test mocks the failed API response, then it checks if the dropdown is hidden and cleared. 
+- Unit test 4: Handles staff selection from dropdown.
+  - The test calls the setupStaffSearch(apiKey) function to set up the search. Then the dropdown is populated. We simulate the click of an option (we set it to the second option as the 1st option is a default) and then verify the input value is updated and the dropdown is hidden.
+    
+Overall, all these tests pass and there is 90% coverage of this file - the left our lines of coverage were: 
+- Error Scenarios: Some error paths might not be fully covered, especially for network or unexpected errors. 
+- Environment Variables: The apiKey constant isn't tested, as it's typically an environment variable. 
+- Mocking the API response: We mock the fetch requests. 
+- Mocking location.reload(): This function to reload a web page is not supported by Jest so it had to be mocked. 
+
+### Integration Testing for Maintenance 
+Using playwright, we did integration testing as it would go into the browser and test the code from there. 
+#### Testing Maintenance Reports 
+
+- Testing the dropdown integration (/playwright-tests/dropdown.test.js): 
+  - Should populate dropdown on venue data load:
+    - Get mock venue data and test that the dropdown is populated when the venue data loads. We expect to see the mocked venue names to appear. 
+  - Should update venue input when an option is selected: 
+    - Check if a venue is selected. Then check if the code updates the input field for the venue. Basically, we populate the dropdown, mock the click of a dropdown option and then we expect the input field to update with our choice. 
+  - Should clear dropdown when clearVenueDropdown is called: 
+    - Clear the dropdown when the clearVenueDropdown function is called. We populate the dropdown and see if it clears once we call the function. Testing  
+
+- Testing maintenance logs integration (/playwright-tests/Logs.test.js): 
+
+    - should fetch and display maintenance requests correctly
+      - The test loads the page and checks that each column gets request blocks (by checking the count of appended items).
+    - should show more requests when "Show More" button is clicked in mobile view
+      - The test mimics a phone screen size. It tests that a single request block is displaying in the “Scheduled” column. The test then waits for the 'show more' button to be selected. Finally, it checks if the column is populated.
+    - should search and display staff results
+      - The tests open a popup and type a name in the 'assigned-to' input field. The test then waits for dropdown and checks that it is populated. 
+
+Overall, all the maintenance tests for Playwright pass. 
 
 
 ### Booking-Details Unit Tests
