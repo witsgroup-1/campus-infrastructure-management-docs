@@ -376,5 +376,5 @@ The `schedules` collection makes reference to the `courses` subcollection. This 
   - Stores general information about each maintenance request.
 
 
-**Summary of schema structure:**
+**Initial Summary of schema structure:**
 ![Maintenance Table](media/maintenancetable.png)
