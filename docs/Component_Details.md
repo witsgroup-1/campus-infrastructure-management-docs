@@ -85,9 +85,8 @@ Variables Related to the database
 
 ### Notifications
 - **Maintenance Notifications**:
-- A bell button was implemented with a mini popup to house the latest maintenance requests from the last 48 hours.
-- The functionality works by a GET request that filters the returned information by the date that the request was crested at.
-- If you click 'Show All Requests' it redirects the user via html refrence to the maintenace logs page. 
+	- The functionality works by a GET fetch request through the maintenance API that filters the returned information by the date that the request was crested at. Therefore, only requests created in the last 48 hours are shown. 
+	- If you click 'Show All Requests' it redirects the user via html reference to the maintenance logs page. 
 
 ## User Guides
 
