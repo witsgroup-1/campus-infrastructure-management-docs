@@ -150,20 +150,22 @@ The onboarding process is designed to collect essential information about you be
 
 #### Overview
 Welcome to the Dashboard of your web application! This guide provides an overview of how to navigate and use the various features of the dashboard, including viewing upcoming bookings, viewing available venues and making maintenance reports.
+![alt text](image-4.png)
+
 
 #### Dashboard Layout
 
 ##### Header
 - **Logo**: Located at the top left of the header.
 - **Title**: Displays the name of the application 'Infrustructure Management'.
-- **Accesses**: Located at the top right of the header, there is a notification bell and navigation menu icon.
+- **Accesses**:  Located at the top left of the header there is navigation menu icon, at the top right corner, there is a notification bell. 
 
 ##### Main Content
 
 ###### Desktop View
 
 - **Venues**:
-  - **Description**:This shows the venues available to book, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+  - **Description**:This shows the venues available to book, through generic category images.   All images have a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
   -**Available venues page**:
   - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
 
@@ -177,7 +179,7 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
 
 ###### Mobile View
 - **Venues**:
-  - **Description**: This shows the venues available to book, through generic category images. The last image has a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
+  - **Description**: This shows the venues available to book, through generic category images. All images have  a click ability which upon clicking will navigate the user to a whole page showing all available venues, the 'Available venues' page.
   -**Available venues page**:
   - This page can be accessed via the last image in the 'Available venues' section, or via the 'Venues' tab in the nav bar, it shows the venues available to be booked in the next slot of the day and also contains an extra information button about those venues.
 
@@ -191,40 +193,55 @@ Welcome to the Dashboard of your web application! This guide provides an overvie
 
 #### Features
 
-##### Viewing Bookings
-- **Desktop**: The desktop view displays both upcoming and past bookings in separate sections with pagination controls.
-- **Mobile**: The mobile view provides a compact summary of bookings, with one item displayed from upcoming and past bookings respectively.
+##### Viewing Available Venues: 
 
-##### Booking Management
-- **Cancel Booking**: Cancels the selected booking.
-- **Rebook**: Rebooks the selected past booking.
+ 
+- User will be able to view venues available to book in the next slot in an image carousel. 
 
-##### Pagination Controls
-- **Previous Button**: Allows navigation to the previous page of bookings.
-- **Next Button**: Allows navigation to the next page of bookings.
-- **Visibility**: Pagination controls are visible only when there are multiple pages of bookings.
+- These images contain the name of the venue and the capacity. 
 
-#### Functionality
-- **Loading State**: Displays a loading message while fetching booking data.
-- **Date and Time Formatting**:
-  - **Date**: `DD/MM/YY`
-  - **Time Slot**: `HH:MM-HH:MM`
+- Each image can be clicked to navigate the user to a full page of available venues to book where each venue has an availability calendar and a book button. 
 
+ 
+
+ 
+
+##### Viewing Upcoming bookings:  
+
+- Users will see their upcoming bookings with details on their dashboard 
+
+- They can quick cancel by clicking on it. 
+
+ 
+
+##### Navigation menu: 
+
+- This opens up to show options to “Make a Report”, “Book Venue”, “My bookings”, “View venues”, “Make a reservation” and then if a user is also an admin, they have the extra option to navigate to “Admin Dashboard”. 
+![alt text](image-5.png)
+ 
+
+##### Notifications:  
+
+- Here users can view notifications for their meal reservations. 
 
 ### Admin User Dashboard Guide
 
 #### Overview
 The Admin Dashboard provides an interface for managing bookings, venues, reports, and schedules. It also facilitates communication and tracking of user requests related to whitelisting and maintenance reports.
-
+![alt text](image-6.png)
 #### Features
 ##### Manage Bookings
+- Manage all bookings made by users.
 
-
-
-##### Manage Venues
-
-- View the list of all available venues.
-- Add Venues: Click the "Add Venue" button to add new venues. Fill in the necessary details (name, location, capacity, etc.) and save.
+##### Manage Venues: 
+- Select “Manage Venues” to view all venues.
+![alt text](image-10.png)
+- Click on the “Add Venue” button to enter details for a new venue.
+- Ensure all necessary fields are filled out before saving.
+![alt text](image-11.png)
+- Each venue can be deleted.
+- Each venue's maintenance status can be checked.
+- Each venue's name can be edited.
 
 
 ##### Manage Reports
@@ -241,9 +258,12 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - Click 'Show All Requests' to be taken to the maintenance logs page.
 
 
+
 ##### Inbox
 
-- Whitelisting Requests: Access the inbox to view requests from users wanting to be added to the whitelist. You can review these requests and take appropriate actions (accept/reject).
+- Whitelisting Requests: Access the inbox to view requests from users wanting to be added to the whitelist. 
+- You can review these requests and take appropriate actions (accept/reject).
+![alt text](image-8.png)
 
 ##### Navigation Menu
 
@@ -251,6 +271,7 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - View All Whitelist Members: View a list of all users currently on the whitelist.
 - Whitelist Requests: Quickly navigate to the section showing pending whitelist requests.
 - User Dashboard: Go to the general user dashboard view.
+![alt text](image-9.png)
 
 
 #### How to Use the Dashboard
@@ -259,8 +280,14 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 
 ##### Manage Venues: 
 - Select “Manage Venues” to view all venues.
+![alt text](image-10.png)
 - Click on the “Add Venue” button to enter details for a new venue.
 - Ensure all necessary fields are filled out before saving.
+![alt text](image-11.png)
+- Each venue can be deleted.
+- Each venue's maintenance status can be checked.
+- Each venue's name can be edited.
+
 
 
 ##### Manage Reports: 
@@ -302,16 +329,20 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - See the last 48 hours of maintenance requests
 - Click 'Show All Requests'
 - Takes you to all maintenance logs
+![alt text](image-7.png)
 
 ##### Inbox: 
 - Open the inbox to see all requests.
 - Approve or deny requests as necessary based on your criteria.
+![alt text](image-8.png)
 
 ##### Navigation menu: 
 
 
 - Click the menu button to explore additional options.
-- Select links to view whitelist members or navigate back to the admin dashboard.
+- Select links to view whitelist members, manage requests or navigate back to the user dashboard.
+![alt text](image-9.png)
+
 
 
 
