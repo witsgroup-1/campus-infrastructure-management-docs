@@ -321,7 +321,11 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 <div style="text-align: center;">
   <img src="media/MaintenanceLogPageFinal.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
 </div>
-- If venues have multiple requests tied to them then you can click 'Show more for this venue button' to see all the requests for that venue.
+- If venues have multiple requests tied to them then you can click 'Show More for this Venue' button to see all the requests for that venue.
+- If you are on mobile view then know that only one request is displayed until you click "Show More"
+<div style="text-align: center;">
+  <img src="media/MaintenanceLogsPhone.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
+</div>
 - Click on a block that displays Venue: name, with a date.
 - View the popup with detailed information.
 <div style="text-align: center;">
