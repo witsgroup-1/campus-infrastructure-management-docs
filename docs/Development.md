@@ -4,13 +4,17 @@
 
 ## Planning of Architecture
 
+The initial focus at the beginning of the project was the technological stack that we would employ, the high-level view of the system which encompassed how data was stored and retrieved and the design of the User Interface (UI) and experience. 
+
+Initial Architecture  
+
 At the initial stage of the project we decided that we would employ a multi-tier architecture. This architecture was well suited to our project as we would need a front-end, a web hosting server, an Application Programming Interface (API) and a backend NO-SQL database.    
 
 The reason we employed a NO-SQL database is due to the fact that they are offer high availability, performance and scalability. These features allow for our website to handle high levels of user traffic so that we can remain always online with our products services [1]. 
 
 Furthermore, we had to decide on the NO-SQL database that we would employ.  As a group we went with the Firebase Firestore database as it is good for mobile development (which we had to account for due to responsive design principles) and scalability [2]. Firestore has real time data synchronisation [2] which would allow for our website to update its content quickly when new database entries and deletions occur. 
 
-We decided to use an API with the Firestore database as we had to integrate with other subsystems and could not expect them to initialise our database infrastructure on their web applications. By using an API other teams could simply access our venue management data without fuss over the inner workings of the database. 
+We decided to use an API with the Firestore database as we had to integrate with other subsystems and could not expect them to initialise our database infrastructure on their web applications. By using an API other teams could simply access our venue management data without worrying over the inner workings of the database. 
 
 The website was hosted on Microsoft Azure as a web application as it was a service we as a team were most familiar with. Furthermore, the service offers services such as support for multiple languages such as Node.js, GitHub CI/CD pipeline integration and we would not have to worry about the finer details of hosting a web application as that would be managed by Azure [3].  Additionally, an important consideration was that our website needed to be hosted in our home country. This was to promote a good latency for University of Witwatersrand staff and students when using our website. Thankfully Azure has support for hosting the website from South Africa. 
 
@@ -40,7 +44,29 @@ The system components can be seen below in the component diagram.
 
 ## UI/UX Design Process
 
-We focused on the mobile design first as our website application is more geared to the mobile first aproach.
+### Design Choices 
+
+Design is an important aspect to a web application as it is the first thing a user sees. For this project it was important that we followed responsive web design principles, made use of good page layout and recognizable colour usage. Our colour scheme is centred around the Wits gold and blue (#917248 and #003B5C respectively), as our web application will be used by University of Witwatersrand students, staff and guests. It utilizes a responsive design, which allows users to access it from various devices with varying screen sizes.  
+
+Other key design choices include the use of a quick access button on the user dashboard, and uniform button, font and form design across the application. These implementations allow for ease of accessibility and use. 
+
+To achieve this, we created wireframes (shown below) to brainstorm the initial layout of our website. 
+
+To refine our ideas, we created many mock-ups in Figma. These mock-ups served to consolidate our design and layout for the final product. 
+
+The first round of mock-ups did not meet client preferences in terms of colour and layout shown below. We circled back and incorporated some of his preferences such as a white base background for every page and cohesiveness with official Wits colours as seen in . 
+
+We continued the trend of university colours with further mock-ups to refine the designs of the website and its’ core features. We made sure that all designs could be translated easily into mobile format. 
+
+Maintenance Reports and logs needed more refinement via mock-ups (shown below). These mock-ups were designed to be easily understandable to the user. The maintenance Reports mock-up had necessary input fields positioned in a non-cluttered way that would be easily manipulated for a mobile view. Maintenance Logs used three columns to get across the status of the reports. Furthermore, the reports only showed the bare minimum of information so that they could be good for mobile view.   
+
+The mock-ups for Schedule Integration were designed to be simple to use and visually aesthetic. They follow the colour scheme by keeping to the gold and blue tints. The overall structure is coherent and user-friendly, with visible texts and fonts and no distracting information. 
+
+For new users who have never used our platform before, we needed to create an onboarding process. A mock-up for mobile was created (shown below), displaying how a user will go through a series of forms to welcome, provide their name, their faculty and role information and to disclose whether they are a tutor or a lecturer. This page was designed to show a user's progress via a circle in the header that will progressively fill up. 
+
+When designing the venue booking mock-ups, we wanted to incorporate a search bar to allow users to quicky access the venue that they want if there is a specific venue that they prefer. The initial designs have a room category (lecture halls, exam halls, tutorial rooms, study rooms, boardrooms), a date filter and a time filter. The plan was to search for venues that fall under that category and are available on that date and time. Later on, we realised that querying the database with all these filters is time consuming and thus not scalable. Therefore, our final venue booking system has only the category filter and the search bar.  
+
+In our initial design, the user submits a form with the venue name, date, time slot, building, campus, and capacity. In the final version, users submit a form with the same info, excluding the campus. 
 
 ### Wireframes <!-- {docsify-ignore} -->
 
@@ -167,7 +193,6 @@ The specifications for their respective databases and API endpoints are shown fu
 ## Integration with Other Systems Overview
 
 - Transport App: Map API for navigation to venues.
-- Events and Activities App: Call their API to find out if any venues are booked for an event or activity - to make sure we are synchronised.
 - Campus Safety App: Call their API to provide emergency contact information.
 - Dining Services: Book reservations through our app.
 
