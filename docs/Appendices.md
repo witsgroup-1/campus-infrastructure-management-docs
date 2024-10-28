@@ -7,6 +7,8 @@
 - [1] https://www.geeksforgeeks.org/top-5-reasons-to-choose-nosql/ 
 - [2] https://cloud.google.com/blog/topics/developers-practitioners/all-you-need-know-about-firestore-cheatsheet 
 - [3] https://learn.microsoft.com/en-us/azure/app-service/overview  
+- [4] https://asana.com/resources/agile-methodology  
+- [5] https://www.scrum.org/learning-series/what-is-scrum/  
 
 ## Meeting Minutes
 
