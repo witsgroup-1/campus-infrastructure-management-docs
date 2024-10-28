@@ -31,31 +31,57 @@
 
 ### Maintenance
 
-- **Make a Report**:
-  - **Fields**: Report Type, Venue, Description.
-  - **Generated Data**: `createdAt` timestamp, status, `userId` which is the user email of the user who submitted the issue.
+Layout 
 
-- **Log Page**:
-  - Shows the status of a maintenance request as a sort of ticket log. the box shows the timestamp/created at date, the venue at which the request is taking place amd each request is under their respective status column.
-  - Clicking on the maintenance log reveals a popup with more information like the request descriptiom where you can set the status, assigned staff, and scheduled completion time.
-  - multiple requests for the same venue will be hidden untill the 'show more of this venue' button is clicked. 
-  - in mobile view there is a 'show more' button to reveal all requests.
+- Maintenance Report: 
 
+	- Header: Top left is a back arrow to get back to the user dashboard and the page title “Report” 
+	- Desktop Body: A ‘report type’ dropdown, a venue search input field (a dropdown of venue options will appear underneath it [Figure 16]), a description input field (it shows how many characters out of 200 you have inputted) and a submit button. There is a graphic on the right-hand side of the page to fill up the empty space. 
+	- Mobile Body: The input fields are the same as for the desktop but the image on the right-hand side is no longer visible. 
+	- Footer: Displays “© 2024 Group -1. All rights reserved.”  
+- Maintenance Logs: 
+	- Header: Top left is a back arrow to get back to the user dashboard and the page title “Maintenance Logs” 
+	- Columns: There are three columns, “Scheduled”, “In Progress” and “Completed”. In each column there are blocks representing maintenance requests/logs.
+ 	- Maintenance request block:  Each maintenance request block displays the venue at which the maintenance issue takes place. Furthermore, the block will show when a maintenance request was created (in the Scheduled column), when it is scheduled for completion (in the “In progress” column) and when it was completed in the “completed column. 
+	- Same venue requests: If multiple requests for the same venue exist, they are hidden until you click the “Show More for this venue” button. 
+	- Request block popup: If you click the maintenance request block, a popup will appear. The popup displays the room name, the request description, the issue category, the status, who it is assigned to, a date picker to edit the timestamp and the timestamp or the ‘created at’ time if it is in the “Scheduled” column. 
+	- Staff Dropdown: When a user wants to edit who the task is assigned to, a dropdown containing all the administrators appears underneath it. 
+	- Mobile: The columns are stacked on top of each other. Under each column one request is displayed. A “Show More” button is displayed underneath that first request in each column so that users can expose the other blocks. If there are multiple requests for one venue they can be exposed with a “Show More for this venue” button as well. 	- Footer: Displays “© 2024 Group -1. All rights reserved.” 
+
+Variables Related to the database 
+
+- Make a Report: 
+
+	- Fields:  
+		- Report Type: A user can choose a generic category for their report such as: Electrical, Ventilation, Pests and Rodents, Roofing and Ceiling and Other. 
+		- Venue, Description. 
+	- Generated Data: 
+		- assignedTo: Which administrator this report is assigned to. This is set to “none” by default.
+  		- createdAt: The current date and time when the report was submitted. 
+		- timestamp: timestamp value to be edited in the future. It will be set to the current date and time by default.  
+		- status: The status of a request. Set to “Scheduled” by default. 
+		- userId: which is the user email of the user who submitted the issue. 
+- Edit a Report in Maintenance logs: 
+
+	- In the popup a user can edit certain fields of a maintenance report: 
+	- assignedTo: An administrator can type in a name or select an option from the dropdown selection that will appear underneath the input field. 
+	- status: An administrator can change the status of a request to either “Scheduled”, “In Progress” or “Completed”. 
+	- timestamp: An administrator can change the date that a task will be scheduled to be completed, in the “In Progress” column.  
 
 #### How It Was Implemented
 
-- **Maintenance Report**: 
-  - The frontend sends a POST request to the maintenance API with the input values from the HTML form.
-  - You can search a valid venue name to associate your maintenace request with. This does a get request via the venue API based on the name of the venue.
-  - The form input clears upon submission.
+- Maintenance Report (./src/maintenance/maintenanceReports.js): 
 
-- **Maintenance Logs**:
-  - A GET request fetches all maintenance requests.
-  - Data is displayed in columns ("Scheduled", "In Progress") depending on status.
-  - Desktop and mobile display functions handle dynamic display and creation of request blocks. 
-  - The "Open Popup" function shows detailed information and allows editing of time, assignment, and status.
-  - **Save Changes**: Updates the database via a POST request and reloads the page.
-  - **Close Popup**: Hides the popup and returns to the maintenance logs screen.
+	- The frontend sends a POST request to the maintenance API with the input values from the maintenanceReports.html form upon form submission. 
+	- You can search a valid venue name to associate your maintenance request. This does a get request via the venue API based on the name of the venue. 
+	- The form input clears upon submission by editing the html fields content. 
+- Maintenance Logs (./src/maintenance/maintenanceLogs.js): 
+	- A GET request fetches all maintenance requests. 
+	- The fetched data is displayed in columns ("Scheduled", "In Progress") depending on status. 
+	- The "Open Popup" function shows detailed information about each request. This data is from the GET fetch request. 
+	- The list of other administrators (staff who are not lecturers) is retrieved via a fetch request where we specify via parameters that we are retrieving users who are staff and not lecturers or tutors.  
+	- Save Changes: If you have updated the editable fields, the data gets sent via a POST request to the maintenanceRequests database and the maintenance logs page gets reloaded. 
+	- Close Popup: Hides the popup and returns to the maintenance logs screen. 
 
 ### Notifications
 - **Maintenance Notifications**:
