@@ -8,16 +8,18 @@
 
 The website deploys via Azure Web app services using Github actions CI/CD pipeline.
 
-### Version Control
+### Version Control 
 
-When it comes to version control we need to define some things first:
+The CI/CD pipeline is an integral part of the project's workflow. It manages the testing, building and deploying of our application through GitHub actions. It allows for smooth integration between our local development environment and the Azure platform. 
 
-- Product: A product is what we can offer to the user to fufill their requirments.
-- Product feature: A products specific characteristics or functions that are important to the customer - so desin and functionality are included.
+GitHub actions was important to use as it automates the workflow, allowing for tests to be automatically run to keep the website building and deploying in a faulty state. This allowed our code to be reliable and it reduced the manual effort that we would have to do to deploy our website otherwise. 
 
-Ref: https://www.aha.io/roadmapping/guide/requirements-management/what-are-product-features
+Another benefit was the continuous integration (CI) and continuous delivery (CD). CI made sure that code was integrated well with the main branch and tested whilst CD automated the deployment so that code reached production with efficiency. 
 
-Version Control is mostly managed by github actions using the CI/CD pipeline - so it will record the date, time etc.
+Furthermore, the CI/CD pipeline along with GitHub actions records the date, time etcetera of the deployment and by who it was done. This made sure we could always keep an audit trail of who made changes and when. 
+
+Overall, the use of GitHub Actions with the CI/CD pipeline allowed for a streamlined approach to testing, building and deployment of our program. 
+
 Branch management guidlines were given to help ensure a lack of mix ups:
 
 - Each collaborator must commit to their own respective branch (labled by their username) or the "Bugs-and-Problems" branch for any problematic code.
@@ -26,7 +28,7 @@ Branch management guidlines were given to help ensure a lack of mix ups:
 - Give your commits to your branch meaningful names including: What you did and who you are - Github actions will reflect the date and time so you do not need to worry about that.
 - Do not merge to main without the agreement of all devs.
 
-The branch names are set as:
+The branch names were initially set as:
 
 - main
 - Bugs-and-Problems
