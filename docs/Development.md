@@ -1,5 +1,3 @@
-
-
 # Development Process :gear:
 
 ## Planning of Architecture
@@ -41,6 +39,51 @@ The Deployment diagram to illustrate how our website deploys.
 
 The system components can be seen below in the component diagram.
 ![Users Table](media/ComponentDiagramSDP.drawio.png)
+
+## Initial Development Phase 
+
+Agile methodology is an iterative methodology that breaks down a project into sprints [4]. After each sprint a team must reflect on the sprint and adjust their strategy [4]. As a group we employed the agile methodology through the SCRUM Process [5].  
+
+Initially as a group we outlined the project scope, designed the system architecture, set up version control, deployed a basic Azure web app, initialised the Jest testing environment, created the basic file structure and designed of the UI through wireframes and mock-ups.  This was all to ensure that we would create a stable environment in which to begin programming our project. 
+
+Throughout this process we met with our client, who made sure to give us feedback such as changing mock-up colours and using tailwind CSS for our project UI. 
+
+## Intermediate Development Phase 
+
+The next milestone there was more of a focus on developing our systems from our planning and iteratively improving upon these systems as we went. We started working on creating the Firestore databases first. Then we created the APIs to retrieve the information from the database.  
+
+With the API and database in place it was important that we secured our API through the use of an API key so that only valid users could access them. Our client suggested that we track the usage of these keys, so we implemented this. Since we had to provide our API to other groups, we gave them access as soon as possible.   
+
+The next important implementation would be the UI based on the Figma mock-ups we had created.  Some of the designs appeared slightly different in the html due to how the Tailwind CSS was implemented. 
+
+During this period, it was recommended by our client that we make the maintenance reports system like a ticket system, that we create an onboarding system for new users and that we make a whitelist for external users (for example temporary lecturers) that need access to university services. We followed the clients feature requirements when we added the functionality to our application.  
+
+Implementing core functionality was always a priority, so we made sure to get these to a good standard as soon as possible for the final milestone after the UI was implemented.  
+
+ 
+Integration was also an important aspect of the development process. Due to troubles with communication our client recommended we create our own APIs to make sure our program was robust. We created an API for security contact information and dining information. 
+
+Finally, testing was an important aspect of our application as it made sure that our website would not be broken upon deployment. Jest was used to do widespread unit testing across our application. 
+ 
+## Finalisation  
+
+Towards the end of the project the focus was making sure that the UI was polished based on client and user feedback as well as making sure that we had finalised our integration testing to an extent. We incorporated the feedback into our application in order to ensure that it was user-friendly and comprehensive. 
+
+Additionally, since we were struggling to get access to the APIs of other teams, we had to further refine our mocked APIs and be ready to receive their APIs at any time.  
+ 
+
+### Tools and Technologies Used 
+
+GitHub – To house our project. 
+
+GitHub actions – CI/CD pipeline for this project.  
+
+GitHub Projects [Figure 38] – Used to keep track of task assignment. 
+
+WhatsApp – Communication Between team members and some daily standups 
+
+Discord – Scrum Meetings (all types) between team members 
+
 
 ## UI/UX Design Process
 
