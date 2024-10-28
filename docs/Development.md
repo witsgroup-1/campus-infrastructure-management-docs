@@ -239,6 +239,20 @@ The specifications for their respective databases and API endpoints are shown fu
 - Campus Safety App: Call their API to provide emergency contact information.
 - Dining Services: Book reservations through our app.
 
+## Collaboration Practices 
+
+### Scrum Methodology 
+
+As a team we adhered to the scrum methodology. Using feedback loops [5], we incrementally adjusted our ideas and approaches throughout the project. 
+
+Each sprint lasted a week where we would have daily standups on WhatsApp and Discord. After every sprint we would have sprint reviews and retrospectives and before a sprint would begin, we would have a sprint planning meeting [Meeting Minutes].  
+
+### External Collaboration 
+
+External communication to other subsystems was done via email and WhatsApp. At the beginning of the project our team made sure to communicate what we needed from the other subsystems. It was also important that we communicated our API access to all other teams as soon as possible.  
+
+The other subsystems were not as quick to send access to their API’s which led to a delay in our integration with their systems.  
+
 ## Timelines
 
 - 8th -20th Auguast - Sprint 1 -Plan the software (UI/UX and architecture)
@@ -265,6 +279,8 @@ The specifications for their respective databases and API endpoints are shown fu
 - changing/ fixing the back buttons.
 - Mock API's instead of hardcoding it.
 - implement use of API key tracking.
+
+
 
 
 ---
