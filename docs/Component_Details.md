@@ -324,7 +324,7 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - If venues have multiple requests tied to them then you can click 'Show More for this Venue' button to see all the requests for that venue.
 - If you are on mobile view then know that only one request is displayed until you click "Show More"
 <div style="text-align: center;">
-  <img src="media/MaintenanceLogsPhone.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
+  <img src="media/MaintenanceLogsPhone.png" alt="All Logs for Maintenance" style="width: 300px; height: 400px;">
 </div>
 - Click on a block that displays Venue: name, with a date.
 - View the popup with detailed information.
@@ -491,8 +491,14 @@ The "Booking Details" page provides detailed information about a selected venue 
   <img src="media/ReportsMaintenancePlus.png" alt="Finding Reports with the plus" style="width: 400px; height: 300px;">
 </div>
 <div style="text-align: center;">
-  <img src="media/MaintenanceReportPage.png" alt="The Maintenance Report Page" style="width: 700px; height: 500px;">
+  <img src="media/MaintenanceReportPageFinal.png" alt="The Maintenance Report Page" style="width: 700px; height: 500px;">
 </div>
+
+Note that if you are on mobile the page will look like:
+<div style="text-align: center;">
+  <img src="media/MaintenanceReportPhone.png" alt="The Maintenance Report Page" style="width: 300px; height: 400px;">
+</div>
+
 
 3. Fill in the venue where the issue took place (e.g., a lecture hall, a tutorial room, a conference hall or a laboratory). A dropdown will appear to assist you with inputting a valid venue.
 
