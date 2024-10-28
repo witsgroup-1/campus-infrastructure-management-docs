@@ -319,7 +319,7 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - Select 'Manage Reports' to view all maintenance logs
 - Arrive at the page with columns for "Scheduled," "In Progress," and "Completed."
 <div style="text-align: center;">
-  <img src="media/MaintenanceLogPage.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
+  <img src="media/MaintenanceLogPageFinal.png" alt="All Logs for Maintenance" style="width: 500px; height: 300px;">
 </div>
 - If venues have multiple requests tied to them then you can click 'Show more for this venue button' to see all the requests for that venue.
 - Click on a block that displays Venue: name, with a date.
