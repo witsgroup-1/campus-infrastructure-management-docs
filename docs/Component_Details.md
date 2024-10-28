@@ -358,6 +358,7 @@ The Admin Dashboard provides an interface for managing bookings, venues, reports
 - See the last 48 hours of maintenance requests
 - Click 'Show All Requests'
 - Takes you to all maintenance logs
+
 ![alt text](image-7.png)
 
 ##### Inbox: 
