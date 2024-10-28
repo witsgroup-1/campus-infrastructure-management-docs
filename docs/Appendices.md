@@ -4,11 +4,11 @@
 
 ---
 ## Bibliography
-- [1] https://www.geeksforgeeks.org/top-5-reasons-to-choose-nosql/ 
-- [2] https://cloud.google.com/blog/topics/developers-practitioners/all-you-need-know-about-firestore-cheatsheet 
-- [3] https://learn.microsoft.com/en-us/azure/app-service/overview  
-- [4] https://asana.com/resources/agile-methodology  
-- [5] https://www.scrum.org/learning-series/what-is-scrum/  
+- [1] GeeksforGeeks. (2020). Top 5 Reasons to Choose NoSQL. [online] Available at: https://www.geeksforgeeks.org/top-5-reasons-to-choose-nosql/.
+- [2] Laoyan, S. (2024). What Is Agile Methodology? (A Beginner’s Guide). [online] Asana. Available at: https://asana.com/resources/agile-methodology.
+- [3] learn.microsoft.com. (2024). Overview - Azure App Service. [online] Available at: https://learn.microsoft.com/en-us/azure/app-service/overview.
+- [4] Scrum.org (n.d.). What is Scrum? [online] Scrum.org. Available at: https://www.scrum.org/learning-series/what-is-scrum/.
+- [5] Vergadia, P. (2021). All you need to know about Firestore: A cheatsheet. [online] Google Cloud Blog. Available at: https://cloud.google.com/blog/topics/developers-practitioners/all-you-need-know-about-firestore-cheatsheet.
 
 ## Meeting Minutes
 
