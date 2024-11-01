@@ -373,16 +373,6 @@ Tests the main booking handler function that orchestrates the booking process.
 
 **Note**: All tests use mocking to simulate API responses and DOM interactions, ensuring that tests are isolated and do not depend on external systems.
 
-## Why is our code coverage ___%
-### For Milestone 2 
-We focused our attention on unit tests for the core features. 
-
-Some lines of code are not covered as thouroughly: This is not a bad thing as some lines are not nessacary to cover or do not need to be as strongly covered as they are functions not prone to error/pointless in the grand scheme of the project.
-
-Some functions have not been unit tested yet and some tests have not been integrated with the main repository.
-
-Patch Coverage is sometimes higher then code coverage: This can often be better then high code coverage as it focuses on the changes to code introduced per pull, patch etc. So it checks how much of the new code is covered by tests and thus shows a good quality in the changes made and helps prevent the introduction of new issues such as regressions.
-(ref: https://about.codecov.io/blog/why-patch-coverage-is-more-important-than-project-coverage/)
 
 # Add Venues Page Unit Testing 
 
